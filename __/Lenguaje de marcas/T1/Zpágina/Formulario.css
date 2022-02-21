@@ -1,0 +1,89 @@
+body
+{
+    margin: 0;
+    position: relative;
+
+    background-color: rgb(20, 20, 20);
+    color: rgb(240, 240, 240);
+
+    font-family: bahnschrift;
+}
+.topmenu
+{
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    width: 100%;
+
+    background-color: rgb(15, 15, 15);
+    color: rgb(240, 240, 240);
+}
+div a
+{
+    padding: 15px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+div a:hover:nth-child(1)
+{
+    background-color: rgb(90, 25, 14);
+    color: rgb(240, 240, 240); 
+}
+.selected
+{
+    background-color: rgb(122, 17, 17);
+    color: rgb(240, 240, 240); 
+}
+.selected:hover
+{
+    background-color: rgb(83, 10, 10);
+    color: white;
+}
+.noselected
+{
+    background-color: rgb(30, 30, 30);
+    color: rgb(240, 240, 240);
+}
+.noselected:hover
+{
+    background-color: rgb(240, 240, 240);
+    color: rgb(15, 15, 15);
+}
+
+
+
+
+
+
+body div:nth-child(2)
+{
+margin: 50px 40px;
+}
+.oblig
+{
+    color: rgb(255, 0, 0);
+}
+.info
+{
+    background-color: transparent;
+    color: white;
+    padding: 3px;
+    border: 2px solid white;
+    font-family: bahnschrift;
+    font-weight: bold;
+}
+input:hover{background-color: rgb(40, 40, 40);}
+.submit
+{
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+    border: 2px solid white;
+    font-family: bahnschrift;
+    font-weight: bold;
+}
+.submit:hover
+{
+    background-color: rgb(240, 240, 240);
+    color: rgb(15,15,15);            
+}

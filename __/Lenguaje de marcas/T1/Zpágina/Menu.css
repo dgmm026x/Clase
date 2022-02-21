@@ -1,0 +1,41 @@
+body
+{
+    margin: 0;
+    position: relative;
+
+    background-color: rgb(20, 20, 20);
+    color: rgb(240, 240, 240);
+
+    font-family: bahnschrift;
+}
+.topmenu
+{
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    width: 100%;
+
+    background-color: rgb(15, 15, 15);
+    color: rgb(240, 240, 240);
+}
+div a
+{
+    padding: 15px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.selected
+{
+    background-color: rgb(90, 25, 14);
+    color: rgb(240, 240, 240); 
+}
+.noselected
+{
+    background-color: rgb(30, 30, 30);
+    color: rgb(240, 240, 240);
+}
+.noselected:hover
+{
+    background-color: rgb(240, 240, 240);
+    color: rgb(15, 15, 15);
+}

@@ -1,0 +1,12 @@
+
+
+inicio
+
+    entero num
+    num<--
+    leer num
+
+    para i<--1 hasta 10 incremento 1 hacer
+        imprimir i + " * " + num + " = " + (num*i)
+    fin para
+fin

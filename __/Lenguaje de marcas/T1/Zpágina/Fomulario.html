@@ -1,0 +1,114 @@
+<!------------------------------------------------------------>
+<!--				  ---FORMULARIO---  		    		-->
+<!------------------------------------------------------------>
+<!DOCTYPE html>
+<!------------------------------------------------------------>
+<!--						HEAD							-->
+<!------------------------------------------------------------>
+<html>
+    <head>
+        <title>CREACIÓN DE CUENTA</title>
+        <link rel="stylesheet" href="./Formulario.css">
+    </head>
+<!------------------------------------------------------------>
+<!--						BODY MENU   					-->
+<!------------------------------------------------------------>
+    <body>
+        <div class="topmenu">
+            <il>
+                <ul>
+                    <a class="noselected" href="./Menu.html" target="_blank"><img src="./Asterisk_White.svg"></a>
+                    <a class="noselected" href="" target="_blank">PRODUCTOS</a>
+                    <a class="selected">CUENTA</a>
+                    <a class="noselected" href="" target="_blank">CONTACTOS</a>
+                </ul>
+            </il>
+        </div>
+<!------------------------------------------------------------>
+<!--						BODY							-->
+<!------------------------------------------------------------>
+        <div>
+        <h1>CREACIÓN DE CUENTA</h1><br>
+        <h3>Porfavor rellenar los siguientes datos:</h3>
+        <p><label class="oblig">*</label>Campos obligatorios...</p><br>
+
+        <form action="">
+            <h3 style="font-weight: bold">USUARIO</h3>
+            <label for="usuario"><label class="oblig">*</label></label>Nombre de usuario<br>
+            <input class="info" type="text" id="apellido1" required><br><br>
+
+            <label for="contra1"><label class="oblig">*</label>Contraseña</label><br>
+            <input class="info" type="password" id="contra1" required><br><br>
+
+            <label for="contra2"><label class="oblig">*</label>Repetición de contraseña</label><br>
+            <input class="info" type="password" id="contra2" required><br><br><br>
+
+
+
+            <h3 style="font-weight: bold">DATOS DEL USUARIO</h3>
+            <label for="nombre1">Nombre</label><br>
+            <input class="info" type="text" id="nombre1"><br><br>
+
+            <label for="apellido1">Primer apellido</label><br>
+            <input class="info" type="text" id="apellido1"><br><br>
+            
+            <label for="apellido2">Segundo apellido</label><br>
+            <input class="info" type="text" id="apellido2"><br><br>
+
+            <label for="anno"><label class="oblig">*</label>Fecha de nacimiento:<br>
+            <input class="info" type="date" id="anno" required><br>
+
+            <label><label class="oblig">*</label>Sexo:<br>
+            <select class="info"  required>
+                <option value="0"></option>
+                <option value="X">Femenino</option>
+                <option value="Y">Masculino</option>
+                <option value="Z">Prefiero no decirlo</option>
+            </select><br><br><br>
+
+
+            <h3 style="font-weight: bold">DATOS DE CONTACTO</h3>
+            <label for="email1"><label class="oblig">*</label>Correo electrónico</label><br>
+            <input class="info" type="email" id="email1" required><br><br>
+
+            <label for="email2"><label class="oblig">*</label>Repetición de correo electrónico</label><br>
+            <input class="info" type="email" id="email2" required><br><br>
+
+            <label for="telef">Teléfono</label><br>
+            <input class="info" type="tel" id="telef"><br><br><br>
+
+
+
+            <h3 style="font-weight: bold">SELECCIONAR CUALQUIER DATO...<br><label style="font-size: 10px;">(No se nos ocurre nada que añadir aquí...disculpen las molestias)</label></h3>
+            
+            <input type="radio" id="esto" name="random">
+            <label for="esto">Esto</label><br>
+
+            <input type="radio" id="esto2" name="random">
+            <label for="esto2">Esto...</label><br>
+
+            <input type="radio" id="esto3" name="random">
+            <label for="esto3">ESTO</label><br>
+
+            <input type="radio" id="esto???" name="random">
+            <label for="esto???">(ㆆ_ㆆ)???</label><br><br><br>
+
+
+            
+            <input type="checkbox" id="novedades">
+            <label for="novedades">Deseo recibir notificaciones de novedades</label><br><br>
+            
+            <input type="checkbox" id="publicidad">
+            <label for="publicidad">Personalización de anuncios</label><br>
+
+            <input type="checkbox" id="lopd" required>
+            <label for="lopd"><label class="oblig">*</label>Acepto la LOPD</label><br><br><br>
+
+            <input class="submit" type="submit" value="CREAR CUENTA"><br><br><br><br><br><br><br><br><br><br>
+        </form>
+        </div>
+    </body>
+</html>
+<!------------------------------------------------------------>
+<!--														-->
+<!------------------------------------------------------------>

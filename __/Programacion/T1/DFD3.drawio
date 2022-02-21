@@ -1,0 +1,31 @@
+<mxfile host="65bd71144e">
+    <diagram id="ddBfkIQUEOLVVdWuOcfF" name="Page-1">
+        <mxGraphModel dx="650" dy="478" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="3) DFD que calcule el menor y mayor de tres números leídos por teclado." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="11" y="280" width="402.5" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Inicio" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="158.75" y="320" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="Imprimir &quot;El valor final es: &quot; + potencia(num1, Num2)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="440" width="320" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="Fin" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="158.75" y="600" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="93" value="i &amp;lt;= num2" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="500" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" value="i &amp;lt;-- i + 1" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="570" y="520" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="Falso" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="414" y="500" width="40" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

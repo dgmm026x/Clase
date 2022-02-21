@@ -1,0 +1,149 @@
+<!------------------------------------------------------------>
+<!--														-->
+<!--	Horario clase (versión con CSS)						-->
+<!--			D.A.M. 1 (2020 - 2021)						-->
+<!--			Daniel García Menéndez						-->
+<!--				v 1.0									-->
+<!--														-->
+<!------------------------------------------------------------>
+
+
+<!------------------------------------------------------------>
+<!--						HEAD							-->
+<!------------------------------------------------------------>
+
+
+<!DOCTYPE html>
+<head>
+	<title>Horario (versión CSS)</title>
+
+<!-- Datos de estilo -->
+	<style>
+		.tiempo
+		{
+			background-color:rgb(202, 202, 202)
+		}
+		.prog
+		{
+			color:rgb(200, 0, 0);
+			background-color:rgb(252, 169, 169)
+		}
+		.marcas
+		{
+			color:orangered;
+			background-color:rgb(255, 195, 173)
+		}
+		.datos
+		{
+			color:rgb(1, 110, 1);
+			background-color:rgb(210, 231, 210)
+		}
+		.entor
+		{
+			color:purple;
+			background-color:rgb(243, 167, 243)
+		}
+		.infor
+		{
+			color:rgb(47, 151, 141);
+			background-color:rgb(178, 223, 218)
+		}
+		.fol
+		{
+			color:rgb(160, 80, 0);
+			background-color:rgb(226, 215, 192)
+		}
+		.ing
+		{
+			color:rgb(0, 0, 200);
+			background-color:rgb(193, 193, 247)
+		}
+	</style>
+</head>
+
+
+<!------------------------------------------------------------>
+<!--						BODY							-->
+<!------------------------------------------------------------>
+
+
+<body style="background-color: rgb(100, 100, 100); font-family:Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold">
+	<table  style="text-align: center"; border="1" cellspacing="0" cellpadding="24">
+
+<!-- Fila -1 - infomación -->
+		<tr>
+			<th colspan="6" style="background-color:rgb(172, 172, 172)">Horario 1º DAM / DAW</th>
+		</tr>
+
+<!-- Fila 0 - días de asistencia semanal -->
+		<tr class="tiempo">
+			<th></th>
+			<th>Lunes</th>
+			<th>Martes</th>
+			<th>Miércoles</th>
+			<th>Jueves</th>
+			<th>Viernes</th>
+		</tr>
+
+<!-- Fila 1 - primera fila asignaturas-->
+		<tr>
+			<th class="tiempo">8:30 - 9:25</th>
+			<td class="prog">Programación</td>
+			<td class="prog" rowspan="2">Programación</td>
+			<td class="entor" rowspan="2" >Entornos de desarrollo</td>
+			<td class="datos">Bases de datos</td>
+			<td class="prog" rowspan="2">Programación</td>
+		</tr>
+
+<!-- Fila 2 - segunda fila asignaturas-->
+		<tr>
+			<th class="tiempo">9:25 - 10:20</th>
+			<td class="infor" rowspan="2">Sistemas informáticos</td>
+			<td class="prog" rowspan="2">Programación</td>
+		</tr>
+
+<!-- Fila 3 - tercera fila asignaturas-->
+		<tr>
+			<th class="tiempo">10:20 - 11:15</th>
+			<td class="datos">Bases de datos</td>
+			<td class="datos">Bases de datos</td>
+			<td class="infor">Sistemas informáticos</td>
+		</tr>
+
+<!-- Fila 4 - descanso -->
+		<tr>
+			<th class="tiempo">11:15 - 11:45</th>
+			<td colspan="5" style="background-color:rgb(223, 223, 223)">Descanso</td>
+		</tr>
+
+<!-- Fila 5 - cuarta fila asignaturas-->
+		<tr>
+			<th class="tiempo">11:45 - 12:40</th>
+			<td class="marcas" rowspan="2">Lenguaje de marcas</td>
+			<td class="datos">Bases de datos</td>
+			<td class="fol">F.O.L.</td>
+			<td class="fol">F.O.L.</td>
+			<td class="datos" rowspan="2">Bases de datos</td>
+		</tr>
+
+<!-- Fila 6 - quinta fila asignaturas-->
+		<tr>
+			<th class="tiempo">12:40 - 13:35</th>
+			<td class="infor" rowspan="2">Sistemas informáticos</td>
+			<td class="ing" rowspan="2">Inglés</td>
+			<td class="marcas" rowspan="2">Lenguaje de marcas</td>
+		</tr>
+
+<!-- Fila 7 - sexta fila asignaturas-->
+		<tr>
+			<th class="tiempo">13:35 - 14:30</th>
+			<td class="entor">Entornos de desarrollo</td>
+			<td class="fol">F.O.L.</td>
+		</tr>
+	</table>
+</body>
+
+
+<!------------------------------------------------------------>
+<!--														-->
+<!------------------------------------------------------------>
