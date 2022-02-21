@@ -1,0 +1,670 @@
+/*------------------------------------------------------*/
+/*              ---   CSS: RESONSIVE    ---             */
+/*			    ---AIRBNB NEWS: ABOUT US---      	    */
+/*			    ---        v 1.0        ---      		*/
+/*------------------------------------------------------*/
+
+
+
+/*Contenido base que no es afectado por Resposive, como titulo, logo,...*/
+body
+{
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.55556;
+    font-family: Cereal,sans-serif;
+    color: #222;
+    background-color: rgb(255, 255, 255);
+}
+header
+{
+    display: flex;
+    padding: 0 6%;
+    height: 80px;
+    justify-content:space-between;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+header a img /*Logo*/
+{
+    float: left;
+    height: 32px;
+    width: 30px;
+    margin-top: 24px;
+    margin-right: 6px;
+}
+header a span   /*Texto "News"*/
+{
+    float: left;
+    margin-top: 12px;
+    padding: 12px 0;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.33333;
+    letter-spacing: -0.53px;
+    text-decoration: none;
+    color: #222;
+}
+
+
+
+/*------------------------------------------------------*/
+/*                 MEDIA: width > 750px                 */
+/*------------------------------------------------------*/
+
+
+
+@media (min-width:750px)
+{
+    header div   /*Accesos del menú*/
+    {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: left;
+    }
+
+    header div a /*Accesos*/
+    {
+        margin-left: 8px;
+        padding: 10px 12px;
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+        color: #000;
+    }
+    header div a:hover   /*Accesos (cuando se coloca el ratón encima...)*/
+    {
+        border-radius: 8px;
+        background-color: #f2f2f2;
+    }
+    header div:nth-of-type(2)
+    {
+        display: none;
+    }
+    .img    /*Imagen bajo el menú*/
+    {
+        width: 100%;
+        margin-top: auto;
+    }
+
+
+
+    .about
+    {
+        margin: 0 24px;
+        padding: 0 22%;
+    }
+    .about h2
+    {
+        margin: 80px 9% 8px;
+        font-size: 32px;
+        line-height: 1.375;
+        font-weight: 600;
+    }
+    .about p
+    {
+        margin: 0 9% 24px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+
+
+    .facts
+    {
+        margin: 80px 0 0;
+        padding: 80px 64px;
+        background-color: #f2f2f2;
+    }
+    .facts h2
+    {
+        font-size: 32px;
+        line-height: 1.375px;
+        font-weight: 600;
+        padding: 15px 0;
+        margin: 0 0 32px;
+    }
+    .facts div
+    {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .facts div div
+    {
+        width: 220px;
+        margin: 0 16px 16px 0;
+        padding: 40px 40px 32px;
+        background-color: #fff;
+        border-radius: 12px;    
+    }
+    .facts div div p:nth-child(1)
+    {
+        font-size: 64px;
+        line-height: 1.125;
+        margin: 0 0 8px;
+        font-weight: 600;
+    }
+    .facts div div p:nth-child(2)
+    {
+        font-size: 16px;
+        line-height: 1.33333;
+        margin-bottom: 32px;
+    }
+    .facts div div p:nth-child(3)
+    {
+        font-size: 12px;
+        line-height: 1.33333;
+        margin-top: auto;
+        color: #717171;
+    }
+
+
+
+    .founders
+    {
+        padding: 80px;
+    }
+    .founders h2
+    {
+        font-size: 32px;
+        line-height: 1.375px;
+        font-weight: 600;
+        padding: 15px 0;
+        margin: 0 0 32px;
+    }
+    .founders div
+    {
+        display: flex;
+        flex-direction: row;
+    }
+    .founders > div div
+    {
+        flex-direction: column;
+        width: 400px;
+        max-height: 50%;
+        margin: 0 8px;
+        background-color: #fff;
+    }
+    .founders div div img
+    {
+        max-width: 100%;
+        border-radius: 20px;
+    }
+    .founders div div p:nth-child(2)
+    {
+        margin-bottom: 0;
+        font-size: 18px;
+        line-height: 1.33333;
+        font-weight: 600;
+    }
+    .founders div div p:nth-child(2):hover
+    {
+        text-decoration: underline;
+    }
+    .founders div div p:nth-child(3)
+    {
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 400;
+        margin-top: 4px 0 0;
+    }
+
+
+
+    .history
+    {
+        padding: 80px;
+    }
+    .history h2
+    {
+        font-size: 32px;
+        line-height: 1.375px;
+        font-weight: 600;
+        padding: 15px 0;
+        margin: 0 0 32px;
+    }
+    .history div
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .history div div
+    {
+        flex-direction: column;
+        max-width: 25%;
+        max-height: 50%;
+        margin: 0 8px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+    }
+
+    .history div div img
+    {
+        max-height: 100%;
+        border-top-left-radius: 11px;
+        border-top-right-radius: 11px;
+    }
+    .history div div p:nth-of-type(1)
+    {
+        margin: 0 0 0 4px;
+        font-size: 18px;
+        line-height: 1.33333;
+        padding: 30px 24px 0;
+        font-weight: 600;
+    }
+    .history div div p:nth-of-type(2)
+    {
+        font-size: 14px;
+        padding: 0 24px 24px;
+        margin: 0;
+    }
+
+
+
+    .end
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: auto;
+        padding: 80px;
+        padding-bottom: 0;
+        border-top: 1px solid #ddd;
+        background-color: #f7f7f7;
+    }
+    .data
+    {
+        width: 25%;
+    }
+    .end div p
+    {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.33333;
+        font-weight: 600;
+    }
+    .end div a
+    {
+        margin: 16px 0 0;
+        font-size: 14px;
+        line-height: 1.33333;
+        font-weight: 400;
+        text-decoration: none;
+        font-family: Cereal,sans-serif;
+        color: #222;
+    }
+
+
+
+    .disc
+    {
+        margin: 0;
+        padding: 50px 80px 20px;
+        background-color: #f7f7f7;
+    }
+    .disc p
+    {
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.33333;
+        font-weight: 600;
+    }
+    .disc p
+    {
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.33333;
+        font-weight: 400;
+    }
+
+
+
+    .c 
+    {
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 24px 80px;
+    }
+    .c a
+    {
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.33333;
+        font-weight: 400;
+        text-decoration: none;
+        font-family: Cereal,sans-serif;
+        color: #222;
+    }
+    .c a
+    {
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.33333;
+        font-weight: 400;
+        text-decoration: none;
+        font-family: Cereal,sans-serif;
+        color: #222;
+    }
+    .c a:nth-of-type(1n+2):hover
+    {
+        text-decoration: underline;
+    }
+}
+
+
+
+/*------------------------------------------------------*/
+/*                 MEDIA: width < 750px                 */
+/*------------------------------------------------------*/
+
+
+
+@media (max-width:750px)
+{
+    header div   /*Accesos del menú*/
+    {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: left;
+    }
+
+    header div a /*Accesos*/
+    {
+        display: none;
+    }
+    header div:nth-of-type(2)
+    {
+        display: flex;
+        flex-flow: column;
+        margin-top: 25px;
+    }
+    header div:nth-of-type(2) div
+    {
+        margin-top: 6px;
+        height: 2px;
+        background-color: black;
+        width: 30px;
+    }
+    .img    /*Imagen bajo el menú*/
+    {
+        display: flex;
+        width: 130%;
+    }
+
+
+
+    .about
+    {
+        margin: 0 24px;
+    }
+    .about h2
+    {
+        margin: 80px 9% 8px;
+        font-size: 32px;
+        line-height: 1.375;
+        font-weight: 600;
+    }
+    .about p
+    {
+        margin: 0 9% 24px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+
+
+    .facts
+    {
+        margin: 80px 0 0;
+        padding: 80px 64px;
+        background-color: #f2f2f2;
+    }
+    .facts h2
+    {
+        font-size: 32px;
+        line-height: 1.375px;
+        font-weight: 600;
+        padding: 15px 0;
+        margin: 0 0 32px;
+    }
+    .facts div
+    {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    .facts div div
+    {
+        width: 300px;
+        margin: 0 16px 16px 0;
+        padding: 40px 40px 32px;
+        background-color: #fff;
+        border-radius: 12px;    
+    }
+    .facts div div p:nth-child(1)
+    {
+        font-size: 64px;
+        line-height: 1.125;
+        margin: 0 0 8px;
+        font-weight: 600;
+    }
+    .facts div div p:nth-child(2)
+    {
+        font-size: 16px;
+        line-height: 1.33333;
+        margin-bottom: 32px;
+    }
+    .facts div div p:nth-child(3)
+    {
+        font-size: 12px;
+        line-height: 1.33333;
+        margin-top: auto;
+        color: #717171;
+    }
+
+
+
+    .founders
+    {
+        padding: 80px 0;
+    }
+    .founders h2
+    {
+        font-size: 32px;
+        line-height: 1.375px;
+        font-weight: 600;
+        padding: 15px 0;
+        margin: 0 0 32px;
+    }
+    .founders div
+    {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    .founders > div div
+    {
+        flex-direction: column;
+        width: 90%;
+        max-height: 50%;
+        margin: 0 8px;
+        background-color: #fff;
+    }
+    .founders div div img
+    {
+        max-width: 100%;
+        border-radius: 20px;
+    }
+    .founders div div p:nth-child(2)
+    {
+        margin-bottom: 0;
+        font-size: 18px;
+        line-height: 1.33333;
+        font-weight: 600;
+    }
+    .founders div div p:nth-child(2):hover
+    {
+        text-decoration: underline;
+    }
+    .founders div div p:nth-child(3)
+    {
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 400;
+        margin-top: 4px 0 0;
+    }
+
+
+
+    .history
+    {
+        padding: 80px;
+    }
+    .history h2
+    {
+        font-size: 32px;
+        line-height: 1.375px;
+        font-weight: 600;
+        padding: 15px 0;
+        margin: 0 0 32px;
+    }
+    .history div
+    {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    .history div div
+    {
+        flex-direction: column;
+        max-width: 25%;
+        margin: 0 8px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+    }
+
+    .history div div img
+    {
+        max-height: 10%;
+        border-top-left-radius: 11px;
+        border-top-right-radius: 11px;
+    }
+    .history div div p:nth-of-type(1)
+    {
+        margin: 0 0 0 4px;
+        font-size: 18px;
+        line-height: 1.33333;
+        padding: 30px 24px 0;
+        font-weight: 600;
+    }
+    .history div div p:nth-of-type(2)
+    {
+        font-size: 14px;
+        padding: 0 24px 24px;
+        margin: 0;
+    }
+
+
+
+    .end
+    {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        padding: 30px;
+        padding-bottom: 0;
+        border-top: 1px solid #ddd;
+        background-color: #f7f7f7;
+    }
+    .data
+    {
+        padding: 20px 0;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+    }
+    .end div p
+    {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.33333;
+        font-weight: 600;
+    }
+    .end div a
+    {
+        margin: 16px 0 0;
+        font-size: 14px;
+        line-height: 1.33333;
+        font-weight: 400;
+        text-decoration: none;
+        font-family: Cereal,sans-serif;
+        color: #222;
+    }
+
+
+
+    .disc
+    {
+        margin: 0;
+        padding: 50px 30px 20px;
+        background-color: #f7f7f7;
+    }
+    .disc p
+    {
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.33333;
+        font-weight: 600;
+    }
+    .disc p
+    {
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.33333;
+        font-weight: 400;
+    }
+
+
+
+    .c 
+    {
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 24px 30px;
+    }
+    .c a
+    {
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.33333;
+        font-weight: 400;
+        text-decoration: none;
+        font-family: Cereal,sans-serif;
+        color: #222;
+    }
+    .c a
+    {
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.33333;
+        font-weight: 400;
+        text-decoration: none;
+        font-family: Cereal,sans-serif;
+        color: #222;
+    }
+    .c a:nth-of-type(1n+2):hover
+    {
+        text-decoration: underline;
+    }
+}
+
+
+
+/*------------------------------------------------------*/
+/*                                                      */
+/*------------------------------------------------------*/

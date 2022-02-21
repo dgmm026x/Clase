@@ -1,0 +1,30 @@
+*
+{
+    background-color: rgb(2, 2, 2);
+    color: white;
+}
+h2{background-color: transparent;}
+p{background-color: transparent;}
+#ajustes
+{
+    background-color: rgb(27, 27, 27);
+    border-radius: 20px;
+    display: flex;
+}
+div
+{
+    background-color: aqua;
+}
+#ajustes:hover
+{
+    background-color: rgb(35, 35, 35);
+}
+#ajustes img
+{
+}
+#ajustes p:nth-child(1)
+{
+}
+#ajustes p:nth-child(2)
+{
+}
