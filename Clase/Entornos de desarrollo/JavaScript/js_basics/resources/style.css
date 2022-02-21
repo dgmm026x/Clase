@@ -1,0 +1,48 @@
+* {
+    font-family: "Courier New", Courier, monospace;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 24px;
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#main {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+.tarjeta {
+    background-color: white;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+}
+.tarjeta .tarjeta-img-container {
+    min-height: 120px;
+    max-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    width: 100%;
+}
+.tarjeta .tarjeta-img-container img {
+    width: 150%;
+}
+.tarjeta .tarjeta-content {
+    padding: 18px;
+}
+#link {
+    text-align: center;
+}
+@media (max-width: 500px) {
+    #main {
+        margin-top: 0;
+    }
+}
