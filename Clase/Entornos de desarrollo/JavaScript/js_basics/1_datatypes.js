@@ -8,7 +8,7 @@ console.log("1.datatypes: 👋 Bienvenidos, en este fichero se harán ejercicios
 //crear una variable de tipo string y otra de tipo int, ambas con el mismo valor numérico. Compararlas para ver si contienen el mismo valor
 
 //utilizar las mismas variables del ejercicio anterior y realizar una comparación estricta
-jhfghwekjhgkwe;
+
 //crear dos arrays con el mismo contenido y comparar con "==" si ambos arrays son iguales
 
 //ahora comparar el contenido de dichos arrays utilizando un bucle
