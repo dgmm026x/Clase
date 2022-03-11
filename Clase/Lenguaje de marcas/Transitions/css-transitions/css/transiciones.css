@@ -1,0 +1,62 @@
+
+
+/*Realizar las siguientes transiciones cuando se hace hover sobre el elemento indicado*/
+/*Asigna a cada caja un color de fondo diferente en hexadecimal siguiendo algún patron de https://coolors.co/ */
+
+.caja:nth-child(1){background-color: #EE6352;}
+.caja:nth-child(2){background-color: #59CD90;}
+.caja:nth-child(3){background-color: #3FA7D6;}
+.caja:nth-child(4){background-color: #FAC05E;}
+.caja:nth-child(5){background-color: #F79D84;}
+.caja:nth-child(6){background-color: #4BC6B9;}
+.caja:nth-child(7){background-color: #73C1C6;}
+.caja:nth-child(8){background-color: #96C3CE;}
+.caja:nth-child(9){background-color: #A79AB2;}
+
+
+/*Caja nº 1 con transición de cambio de color de fondo */
+
+.caja:nth-child(1){transition: background-color 250ms linear;}
+.caja:nth-child(1):hover{background-color: rgb(75, 75, 75);}
+
+
+/*Caja nº 2 con transición de cambio de tamaño de tipografía, duración 2 segundos*/
+
+.caja:nth-child(2){transition: font-size 250ms linear;}
+.caja:nth-child(2):hover{font-size: 48px;}
+
+
+/*Caja nº 3 con transición de cambio de color de las letras del contenedor, duración una quinta parte de un segundo*/
+
+.caja:nth-child(3){}
+
+
+/*Caja nº 4 con transición de cambio de valor del interlineado, con inicio suavizado*/
+
+.caja:nth-child(4){}
+
+
+/*Caja nº 5 con transición de cambio de redondeo de las esquinas un segundo después de hacer el hover*/
+
+.caja:nth-child(5){}
+
+
+/*Caja nº 6 con transición de cambio de opacidad durante 2 segundos con entrada y salida suavizada*/
+
+.caja:nth-child(6){}
+
+
+/*Cajas impares con transición de sombra con salida suavizada y duración de medio segundo*/
+
+.caja:nth-child(1){}
+.caja:nth-child(3){}
+.caja:nth-child(5){}
+.caja:nth-child(7){}
+.caja:nth-child(9){}
+
+
+/*Cajas 7,8 y 9 con propiedades a tu elección*/
+
+.caja:nth-child(7){}
+.caja:nth-child(8){}
+.caja:nth-child(9){}

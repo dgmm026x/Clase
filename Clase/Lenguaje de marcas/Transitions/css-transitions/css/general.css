@@ -1,0 +1,43 @@
+/*importación de fuentes de google*/
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&display=swap");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Fredoka", sans-serif;
+}
+h1 {
+    font-size: 40px;
+    margin-bottom: 24px;
+}
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+    margin: auto;
+}
+.v-al-center {
+    align-items: center;
+}
+.h-al-center {
+    justify-content: center;
+}
+
+.grid-container {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+}
+
+.caja {
+    height: 200px;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.caja span {
+    font-size: 24px;
+    font-weight: 500;
+}
