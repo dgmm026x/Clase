@@ -22,8 +22,8 @@
 
 /*Caja nº 2 con transición de cambio de tamaño de tipografía, duración 2 segundos*/
 
-.caja:nth-child(2){transition: font-size 250ms linear;}
-.caja:nth-child(2):hover{font-size: 48px;}
+/*.caja:nth-child(2){transition: font-size 250ms linear;}*/
+.caja:nth-child(2):hover{}
 
 
 /*Caja nº 3 con transición de cambio de color de las letras del contenedor, duración una quinta parte de un segundo*/
@@ -34,33 +34,51 @@
 
 /*Caja nº 4 con transición de cambio de valor del interlineado, con inicio suavizado*/
 
-.caja:nth-child(4){/*transition: ;*/}
+.caja:nth-child(4){}
 .caja:nth-child(4):hover{}
 
 
 /*Caja nº 5 con transición de cambio de redondeo de las esquinas un segundo después de hacer el hover*/
 
-.caja:nth-child(5){transition: border-radius 250ms linear;}
+.caja:nth-child(5){transition: border-radius 250ms ease-in;}
 .caja:nth-child(5):hover{border-radius:25px;}
 
 
 /*Caja nº 6 con transición de cambio de opacidad durante 2 segundos con entrada y salida suavizada*/
 
-.caja:nth-child(6){}
-.caja:nth-child(6):hover{}
+.caja:nth-child(6){transition: opacity 250ms ease-in-out;}
+.caja:nth-child(6):hover{opacity: 20%;}
 
 
 /*Cajas impares con transición de sombra con salida suavizada y duración de medio segundo*/
 
 .caja:nth-child(1){}
+.caja:nth-child(1):hover{}
 .caja:nth-child(3){}
+.caja:nth-child(3):hover{}
 .caja:nth-child(5){}
-.caja:nth-child(7){}
-.caja:nth-child(9){}
+.caja:nth-child(5):hover{}
 
 
 /*Cajas 7,8 y 9 con propiedades a tu elección*/
 
 .caja:nth-child(7){}
+.caja:nth-child(7):hover{}
 .caja:nth-child(8){}
-.caja:nth-child(9){}
+.caja:nth-child(8):hover{}
+.caja:nth-child(9)
+{
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    transition: background-color 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
+}
+.caja:nth-child(9):hover
+{
+    background-color: black;
+    color: white;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
