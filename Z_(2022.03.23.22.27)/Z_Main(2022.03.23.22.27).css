@@ -16,14 +16,17 @@
 body
 {
     /* border-left: 2px solid rgb(255, 255, 255); */
-    background-color: rgb(113, 189, 37);
+    background-color: rgb(125, 25, 25);
 }
 
 
+/**********************************************************************/
+/**********************************************************************/
 
-#PreHeader
+
+.PreHeader
 {
-    height: 61px;
+    height: 89px;
     width: 100%;
 
     background-color: black;
@@ -32,7 +35,7 @@ header
 {
     top: 0;
     position: sticky;
-    height: 60px;
+    height: 88px;
     width: 100%;
     
     display: flex;
@@ -41,38 +44,85 @@ header
     position: fixed;
     overflow: hidden;
 
-    /* border-left: 2px solid white; */
-    /* border-right: 2px solid white; */
+    border-top: 1px solid white;
     border-bottom: 1px solid white;
 
-    background-color: rgba(0, 0, 0, 0.500);
+    background-color: rgba(0, 0, 0, 0.75);
     text-decoration: none;
 }
 
 
+/**********************************************************************/
 
-#Header_Z
+
+.MenuGap
 {
-    height: 60px;
+    height: 100%;
+    width: 50px;
 }
-#Header_Z a
+.MenuCenter
+{
+    width: 100%;
+    height: 88px;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+
+/**********************************************************************/
+
+
+.MenuTop
+{
+    width:100%;
+    height: 44px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.MenuLogo
+{
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.MenuLogo a
 {
     transition: color 250ms ease-out;
 
     font-size: 40px;
     text-decoration: none;
 }
-#Header_Z a:hover
+.MenuLogo a:hover
 {
-    color:red
+    color: rgb(255, 25, 25);
 }
 
 
+/**********************************************************************/
 
-.Header_Option
+
+.MenuBottom
 {
-    margin-left: 5px;
-    height: 40px;
+    width:100%;
+    height: 44px;
+    
+    background-color: blue;
+}
+.MenuOption
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Option
+{
+    height: 36px;
     width: 70px;
 
     display: flex;
@@ -85,20 +135,25 @@ header
 
     font-size: 22px;
     text-decoration: none;
+
+    background-color: brown;
 }
-.Header_Option:hover
+.Option:hover
 {
     background-color: white;
     color: black;
 }
 
 
+/**********************************************************************/
+/**********************************************************************/
 
-#Main_1
+
+.PageContent
 {
     margin: 0;
     padding: 50px;
-    min-height: 100px;
+    min-height: 400px;
 
     display: flex;
     align-items: flex-end;
@@ -108,7 +163,7 @@ header
     background-position: center;
     background-repeat: no-repeat;
 }
-#Main_1 a
+.PageContent a
 {
     padding: 5px 15px;
 
@@ -119,49 +174,27 @@ header
     font-size: 30px;
     text-decoration: none;
 }
-#Main_1 a:hover
+.PageContent a:hover
 {
     background-color:white;
     color: black;
 }
 
 
-
-/**********************************************************************/
-/**********************************************************************/
 /**********************************************************************/
 
 
-
-@media(min-width:900px)
+.End
 {
-    #Header_Section
-    {
-        display: flex;
-        flex-direction: row;
-    }
-
-
-
-    header nav
-    {
-        display: none;
-    }
-
-
-
-    #EndGrid
-    {
-        display: grid;
-        grid-template-columns:
-            minmax(0px 1000px)
-            minmax(0px 1000px)
-            minmax(0px 1000px)
-            minmax(0px 1000px);
-        grid-template-rows:
-            minmax(50px 100px)
-            minmax(50px 100px);
-    }
+    display: grid;
+    grid-template-columns:
+        minmax(0px 1000px)
+        minmax(0px 1000px)
+        minmax(0px 1000px)
+        minmax(0px 1000px);
+    grid-template-rows:
+        minmax(50px 100px)
+        minmax(50px 100px);
 }
 
 
@@ -172,12 +205,20 @@ header
 
 
 
-@media(max-width:900px)
+@media(min-width:601px)
 {
-    #Header_Section
-    {
-        display: none;
-    }
+}
+
+
+
+/**********************************************************************/
+/**********************************************************************/
+/**********************************************************************/
+
+
+
+@media(max-width:600px)
+{
 }
 
 
