@@ -20,22 +20,24 @@ body
 }
 
 
-/**********************************************************************/
-/**********************************************************************/
+
+/************************************************************************/
+/*                          MENU                                        */
+/************************************************************************/
 
 
-.PreHeader
+
+.UnderMenu
 {
-    height: 89px;
     width: 100%;
-
-    background-color: black;
+    min-height: 122px;
+    
+    background-color: rgb(0, 0, 0);
 }
 header
 {
     top: 0;
-    position: sticky;
-    height: 88px;
+    height: 120px;
     width: 100%;
     
     display: flex;
@@ -44,116 +46,125 @@ header
     position: fixed;
     overflow: hidden;
 
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-
-    background-color: rgba(0, 0, 0, 0.75);
-    text-decoration: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 
+
 /**********************************************************************/
+
 
 
 .MenuGap
 {
+    width: 25%;
     height: 100%;
-    width: 50px;
 }
 .MenuCenter
 {
     width: 100%;
-    height: 88px;
+    height: 100px;
     
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 
+
 /**********************************************************************/
+
 
 
 .MenuTop
 {
     width:100%;
-    height: 44px;
+    height: 60px;
 
     display: flex;
-    flex-direction: row;
     justify-content: center;
 }
 .MenuLogo
 {
-    width: 44px;
-    height: 44px;
+    width: 60px;
+    height: 60px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.MenuLogo a
+.Logo
 {
-    transition: color 250ms ease-out;
+    height: 60px;
 
-    font-size: 40px;
-    text-decoration: none;
+    transition: visbility 300ms ease-out;
 }
-.MenuLogo a:hover
+.Logo:hover
 {
-    color: rgb(255, 25, 25);
+    visibility: hidden;
 }
+.LogoRed
+{
+    display: none;
+}
+
 
 
 /**********************************************************************/
+
 
 
 .MenuBottom
 {
     width:100%;
-    height: 44px;
+    min-height: 60px;
     
-    background-color: blue;
-}
-.MenuOption
-{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-evenly;
 }
-.Option
+.MenuOption span
 {
     height: 36px;
-    width: 70px;
-
+    width: 85px;
+    margin: 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border-top-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    transition: background-color 250ms ease-out;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: background-color 300ms ease-out;
 
-    font-size: 22px;
-    text-decoration: none;
-
-    background-color: brown;
+    font-size: 24px;
 }
-.Option:hover
+.MenuOption span:hover
 {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 1);
     color: black;
 }
+.OptionContent
+{
+    width: 100%;
+    height: 0;
+    display: none;
+}
 
 
-/**********************************************************************/
-/**********************************************************************/
+
+/************************************************************************/
+/*                          WEBSITE CONTENT                             */
+/************************************************************************/
+
 
 
 .PageContent
 {
     margin: 0;
-    padding: 50px;
-    min-height: 400px;
+    height: 43.4vw;
 
     display: flex;
     align-items: flex-end;
@@ -165,64 +176,80 @@ header
 }
 .PageContent a
 {
-    padding: 5px 15px;
+    margin: 0 50px 5vw 50px;
+    padding: 1vw 2.5vw;
 
-    border-top-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    transition: background-color 250ms ease-out;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: background-color 300ms ease-out;
 
-    font-size: 30px;
+    font-size: 2.2vw;
     text-decoration: none;
+
+    background-color: rgba(0, 0, 0, 0.4);
 }
 .PageContent a:hover
 {
-    background-color:white;
+    background-color:rgba(255, 255, 255, 0.6);
     color: black;
 }
-
-
-/**********************************************************************/
-
-
-.End
+#burguer
 {
-    display: grid;
-    grid-template-columns:
-        minmax(0px 1000px)
-        minmax(0px 1000px)
-        minmax(0px 1000px)
-        minmax(0px 1000px);
-    grid-template-rows:
-        minmax(50px 100px)
-        minmax(50px 100px);
+display: none;
 }
 
 
 
-/**********************************************************************/
-/**********************************************************************/
-/**********************************************************************/
+/************************************************************************/
+/*                          MEDIAQUERIES                                */
+/************************************************************************/
 
 
 
-@media(min-width:601px)
+@media(max-width:900px)
 {
+    .MenuOption:nth-last-of-type(1n+3) span
+    {
+        display: none;
+    }
+    .MenuBottom
+    {
+        justify-content: center;
+    }
+    .PageContent
+    {
+        min-height: 350px;
+    }
+    .PageContent a
+    {
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        font-size: 3.5vw;
+    }
 }
 
 
 
-/**********************************************************************/
-/**********************************************************************/
-/**********************************************************************/
+/************************************************************************/
 
 
 
 @media(max-width:600px)
 {
+    .PageContent
+    {
+        height: 350px;
+        justify-content: center;
+    }
+    .PageContent a
+    {
+        font-size: 5vw;
+    }
 }
 
 
 
-/**********************************************************************/
-/**********************************************************************/
-/**********************************************************************/
+/************************************************************************/
+/************************************************************************/
+/************************************************************************/
