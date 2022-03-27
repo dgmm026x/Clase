@@ -8,15 +8,10 @@
 {
     margin: 0;
 
-    background-color: transparent;
+    background-color: rgb(125, 25, 25);
     color: white;
 
     font-family: bahnschrift;
-}
-body
-{
-    /* border-left: 2px solid rgb(255, 255, 255); */
-    background-color: rgb(125, 25, 25);
 }
 
 
@@ -30,25 +25,21 @@ body
 .UnderMenu
 {
     width: 100%;
-    min-height: 122px;
+    height: 120px;
     
     background-color: rgb(0, 0, 0);
 }
-header
+.NavBar
 {
     top: 0;
-    height: 120px;
     width: 100%;
     
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    overflow: hidden;
 
-    border-bottom: 2px solid rgb(255, 255, 255);
-    
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: transparent;
 }
 
 
@@ -60,16 +51,20 @@ header
 .MenuGap
 {
     width: 25%;
-    height: 100%;
+    height: 108px;
+
+    background-color: rgba(0, 0, 0, 0.6);
 }
 .MenuCenter
 {
     width: 100%;
-    height: 100px;
+    height: 100%;
     
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 
@@ -85,6 +80,8 @@ header
 
     display: flex;
     justify-content: center;
+
+    background-color: transparent;
 }
 .MenuLogo
 {
@@ -94,20 +91,20 @@ header
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: visbility 300ms ease-out;
+
+    background-color: transparent;
 }
 .Logo
 {
     height: 60px;
 
-    transition: visbility 300ms ease-out;
-}
-.Logo:hover
-{
-    visibility: hidden;
-}
-.LogoRed
-{
-    display: none;
+    display: flex;
+    align-items: center;
+
+    font-size: 60px;
+
+    background-color: transparent;
 }
 
 
@@ -116,41 +113,170 @@ header
 
 
 
+
+.MenuGapInside
+{
+    width: 100%;
+    height: 12px;
+
+    background-color:  transparent;
+}
 .MenuBottom
 {
     width:100%;
-    min-height: 60px;
+    height: 36px;
     
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+
+    background-color: transparent;
 }
-.MenuOption span
+.MenuOption
 {
     height: 36px;
     width: 85px;
-    margin: 0 10px;
+    margin: 0 6px;
+
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    transition: background-color 300ms ease-out;
+    touch-action: auto;
+
+    border-top-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    transition: box-shadow 300ms ease-out, background-color 300ms ease-out;
 
     font-size: 24px;
+
+    background-color: transparent;
 }
-.MenuOption span:hover
+.MenuOption:hover
 {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     background-color: rgba(255, 255, 255, 1);
     color: black;
 }
+.MenuOption span
+{
+    background-color: transparent;
+    transition: color 600ms ease-out;
+}
+.MenuOption:hover span
+{
+    background-color: transparent;
+    color: black;
+}
+.MenuOption:nth-of-type(1n+8)
+{
+    display: none;
+}
+
+
+
 .OptionContent
 {
-    width: 100%;
+    width: 22%;
     height: 0;
+    
     display: none;
+    position: absolute;
+    top: 108px;
+    /* left: 0%; */
+
+    transition: box-shadow 300ms ease-out, background-color 300ms ease-out, color 600ms ease-out;
+    
+    background-color: transparent;
+}
+.MenuOption:hover .OptionContent
+{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+   
+    background-color: transparent;
+}
+.OptionContent .ContentGap
+{
+    width: 100%;
+    height: 22px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: transparent;
+}
+.OptionContent .Content
+{
+    height: 100%;
+    padding: 12px 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-top-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.OptionContent .Content p
+{
+    background-color: transparent;
+}
+.OptionContent .Content a
+{
+    padding: 3px 12px;
+    margin: 5px 0 0;
+
+    border-top-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    
+    transition: box-shadow 300ms ease-out, background-color 300ms ease-out, color 600ms ease-out;
+
+    font-size: 1.6vw;
+    text-align: center;
+    text-decoration: none;
+
+    background-color: transparent;
+}
+.OptionContent .Content a:nth-of-type(1)
+{
+    margin: 0;
+}
+.OptionContent .Content a:hover
+{
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+}
+
+
+
+.MenuGapOutside
+{
+    width: 100%;
+    height: 10px;
+    
+    position: fixed;
+    overflow: hidden;
+    top: 108px;
+
+    border-bottom: 2px solid white;
+
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 
@@ -170,58 +296,122 @@ header
     align-items: flex-end;
     justify-content: left;
 
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 100%;
+
+    transition: background-size 300ms ease-out;
+}
+.PageContent:hover
+{
+    background-size: 101%;
 }
 .PageContent a
 {
+    max-width: 50%;
     margin: 0 50px 5vw 50px;
     padding: 1vw 2.5vw;
 
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    transition: background-color 300ms ease-out;
+    border-top-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    transition: box-shadow 300ms ease-out, background-color 300ms ease-out, color 600ms ease-out;
 
     font-size: 2.2vw;
     text-decoration: none;
 
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 .PageContent a:hover
 {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     background-color:rgba(255, 255, 255, 0.6);
     color: black;
 }
-#burguer
+
+
+
+/************************************************************************/
+/*                          END                                         */
+/************************************************************************/
+
+
+
+.End
 {
-display: none;
+    width: 100%;
+    height: 20vw;
+
+    border-top: 2px solid white;
+
+    background-color: rgb(0, 0, 0);
 }
 
 
 
 /************************************************************************/
-/*                          MEDIAQUERIES                                */
+/*                          MEDIA QUERIES                               */
 /************************************************************************/
 
 
 
-@media(max-width:900px)
+@media(max-width: 800px)
 {
-    .MenuOption:nth-last-of-type(1n+3) span
+    .MenuOption:nth-last-of-type(1n+2)
     {
         display: none;
     }
-    .MenuBottom
+    .MenuOption:nth-of-type(1n+8)
     {
-        justify-content: center;
+        display: flex;
     }
-    .PageContent
+
+
+
+    .OptionContent
     {
-        min-height: 350px;
+        width: 67%;
+        display: none;/*NONE*/
     }
+    .OptionContent .Content
+    {
+        padding: 36px 24px;
+    }
+    .Content div
+    {
+        width: 100%;
+
+        background-color: transparent;
+    }
+    .OptionContent .Content div p
+    {
+        /* width: 40%; */
+        margin: 30px 0 6px 0;
+        padding: 0 0 0 6px;
+        font-size: 24px;
+        border-bottom: 1px solid white;
+    }
+    .OptionContent .Content div:nth-child(1) p
+    {
+        margin: 0 0 6px 0;
+    }
+    .OptionContent .Content div a
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;;
+        font-size: 2.5vw;
+    }
+
+
+
     .PageContent a
     {
+        display: flex;
+        vertical-align: middle;
+        justify-content: center;
         border-top-left-radius: 10px;
         border-bottom-right-radius: 10px;
 
@@ -235,18 +425,94 @@ display: none;
 
 
 
-@media(max-width:600px)
+/* @media (max-width: 1000px) and (max-height: 500px)
 {
+    .MenuOption:nth-last-of-type(1n+2)
+    {
+        display: flex;
+    }
+    .MenuOption:nth-of-type(1n+8)
+    {
+        display: none;
+    }
+
+
     .PageContent
     {
         height: 350px;
+    }
+} */
+
+
+
+/************************************************************************/
+
+
+
+/* @media(max-width: 800px) and (min-height: 500px)
+{
+    .UnderMenu{height: 120px;}
+    header{max-height: 120px;}
+    .MenuCenter{max-height: 100%;}
+    .MenuTop{max-height: 50%;}
+    .MenuBottom{max-height: 50%;}
+
+
+    .PageContent
+    {
+        height: 260px;
         justify-content: center;
     }
     .PageContent a
     {
         font-size: 5vw;
     }
-}
+} */
+
+
+
+/************************************************************************/
+
+
+
+/* @media (max-width: 800px) and (max-height: 500px)
+{
+    .UnderMenu
+    {
+        height: 60px;
+    }
+    header
+    {
+        height: 60px;
+
+    }
+    .MenuGap
+    {
+        width: 10%;
+    }
+    .MenuCenter
+    {
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+    }
+    .MenuTop
+    {
+        width: 50%;
+        height: 100%;
+    }
+    .MenuBottom
+    {
+        width: 50%;
+        height: 100%;
+    }
+
+
+    .PageContent
+    {
+        height: 200px;
+    }
+} */
 
 
 
