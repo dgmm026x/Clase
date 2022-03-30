@@ -46,7 +46,7 @@
     align-items: center;
     justify-content: space-between;
     position: fixed;
-
+    
     background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -88,14 +88,14 @@
 
     display: flex;
     justify-content: center;
+    align-items: center;
 
     background-color: transparent;
 }
 .MenuLogo
 {
-    width: 60px;
-    height: 60px;
-
+    width: 50px;
+    height: 50px;
     display: flex;
     justify-content: center;
     transition: visbility 300ms ease-out;
@@ -104,12 +104,12 @@
 }
 .Logo
 {
-    padding-bottom: 3px;
+    padding-bottom: 5px;
 
     display: flex;
     align-items: center;
 
-    font-size: 47px;
+    font-size: 60px;
 
     background-color: transparent;
 }
@@ -248,10 +248,10 @@
     margin: 5px 0 0;
     padding: 1px 12px 0;
 
-    border-top-left-radius: .6vw;
-    border-bottom-right-radius: .6vw;
-    border-bottom-left-radius: .075vw;
-    border-top-right-radius: .075vw;
+    border-top-left-radius: .8vw;
+    border-bottom-right-radius: .8vw;
+    border-bottom-left-radius: .1vw;
+    border-top-right-radius: .1vw;
     
     transition: box-shadow 300ms ease-out, background-color 300ms ease-out, color 600ms ease-out;
 
@@ -311,7 +311,7 @@
 }
 .PageContent:hover
 {
-    background-size: 102%;
+    background-size: 101.3%;
 }
 .PageContent a
 {
@@ -336,6 +336,13 @@
     background-color:rgba(255, 255, 255, 0.6);
     color: black;
 }
+
+
+
+/* .PageContent:nth-of-type(4){color: rgb(255, 0, 0);}
+.PageContent:nth-of-type(4){color: rgb(255, 111, 0);}
+.PageContent:nth-of-type(4){color: rgb(255, 247, 0);}
+.PageContent:nth-of-type(4){color: rgb(128, 255, 0);} */
 
 
 
@@ -436,12 +443,9 @@
     }
     .OptionContent .Content
     {
-        padding: 2vw 5vw 5vw;
+        padding: 0 5vw 5vw;
 
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(7, 1fr);
-        gap: 2vw;
+
     }
     .Content div
     {
@@ -452,13 +456,13 @@
     .OptionContent .Content div p
     {
         /* width: 40%; */
-        margin: 25px 0 0 0;
+        margin: 5vw 0 0 0;
         padding: 3px 12px 0;
 
-        /* border-top-left-radius: 11px; */
-        border-bottom-right-radius: 11px;
-        border-bottom-left-radius: 2px;
-        /* border-top-right-radius: 2px; */
+        /* border-top-left-radius: 1.2vw; */
+        border-bottom-right-radius: 1.2vw;
+        border-bottom-left-radius: .15vw;
+        /* border-top-right-radius: .15vw; */
 
         font-size: 3.2vw;
 
@@ -473,10 +477,10 @@
         flex-direction: row;
         align-items: baseline;
 
-        border-top-left-radius: 11px;
-        border-bottom-right-radius: 11px;
-        border-bottom-left-radius: 2px;
-        border-top-right-radius: 2px;
+        border-top-left-radius: 1.2vw;
+        border-bottom-right-radius: 1.2vw;
+        border-bottom-left-radius: .15vw;
+        border-top-right-radius: .15vw;
 
         font-size: 2.5vw;
     }
@@ -490,6 +494,11 @@
     .PageContent a
     {
         font-size: 3.2vw;
+
+        border-top-left-radius: 2vw;
+        border-bottom-right-radius: 2vw;
+        border-bottom-left-radius: .25vw;
+        border-top-right-radius: .25vw;
     }
 }
 
@@ -555,11 +564,11 @@
     }
     .OptionContent .Content
     {
-        padding: 0 20px 25px;
+        padding: 0 3vw 3vw;
     }
     .OptionContent .Content div p
     {
-        margin-top: 5px;
+        margin-top: 3vw;
         font-size: 2.7vw;
     }
     .OptionContent .Content div a
@@ -596,17 +605,23 @@
         width: 96%;
         height: 350px;/*256*/
     }
-    .OptionContent .Content
-    {
-        padding: 0 20px 25px;
-    }
     .OptionContent .Content div p
     {
         font-size: 6vw;
+
+        border-top-left-radius: 2vw;
+        border-bottom-right-radius: 2vw;
+        border-bottom-left-radius: .25vw;
+        border-top-right-radius: .25vw;
     }
     .OptionContent .Content div a
     {
         font-size: 4.5vw;
+
+        border-top-left-radius: 2vw;
+        border-bottom-right-radius: 2vw;
+        border-bottom-left-radius: .25vw;
+        border-top-right-radius: .25vw;
     }
 
 
@@ -620,10 +635,10 @@
         margin-left: 0px;
         font-size: 4.5vw;
 
-        border-top-left-radius: 11px;
-        border-bottom-right-radius: 11px;
-        border-bottom-left-radius: 2px;
-        border-top-right-radius: 2px;
+        border-top-left-radius: 2.4vw;
+        border-bottom-right-radius: 2.4vw;
+        border-bottom-left-radius: .3vw;
+        border-top-right-radius: .3vw;
     }
 }
 
