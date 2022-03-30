@@ -13,19 +13,39 @@
 
 ////////////////////////////////////////////////////////////////////////
 //                                                                    //
-//          ZS202201 MENU JAVASCRIPT                                  //
+//          BURGUER MENU                                              //
 //                                                                    //
 ////////////////////////////////////////////////////////////////////////
 
-function DESPLIEGUEMENUBURGUER()
+
+
+function BURGUERMENU()
 {
-    var BURGUER=ZS2022001_MENU.getElementById("MENUBURGUER");
+  var STATUS=document.getElementById("BURGUERMENU");
+  var WIDTH=window.width;
 
+  if(WIDTH>=900)
+  {
+    STATUS.style.display="none";}
+  else
+  {
+    if(STATUS.style.display==="block"){STATUS.style.display="none";}
 
-    if (BURGUER.style.display==="none"){BURGUER.style.display="block";}
-    
-    else{BURGUER.style.display="none";}
+    else{STATUS.style.display="block";}
   }
+}
+
+
+
+// function STOPBACKGROUNDSCROLL()
+// {
+//     var STATUS=document.getElementById("BURGUERMENU");
+//     var STATUS2=document.getElementById("BACKGROUND");
+
+//     if(STATUS.style.display==="block"){STATUS2.style.position="position";}
+// }
+
+
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
