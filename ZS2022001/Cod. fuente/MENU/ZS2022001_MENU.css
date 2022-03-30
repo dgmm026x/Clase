@@ -299,10 +299,10 @@ body
 
 /************************************************************************/
 
-/* .PageContent:nth-of-type(4){color: rgb(255, 0, 0);}
-.PageContent:nth-of-type(4){color: rgb(255, 111, 0);}
-.PageContent:nth-of-type(4){color: rgb(255, 247, 0);}
-.PageContent:nth-of-type(4){color: rgb(128, 255, 0);} */
+/* .PageContent:nth-of-type(4){background-color: rgb(255, 0, 0);}
+.PageContent:nth-of-type(5){background-color: rgb(255, 111, 0);}
+.PageContent:nth-of-type(6){background-color: rgb(255, 247, 0);}
+.PageContent:nth-of-type(7){background-color: rgb(128, 255, 0);} */
 
 /************************************************************************/
 
