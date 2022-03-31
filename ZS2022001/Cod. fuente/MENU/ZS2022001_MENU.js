@@ -22,28 +22,11 @@
 function BURGUERMENU()
 {
   var STATUS=document.getElementById("BURGUERMENU");
-  var WIDTH=window.width;
 
-  if(WIDTH>=900)
-  {
-    STATUS.style.display="none";}
-  else
-  {
-    if(STATUS.style.display==="block"){STATUS.style.display="none";}
+  if(STATUS.style.display==="block"){STATUS.style.display="none";}
 
-    else{STATUS.style.display="block";}
-  }
+  else{STATUS.style.display="block";}
 }
-
-
-
-// function STOPBACKGROUNDSCROLL()
-// {
-//     var STATUS=document.getElementById("BURGUERMENU");
-//     var STATUS2=document.getElementById("BACKGROUND");
-
-//     if(STATUS.style.display==="block"){STATUS2.style.position="position";}
-// }
 
 
 

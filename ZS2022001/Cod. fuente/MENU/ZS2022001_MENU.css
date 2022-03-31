@@ -218,7 +218,7 @@ body
 .OptionContent .Content
 {
     height: 100%;
-    padding: 12px 24px;
+    padding: 24px;
 
     display: flex;
     flex-direction: column;
@@ -240,17 +240,18 @@ body
 }
 .OptionContent .Content a
 {
-    margin: 5px 0 0;
-    padding: 1px 12px 0;
+    width: calc(100% - 24px);
+    margin: 6px 0 0;
+    padding: 3px 11px 1px;
 
-    border-top-left-radius: .8vw;
-    border-bottom-right-radius: .8vw;
-    border-bottom-left-radius: .1vw;
-    border-top-right-radius: .1vw;
+    border-top-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
     
     transition: box-shadow 300ms ease-out, background-color 300ms ease-out, color 600ms ease-out;
 
-    font-size: 24px;
+    font-size: 20px;
     text-decoration: none;
 
     background-color: transparent;
@@ -280,7 +281,7 @@ body
 
 .PageContent
 {
-    height: 45vw;
+    height: calc(100vh - 120px);
 
     display: flex;
     align-items: flex-end;
@@ -290,12 +291,13 @@ body
     background-repeat: no-repeat;
     background-size: cover;
 
-    /* transition: background-size 300ms ease-out; */
+    transition: cover 300ms ease-out;
 }
-/* .PageContent:hover
+
+.PageContent:hover
 {
-    background-size: calc(cover + 10%);
-} */
+    background-size: calc(cover + 10vw);
+}
 
 /************************************************************************/
 
@@ -309,18 +311,20 @@ body
 .PageContent a
 {
     max-width: 50%;
-    margin: 0 0 5vw 50px;
-    padding: 1vw 2.5vw;
+    margin: 0 0 4vw 40px;
+    padding: 9px 24px 6px;
 
-    border-top-left-radius: 1.2vw;
-    border-bottom-right-radius: 1.2vw;
-    border-bottom-left-radius: .15vw;
-    border-top-right-radius: .15vw;
+    border-top-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+
     transition: box-shadow 300ms ease-out, background-color 300ms ease-out, color 600ms ease-out;
 
-    font-size: 2.2vw;
+    font-size: 24px;
     text-decoration: none;
 
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     background-color: rgba(0, 0, 0, 0.6);
 }
 .PageContent a:hover
@@ -372,22 +376,20 @@ body
     .WindowOptionContent
     {
         width: calc(100% - 26px);
-        height: calc(100% - 220px);
+        height: calc(100% - 144px);
         margin: 12px;
         
         display: none;
         position: fixed;
         justify-content: center;
 
-        
-        
         border-top-left-radius: 11px;
         border-bottom-right-radius: 11px;
         border-bottom-left-radius: 2px;
         border-top-right-radius: 2px;
 
         box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-        background-color: rgb(0, 0, 0, 0.5)
+        background-color: rgb(0, 0, 0, 0.6)
     }
     /* .WindowOptionContent:hover body
     {
@@ -395,9 +397,9 @@ body
     } */
     .Content
     {
-        width: calc(100% - 5.0526315789473684210526315789474%);
+        width: calc(100% - 48px); /*5.0526315789473684210526315789474%*/
         height: 100%;
-        margin: 0 2.5263157894736842105263157894737% 2.5263157894736842105263157894737%;
+        margin: 0 24px; /*2.5263157894736842105263157894737%*/
         overflow: scroll;
         background-color: transparent;
     }
@@ -407,45 +409,72 @@ body
     }
     .Content
     {
+        margin-top: 24px;
+        height: calc(100% - 48px);
+
+        
+        border-top-left-radius: 11px;
+        border-bottom-right-radius: 11px;
+        border-bottom-left-radius: 2px;
+        border-top-right-radius: 2px;
         -ms-overflow-style: none;
         scrollbar-width: none;
+
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
     }
     .Content div
     {
-        margin: 2.5263157894736842105263157894737% 0;
+        margin-top: 24px; /*2.5263157894736842105263157894737%*/
 
         background-color: transparent;
     }
+    .Content div:nth-of-type(1)
+    {
+        margin-top: 0;
+    }
+    .Content div:nth-last-of-type(1)
+    {
+        margin-bottom: 0;
+        padding-bottom: 6px;
+    }
     .Content div p
     {
-        padding: 3px 12px 0;
+        padding: 3px 12px 1px;
 
-        border-bottom-right-radius: 1.2vw;
-        border-bottom-left-radius: .15vw;
+        border-top-left-radius: 11px;
+        border-bottom-right-radius: 11px;
+        border-bottom-left-radius: 2px;
+        border-top-right-radius: 2px;
 
-        font-size: 3.2vw;
+        font-size: 24px;
 
+        border-top: 1px solid white;
         border-bottom: 1px solid white;
 
         background-color: transparent;
     }
+    .Content div:nth-of-type(1) p
+    {
+        border-top: none;
+    }
     .Content div a
     {
-        margin: 0.52631578947368421052631578947368% 0 0;
-        padding: 3px 12px 0;
+        margin: 6px 0 0; /*0.52631578947368421052631578947368%*/
+        padding: 3px 12px 1px;
 
         display: flex;
         flex-direction: row;
         align-items: baseline;
 
-        border-top-left-radius: 1.2vw;
-        border-bottom-right-radius: 1.2vw;
-        border-bottom-left-radius: .15vw;
-        border-top-right-radius: .15vw;
+        border-top-left-radius: 11px;
+        border-bottom-right-radius: 11px;
+        border-bottom-left-radius: 2px;
+        border-top-right-radius: 2px;
 
         transition: box-shadow 300ms ease-out, background-color 300ms ease-out, color 600ms ease-out;
 
-        font-size: 2.5vw;
+        font-size: 20px;
         text-decoration: none;
 
         background-color: transparent;
@@ -456,24 +485,12 @@ body
         background-color: rgba(255, 255, 255, 1);
         color: black;
     }
-
-    /******************************************************************/
-
-    .PageContent a
-    {
-        font-size: 150%;
-
-        border-top-left-radius: 2vw;
-        border-bottom-right-radius: 2vw;
-        border-bottom-left-radius: .25vw;
-        border-top-right-radius: .25vw;
-    }
 }
 
 /************************************************************************/
 /************************************************************************/
 
-@media (min-width: 600px) and (max-width: 900px) and (max-height: 600px)
+@media (min-width: 601px) and (max-width: 900px) and (max-height: 600px)
 {
     .UnderMenu
     {
@@ -514,7 +531,14 @@ body
 
     .WindowOptionContent
     {
-        height: calc(100% - 72px - 16.638935108153078202995008319468%);
+        height: calc(100% - 84px);/*16.638935108153078202995008319468%*/
+    }
+
+    /******************************************************************/
+    
+    .PageContent
+    {
+        height: calc(100vh - 60px);
     }
 
     /******************************************************************/
@@ -531,27 +555,15 @@ body
 
 @media (max-width: 600px)
 {
+
     .Content div p
     {
-        font-size: 6vw;
-
-        border-top-left-radius: 2vw;
-        border-bottom-right-radius: 2vw;
-        border-bottom-left-radius: .25vw;
-        border-top-right-radius: .25vw;
+        font-size: 18px;
     }
     .Content div a
     {
-        font-size: 4.5vw;
-
-        border-top-left-radius: 2vw;
-        border-bottom-right-radius: 2vw;
-        border-bottom-left-radius: .25vw;
-        border-top-right-radius: .25vw;
+        font-size: 16px;
     }
-
-    /******************************************************************/
-
     .PageContent
     {
         justify-content: center;
@@ -559,12 +571,8 @@ body
     .PageContent a
     {
         margin-left: 0px;
-        font-size: 4.5vw;
 
-        border-top-left-radius: 2.4vw;
-        border-bottom-right-radius: 2.4vw;
-        border-bottom-left-radius: .3vw;
-        border-top-right-radius: .3vw;
+        font-size: 18px;
     }
 }
 
