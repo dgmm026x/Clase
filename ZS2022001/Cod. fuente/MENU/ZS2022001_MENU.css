@@ -301,10 +301,10 @@ body
 
 /************************************************************************/
 
-/* .PageContent:nth-of-type(4){background-color: rgb(255, 0, 0);}
+.PageContent:nth-of-type(4){background-color: rgb(255, 0, 0);}
 .PageContent:nth-of-type(5){background-color: rgb(255, 111, 0);}
 .PageContent:nth-of-type(6){background-color: rgb(255, 247, 0);}
-.PageContent:nth-of-type(7){background-color: rgb(128, 255, 0);} */
+.PageContent:nth-of-type(7){background-color: rgb(128, 255, 0);}
 
 /************************************************************************/
 
@@ -450,7 +450,7 @@ body
         font-size: 24px;
 
         border-top: 1px solid white;
-        border-bottom: 1px solid white;
+        border: 1px solid white;
 
         background-color: transparent;
     }
