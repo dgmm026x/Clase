@@ -311,7 +311,7 @@ body
 .PageContent a
 {
     max-width: 50%;
-    margin: 0 0 4vw 40px;
+    margin: 0 0 60px 40px;
     padding: 9px 24px 6px;
 
     border-top-left-radius: 11px;
@@ -570,7 +570,7 @@ body
     }
     .PageContent a
     {
-        margin-left: 0px;
+        margin-left: 0;
 
         font-size: 18px;
     }
