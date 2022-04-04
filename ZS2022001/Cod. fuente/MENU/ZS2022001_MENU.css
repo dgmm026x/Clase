@@ -21,8 +21,8 @@
     -ms-user-select: none;
     user-select: none;
 
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 body::-webkit-scrollbar
 {
@@ -33,6 +33,53 @@ body
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+.ThemeSwitch
+{
+    padding: 0 12px 2px;
+    height: 40px;
+    width: 40px;
+
+    display: flex;
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+    align-items: center;
+    justify-content: center;
+
+    border-top-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+
+    transition: box-shadow 300ms ease-out, background-color 300ms ease-out, color 600ms ease-out;
+
+    font-size: 24px;
+
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.6);
+    color: rgb(0, 0, 0);
+}
+.ThemeSwitch:hover
+{
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+@keyframes miniMenu
+{
+    from{height: 0;}
+    to{height: auto;}
+}
+@keyframes burguerMenu
+{
+    from{height: 0;}
+    to{height: calc(100% - 144px);}
+}
+@keyframes colors
+{
+    from{background-color: rgb(0, 0, 0);}
+    to{background-color: rgb(255, 255, 255);}
+}
 
 
 
@@ -41,12 +88,16 @@ body
 /************************************************************************/
 
 
-
+body
+{
+    animation-name: colors;
+    animation-duration: 1.2s;
+}
 .UnderMenu
 {
     width: 100%;
     height: 120px;
-    
+
     background-color: transparent;
 }
 .NavBar
@@ -59,7 +110,7 @@ body
     justify-content: space-between;
     position: fixed;
     
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 /**********************************************************************/
@@ -154,13 +205,13 @@ body
     font-size: 24px;
 
     /* border-bottom: 1px solid white; */
-    background-color: transparent;
+    background-color: rgb(255, 255, 255);
 }
 .MenuOption:hover
 {
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-    background-color: rgba(255, 255, 255, 1);
-    color: black;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 
     transition: OptionContent Content height 100ms linear;
 }
@@ -173,7 +224,7 @@ body
 .MenuOption:hover span
 {
     background-color: transparent;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 .MenuOption:nth-of-type(1n+8)
 {
@@ -185,10 +236,11 @@ body
 .OptionContent
 {
     width: 22%;
-    height: 0;
-    
+    height: auto;
+
     display: none;
     position: absolute;
+    flex-direction: column;
     top: 108px;
 
     transition: box-shadow 300ms ease-out, background-color 300ms ease-out, color 600ms ease-out;
@@ -197,10 +249,11 @@ body
 }
 .MenuOption:hover .OptionContent
 {
-    height: auto;
     display: flex;
-    flex-direction: column;
-   
+
+    animation-name: miniMenu;
+    animation-duration: 300ms;
+
     background-color: transparent;
 }
 .OptionContent .ContentGap
@@ -232,7 +285,7 @@ body
 
     /* border: 2px solid white; */
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
 }
 .OptionContent .Content p
 {
@@ -263,8 +316,8 @@ body
 .OptionContent .Content a:hover
 {
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-    background-color: rgba(255, 255, 255, 1);
-    color: black;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 .WindowOptionContent
 {
@@ -311,7 +364,7 @@ body
 .PageContent a
 {
     max-width: 50%;
-    margin: 0 0 4vw 40px;
+    margin: 0 0 12px 12px;
     padding: 9px 24px 6px;
 
     border-top-left-radius: 11px;
@@ -325,13 +378,13 @@ body
     text-decoration: none;
 
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
 }
 .PageContent a:hover
 {
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-    background-color:rgba(255, 255, 255, 0.6);
-    color: black;
+    background-color:rgba(0, 0, 0, 0.6);
+    color: rgb(255, 255, 255);
 }
 
 
@@ -375,7 +428,7 @@ body
 
     .WindowOptionContent
     {
-        width: calc(100% - 26px);
+        width: calc(100% - 24px);
         height: calc(100% - 144px);
         margin: 12px;
         
@@ -383,45 +436,45 @@ body
         position: fixed;
         justify-content: center;
 
+        animation-name: burguerMenu;
+        animation-duration: 300ms;
+
         border-top-left-radius: 11px;
         border-bottom-right-radius: 11px;
         border-bottom-left-radius: 2px;
         border-top-right-radius: 2px;
 
         box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-        background-color: rgb(0, 0, 0, 0.6)
+        background-color: rgba(255, 255, 255, 0.6)
     }
     /* .WindowOptionContent:hover body
     {
         position: fixed;
     } */
-    .Content
-    {
-        width: calc(100% - 48px); /*5.0526315789473684210526315789474%*/
-        height: 100%;
-        margin: 0 24px; /*2.5263157894736842105263157894737%*/
-        overflow: scroll;
-        background-color: transparent;
-    }
     .Content::-webkit-scrollbar
     {
         display: none;
     }
     .Content
     {
-        margin-top: 24px;
+        margin: 24px;
+        width: calc(100% - 48px);
         height: calc(100% - 48px);
-
         
+        overflow: scroll;
+
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
         border-top-left-radius: 11px;
         border-bottom-right-radius: 11px;
         border-bottom-left-radius: 2px;
         border-top-right-radius: 2px;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
 
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
+        /* border-top: 1px solid rgb(0, 0, 0); */
+        /* border-bottom: 1px solid rgb(0, 0, 0); */
+
+        background-color: transparent;
     }
     .Content div
     {
@@ -449,10 +502,10 @@ body
 
         font-size: 24px;
 
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
+        /* border-top: 1px solid rgb(0, 0, 0); */
+        /* border-bottom: 1px solid rgb(0, 0, 0); */
 
-        background-color: transparent;
+        background-color: rgb(255, 255, 255);
     }
     .Content div:nth-of-type(1) p
     {
@@ -482,8 +535,8 @@ body
     .Content a:hover
     {
         box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-        background-color: rgba(255, 255, 255, 1);
-        color: black;
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
     }
 }
 
@@ -566,11 +619,11 @@ body
     }
     .PageContent
     {
-        justify-content: center;
+        /* justify-content: center; */
     }
     .PageContent a
     {
-        margin-left: 0px;
+        /* margin-left: 0px; */
 
         font-size: 18px;
     }

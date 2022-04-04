@@ -21,11 +21,41 @@
 
 function BURGUERMENU()
 {
-  var STATUS=document.getElementById("BURGUERMENU");
+  var BURGUER=document.getElementById("BURGUERMENU");
+  var WIDTH=screen.width;
 
-  if(STATUS.style.display==="block"){STATUS.style.display="none";}
 
-  else{STATUS.style.display="block";}
+  if(BURGUER.style.display==="block")
+  {
+    BURGUER.style.display="none";
+  }
+
+
+  else
+  {
+    BURGUER.style.display="block";
+  }
+}
+
+
+
+function THEME()
+{
+  var THEME=document.getElementById("THEME");
+
+
+  if(THEME.style.backgroundColor==="rbg(255, 255, 255)")
+  {
+    THEME.style.backgroundColor="rbg(0, 255, 255)";
+    THEME.style.color="rbg(0, 0, 0)";
+  }
+
+  
+  else
+  {
+    THEME.style.backgroundColor="rbg(0, 0, 0)";
+    THEME.style.color="rbg(255, 255, 255)";
+  }
 }
 
 
