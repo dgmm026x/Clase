@@ -235,9 +235,15 @@ body
 
 .OptionContent
 {
+<<<<<<< HEAD
     width: 22%;
     height: auto;
 
+=======
+    width: 295px;
+    height: 0;
+    
+>>>>>>> e7cb6a2561f2338bd58676ab2a8a961bcc88ab60
     display: none;
     position: absolute;
     flex-direction: column;
@@ -354,17 +360,21 @@ body
 
 /************************************************************************/
 
-/* .PageContent:nth-of-type(4){background-color: rgb(255, 0, 0);}
+.PageContent:nth-of-type(4){background-color: rgb(255, 0, 0);}
 .PageContent:nth-of-type(5){background-color: rgb(255, 111, 0);}
 .PageContent:nth-of-type(6){background-color: rgb(255, 247, 0);}
-.PageContent:nth-of-type(7){background-color: rgb(128, 255, 0);} */
+.PageContent:nth-of-type(7){background-color: rgb(128, 255, 0);}
 
 /************************************************************************/
 
 .PageContent a
 {
     max-width: 50%;
+<<<<<<< HEAD
     margin: 0 0 12px 12px;
+=======
+    margin: 0 0 60px 40px;
+>>>>>>> e7cb6a2561f2338bd58676ab2a8a961bcc88ab60
     padding: 9px 24px 6px;
 
     border-top-left-radius: 11px;
@@ -502,8 +512,13 @@ body
 
         font-size: 24px;
 
+<<<<<<< HEAD
         /* border-top: 1px solid rgb(0, 0, 0); */
         /* border-bottom: 1px solid rgb(0, 0, 0); */
+=======
+        border-top: 1px solid white;
+        border: 1px solid white;
+>>>>>>> e7cb6a2561f2338bd58676ab2a8a961bcc88ab60
 
         background-color: rgb(255, 255, 255);
     }
@@ -623,7 +638,11 @@ body
     }
     .PageContent a
     {
+<<<<<<< HEAD
         /* margin-left: 0px; */
+=======
+        margin-left: 0;
+>>>>>>> e7cb6a2561f2338bd58676ab2a8a961bcc88ab60
 
         font-size: 18px;
     }
