@@ -28,12 +28,14 @@ function BURGUERMENU()
   if(STATUS.style.display === "block")
   {
     STATUS.style.display = "none";
+    console.log("Hiding burguer menu...");
   }
 
 
   else
   {
     STATUS.style.display = "block";
+    console.log("Showing burguer menu...");
   }
 }
 
@@ -41,69 +43,76 @@ function BURGUERMENU()
 
 function THEME()
 {
-  const OPAQUE_ID = ["NavBar","themeSwitch"];
+  const OPAQUE_ID = ["NavBar","themeSwitch","End"];
 
 
   for (let i = 0; i < OPAQUE_ID.length; i++)
   {
     var O_ID=document.getElementById(OPAQUE_ID[i]);
-    console.log(i);
+    
     
     if(O_ID.style.backgroundColor == "rgb(0, 0, 0)")
     {O_ID.style.backgroundColor = "rgb(255, 255, 255)"; O_ID.style.color="rgb(0, 0, 0)";}
     
+
     else
     {O_ID.style.backgroundColor="rgb(0, 0, 0)"; O_ID.style.color="rgb(255, 255, 255)";}
-
-
-    const OPAQUE_CLASS = ["P"];
-
-
-    for (let i = 0; i < OPAQUE_CLASS.length; i++)
-    {
-      var O_CLASS=document.getComputedStyle(OPAQUE_CLASS[i]);
-      console.log(i);
-      
-      if(O_CLASS.style.backgroundColor == "rgb(0, 0, 0)")
-      {O_CLASS.style.backgroundColor = "rgb(255, 255, 255)"; O_CLASS.style.color="rgb(0, 0, 0)";}
-      
-      else
-      {O_CLASS.style.backgroundColor="rgb(0, 0, 0)"; O_CLASS.style.color="rgb(255, 255, 255)";}
-    }
+    console.log("a");
   }
 
 
-  // const TRANSLUCID_ID = ["BurguerContent"];
+  const TRANSLUCID_ID = ["BurguerWindow"];
 
 
-  // for (let i = 0; i < TRANSLUCID_ID.length; i++)
-  // {
-  //   var ITEM=document.getElementById(TRANSLUCID_ID[i]);
-  //   console.log("b");
-
-  //   if(ITEM.style.backgroundColor == "rgba(0, 0, 0, 0.75)")
-  //   {ITEM.style.backgroundColor = "rgba(255, 255, 255, 0.75)"; ITEM.style.color = "rgb(0, 0, 0)";}
+  for (let i = 0; i < TRANSLUCID_ID.length; i++)
+  {
+    var TL_ID=document.getElementById(TRANSLUCID_ID[i]);
     
-  //   else
-  //   {ITEM.style.backgroundColor = "rgba(0, 0, 0 0.75)"; ITEM.style.color = "rgb(255, 255, 255)";}
-  // }
 
-
-  // const TRANSPARENT_ID = [];
-
-
-  // for (let i = 0; i < TRANSPARENT_ID.length; i++)
-  // {
-  //   var ITEM=document.getElementById(TRANSPARENT_ID[i]);
-  //   console.log("c");
-
-  //   if(ITEM.style.color == "rgb(255, 255, 255)")
-  //   {ITEM.style.color = "rgb(0, 0, 0)";}
+    if(TL_ID.style.backgroundColor == "rgba(0, 0, 0, 0.75)")
+    {TL_ID.style.backgroundColor = "rgba(255, 255, 255, 0.75)"; TL_ID.style.color = "rgb(0, 0, 0)";}
     
-  //   else
-  //   {ITEM.style.color = "rgb(255, 255, 255)";}
-  // }
+
+    else
+    {TL_ID.style.backgroundColor = "rgba(0, 0, 0 0.75)"; TL_ID.style.color = "rgb(255, 255, 255)";}
+    console.log("b");
+  }
+
+
+  const TRANSPARENT_ID = [];
+
+
+  for (let i = 0; i < TRANSPARENT_ID.length; i++)
+  {
+    var T_ID=document.getElementById(TRANSPARENT_ID[i]);
+    
+
+    if(T_ID.style.color == "rgb(255, 255, 255)")
+    {T_ID.style.color = "rgb(0, 0, 0)";}
+    
+
+    else
+    {T_ID.style.color = "rgb(255, 255, 255)";}
+    console.log("c");
+  }
 }
+
+
+//   const OPAQUE_CLASS = ["P"];
+
+
+//   for (let i = 0; i < OPAQUE_CLASS.length; i++)
+//   {
+//     var O_CLSS=document.styleSheets(OPAQUE_CLASS[i]);
+//     console.log(i);
+    
+//     if(O_CLSS.style.backgroundColor == "rgb(0, 0, 0)")
+//     {O_CLSS.style.backgroundColor = "rgb(255, 255, 255)"; O_CLSS.style.color="rgb(0, 0, 0)";}
+    
+//     else
+//     {O_CLSS.style.backgroundColor = "rgb(0, 0, 0)"; O_CLSS.style.color = "rgb(255, 255, 255)";}
+//   }
+// }
 
 
 

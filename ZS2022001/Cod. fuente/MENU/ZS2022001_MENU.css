@@ -155,7 +155,7 @@ body
     justify-content: center;
     align-items: center;
 
-    background-color: transparent;
+    /* background-color: transparent; */
 }
 #MenuLogo
 {
@@ -165,7 +165,7 @@ body
     justify-content: center;
     transition: visbility 300ms ease-out;
 
-    background-color: transparent;
+    /* background-color: transparent; */
 }
 #Logo
 {
@@ -176,7 +176,7 @@ body
 
     font-size: 60px;
 
-    background-color: transparent;
+    /* background-color: transparent; */
 }
 
 /**********************************************************************/
@@ -220,7 +220,7 @@ body
 
     font-size: 24px;
 
-    background-color: transparent;
+    /* background-color: transparent; */
 }
 #MenuBottom div span:hover
 {
