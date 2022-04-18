@@ -22,14 +22,12 @@
 function BURGUERMENU()
 {
   var BURGUER = document.getElementById("BurguerWindow");
-  // var SCROLL = display.getElementById("BODY");
 
 
   if(BURGUER.style.display === "block")
   {
     BURGUER.style.display = "none";
     console.log("Burguer menu (0)");
-    // SCROLL.style.position  = "none";
   }
 
 
@@ -37,15 +35,14 @@ function BURGUERMENU()
   {
     BURGUER.style.display = "block";
     console.log("Burguer menu (1)");
-    // SCROLL.style.position  = "fixed";
   }
 }
 
 
 
-/*function THEME()
+function THEME()
 {
-  var THEME=document.getElementsByClassName("OPAQUE");
+  var THEME=document.getElementById("OPAQUE");
 
 
   if(THEME.style.backgroundColor == "rgb(0, 0, 0)")
@@ -61,7 +58,7 @@ function BURGUERMENU()
     THEME.style.color="rgb(255, 255, 255)";
   }
   console.log("a");
-}*/
+}
 
 
 
