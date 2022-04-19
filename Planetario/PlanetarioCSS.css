@@ -1,0 +1,317 @@
+
+
+
+@keyframes Rotation
+{
+    0%{rotate: 0;}
+    100%{rotate: 359deg;}
+}
+
+
+
+body
+{
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+}
+#SolarSystem
+{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+#MarsOrbit
+{
+    width: 70vh;
+    height: 70vh;
+    margin: 4vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    animation: Rotation 180s linear infinite;
+
+    border-radius: 100%;
+    background-color: transparent;
+}
+#MarsSphere
+{
+    width: 6vh;
+    height: 6vh;
+
+    left: calc(50% - 38vh);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    border-radius: 100%;
+    background-color: transparent;
+}
+#DeimosOrbit
+{
+    width: 6vh;
+    height: 6vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    animation: Rotation 30s linear infinite;
+
+    border-radius: 100%;
+    background-color: transparent;
+}
+#DeimosItself
+{
+    width: 0.15vh;
+    height: 0.15vh;
+
+    position: absolute;
+    left: -0.25vh;
+
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+}
+#PhobosOrbit
+{
+    width: 4vh;
+    height: 4vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    animation: Rotation 30s linear infinite;
+
+    border-radius: 100%;
+    background-color: transparent;
+}
+#PhobosItself
+{
+    width: 0.15vh;
+    height: 0.15vh;
+
+    position: absolute;
+    left: -0.25vh;
+
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+}
+#MarsItself
+{
+    width: 1vh;
+    height: 1vh;
+
+    position: absolute;
+    left: calc(50% - 35.5vh);
+
+    border-radius: 100%;
+    background-color: transparent;
+}
+#MarsFace
+{
+    width: 0.5vh;
+    height: 1vh;
+
+    position: absolute;
+    left: calc(50%);
+
+    border-top-right-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    background-color: rgb(224, 81, 24);
+}
+
+
+
+
+
+
+#EarthOrbit
+{
+    width: 50vh;
+    height: 50vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: Rotation 180s linear infinite;
+    
+    /* border-radius: 100%; */
+    background-color: transparent;
+}
+#MoonOrbit
+{
+    width: 7vh;
+    height: 7vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: calc(50% - 28.5vh);
+
+    animation: Rotation 30s linear infinite;
+
+    border-radius: 100%;
+    background-color: transparent;
+}
+#MoonItself
+{
+    width: 0.4vh;
+    height: 0.4vh;
+
+    position: absolute;
+    left: 0vh;
+
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+}
+#EarthItself
+{
+    width: 1.5vh;
+    height: 1.5vh;
+
+    position: absolute;
+    left: calc(50% - 25.75vh);
+
+    border-radius: 100%;
+    background-color: transparent;
+}
+#EarthFace
+{
+    width: 0.75vh;
+    height: 1.5vh;
+
+    position: absolute;
+    left: calc(50%);
+
+    border-top-right-radius: 1.5vh;
+    border-bottom-right-radius: 1.5vh;
+    background-color: rgb(0, 120, 255);
+}
+
+
+
+
+
+
+#venusOrbit
+{
+    width: 35vh;
+    height: 35vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: Rotation 180s linear infinite;
+
+    border-radius: 100%;
+    background-color: transparent;
+}
+#VenusItself
+{
+    width: 1.5vh;
+    height: 1.5vh;
+
+    position: absolute;
+    left: calc(50% - 18.25vh);
+
+    border-radius: 100%;
+    background-color: transparent;
+}
+#VenusFace
+{
+    width: 0.75vh;
+    height: 1.5vh;
+
+    position: absolute;
+    left: calc(50%);
+
+    border-top-right-radius: 1.5vh;
+    border-bottom-right-radius: 1.5vh;
+    background-color: rgb(252, 245, 183);
+}
+
+
+
+
+
+
+#MercuryOrbit
+{
+    width: 19vh;
+    height: 19vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: Rotation 180s linear infinite;
+
+    border-radius: 100%;
+    background-color: transparent;
+}
+#MercuryIself
+{
+    width: 1vh;
+    height: 1vh;
+
+    position: absolute;
+    left: calc(50% - 10vh);
+
+    border-radius: 100%;
+    background-color: transparent;
+}
+#MercuryFace
+{
+    width: 0.5vh;
+    height: 1vh;
+
+    position: absolute;
+    left: calc(50%);
+
+    border-top-right-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    background-color: rgb(121, 121, 121);
+}
+
+
+
+
+
+
+#Sun
+{
+    width: 2.5vh;
+    height: 2.5vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+}
