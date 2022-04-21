@@ -4,7 +4,7 @@
 @keyframes Rotation
 {
     0%{rotate: 0;}
-    100%{rotate: 359deg;}
+    100%{rotate: 360deg;}
 }
 
 
@@ -16,6 +16,7 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     background-color: black;
 }
@@ -23,12 +24,13 @@ body
 {
     width: 100vw;
     height: 100vh;
+    /* margin-top: 5vh; */
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background-color: rgb(0, 0, 0);
+    background-color: transparent;
 }
 
 
@@ -40,16 +42,54 @@ body
 {
     width: 95vh;
     height: 95vh;
-    margin: 4vw;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    animation: Rotation 180s linear infinite;
+    position: absolute;
 
     border-radius: 100%;
+    
+    animation: Rotation 200s linear infinite;
+
     background-color: transparent;
+}
+#JupiterOrbit:hover #JupiterLine
+{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    border: 1px solid rgb(50, 50, 50);
+
+    transition: border 150ms linear;
+
+    border-radius: 100%;
+}
+#JupiterInfo
+{
+    width: 50vw;
+    height: 8vh;
+    margin-bottom: 10px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+
+    border-radius: 10px;
+
+    font-family: Bahnschrift;
+    font-size: 15px;
+    color: white;
+
+    background-color: rgba(50, 50, 50, 0.5);
+}
+#JupiterOrbit:hover #JupiterInfo
+{
+    display: flex;
 }
 #JupiterSphere
 {
@@ -76,15 +116,15 @@ body
     align-items: center;
     position: absolute;
 
-    animation: Rotation 30s linear infinite;
+    animation: Rotation 36s linear infinite;
 
     border-radius: 100%;
     background-color: transparent;
 }
 #CalistoItself
 {
-    width: 0.3vh;
-    height: 0.3vh;
+    width: 0.42vh;
+    height: 0.42vh;
 
     position: absolute;
     left: -0.25vh;
@@ -102,15 +142,15 @@ body
     align-items: center;
     position: absolute;
 
-    animation: Rotation 30s linear infinite;
+    animation: Rotation 34s linear infinite;
 
     border-radius: 100%;
     background-color: transparent;
 }
 #GanimedesItself
 {
-    width: 0.3vh;
-    height: 0.3vh;
+    width: 0.42vh;
+    height: 0.42vh;
 
     position: absolute;
     left: -0.25vh;
@@ -128,15 +168,15 @@ body
     align-items: center;
     position: absolute;
 
-    animation: Rotation 30s linear infinite;
+    animation: Rotation 32s linear infinite;
 
     border-radius: 100%;
     background-color: transparent;
 }
 #EuropaItself
 {
-    width: 0.3vh;
-    height: 0.3vh;
+    width: 0.41vh;
+    height: 0.41vh;
 
     position: absolute;
     left: -0.25vh;
@@ -161,8 +201,8 @@ body
 }
 #IoItself
 {
-    width: 0.3vh;
-    height: 0.3vh;
+    width: 0.4vh;
+    height: 0.4vh;
 
     position: absolute;
     left: -0.25vh;
@@ -170,7 +210,6 @@ body
     border-radius: 100%;
     background-color: rgb(246, 187, 76);
 }
-
 #JupiterItself
 {
     width: 3vh;
@@ -207,11 +246,26 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    animation: Rotation 180s linear infinite;
+    position: absolute;
 
     border-radius: 100%;
+    
+    animation: Rotation 195s linear infinite;
+
     background-color: transparent;
+}
+#MarsOrbit:hover #MarsLine
+{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    border: 1px solid rgb(50, 50, 50);
+
+    transition: border 150ms linear;
+    
+    border-radius: 100%;
 }
 #MarsSphere
 {
@@ -238,7 +292,7 @@ body
     align-items: center;
     position: absolute;
 
-    animation: Rotation 30s linear infinite;
+    animation: Rotation 32s linear infinite;
 
     border-radius: 100%;
     background-color: transparent;
@@ -315,11 +369,26 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
 
-    animation: Rotation 180s linear infinite;
+    border-radius: 100%;
+    
+    animation: Rotation 190s linear infinite;
+
+    background-color: transparent;
+}
+#EarthOrbit:hover #EarthLine
+{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    border: 1px solid rgb(50, 50, 50);
+
+    transition: border 150ms linear;
     
     border-radius: 100%;
-    background-color: transparent;
 }
 #MoonOrbit
 {
@@ -339,8 +408,8 @@ body
 }
 #MoonItself
 {
-    width: 0.5vh;
-    height: 0.5vh;
+    width: 0.45vh;
+    height: 0.45vh;
 
     position: absolute;
     left: 0vh;
@@ -375,7 +444,7 @@ body
 
 
 
-#venusOrbit
+#VenusOrbit
 {
     width: 35vh;
     height: 35vh;
@@ -383,11 +452,26 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-
-    animation: Rotation 180s linear infinite;
+    position: absolute;
 
     border-radius: 100%;
+    
+    animation: Rotation 185s linear infinite;
+
     background-color: transparent;
+}
+#VenusOrbit:hover #VenusLine
+{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    border: 1px solid rgb(50, 50, 50);
+
+    transition: border 150ms linear;
+    
+    border-radius: 100%;
 }
 #VenusItself
 {
@@ -424,11 +508,26 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-
-    animation: Rotation 180s linear infinite;
+    position: absolute;
 
     border-radius: 100%;
+    
+    animation: Rotation 180s linear infinite;
+
     background-color: transparent;
+}
+#MercuryOrbit:hover #MercuryLine
+{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    border: 1px solid rgb(50, 50, 50);
+
+    transition: border 150ms linear;
+    
+    border-radius: 100%;
 }
 #MercuryIself
 {
@@ -459,13 +558,13 @@ body
 
 #Sun
 {
-    width: 5vh;
-    height: 5vh;
+    width: 4vh;
+    height: 4vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     border-radius: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 242, 197);
 }
