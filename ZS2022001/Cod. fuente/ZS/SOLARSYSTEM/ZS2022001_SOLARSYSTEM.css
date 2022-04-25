@@ -1,0 +1,1783 @@
+/**********************************************************************/
+/**********************************************************************/
+/**********************************************************************/
+/*                                                                    */
+/*          ZS202201 SOLAR SYSTEM (CSS FILE)                          */
+/*          (DESIGN BEGAN IN: 2022-03-27)                             */
+/*                                                                    */
+/**********************************************************************/
+/**********************************************************************/
+/**********************************************************************/
+
+
+
+/************************************************************************/
+/*          KEYFRAMES                                                   */
+/************************************************************************/
+
+
+
+@keyframes showMenu
+{
+    from{ height: 0;}
+    to{height: calc(100% - 18px);}
+}
+@keyframes showMenuBurguer
+{
+    from{height: 0;}
+    to{height: calc(100% - 120px);}
+}
+@keyframes showMenuBurguerMini
+{
+    from{height: 0;}
+    to{height: calc(100% - 60px);}
+}
+
+
+
+
+/************************************************************************/
+/*          HTML                                                        */
+/************************************************************************/
+
+
+
+*
+{
+    margin: 0;
+
+    font-family: bahnschrift;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    background-color: transparent;
+}
+body::-webkit-scrollbar
+{
+    display: none;
+}
+body
+{
+    -ms-overflow-style: none;
+    overflow: visible;
+
+    display: flex;
+    flex-direction: column;
+    
+    background-color: rgb(150, 0, 0);
+}
+#themeSwitch
+{
+    width: 40px;
+    height: 40px;
+    padding-right: 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 12px;
+
+    border-top-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+
+    transition: box-shadow 300ms ease-out, background-color 300ms ease-out, color 600ms ease-out;
+
+    font-size: 24px;
+
+    /* background-color: rgb(255, 255, 255); */
+}
+#themeSwitch:hover
+{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+
+
+/************************************************************************/
+/*          MENU BAR                                                    */
+/************************************************************************/
+
+
+
+#UnderMenu
+{
+    width: 100%;
+    height: 120px;
+
+    /* display: none; */
+
+    /* background-color: rgb(255, 255, 255); */
+}
+#NavBar
+{
+    top: 0;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    
+    /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); */
+    /* background-color: rgb(255, 255, 255); */
+    /* color: rgb(0, 0, 0); */
+}
+
+/**********************************************************************/
+
+.MenuGap
+{
+    width: 25%;
+    height: 120px;
+
+    /* background-color: transparent; */
+}
+#MenuCenter
+{
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* background-color: transparent; */
+}
+
+/**********************************************************************/
+
+#MenuTop
+{
+    width:100%;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: transparent; */
+}
+#MenuLogo
+{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    transition: visbility 300ms ease-out;
+
+    /* background-color: transparent; */
+}
+#Logo
+{
+    padding-bottom: 5px;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 60px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+
+    /* background-color: transparent; */
+}
+
+/**********************************************************************/
+
+#MenuBottom
+{
+    width:100%;
+    height: 60px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#MenuBottom div
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#MenuBottom div span
+{
+    height: 36px;
+    width: 85px;
+    margin: 0 6px;
+    padding-top: 2px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    touch-action: auto;
+
+    border-top-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    transition: box-shadow 300ms ease-out, background-color 300ms ease-out, color 600ms ease-out;
+
+    font-size: 24px;
+
+    /* background-color: transparent; */
+}
+#MenuBottom div span:hover
+{
+    /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); */
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+/* #MenuBottom div span
+{
+    
+    background-color: transparent;
+    transition: color 600ms ease-out;
+}
+#MenuBottom div:hover span
+{
+    background-color: transparent;
+    color: black;
+} */
+#MenuBottom div:nth-of-type(1n+8)
+{
+    display: none;
+}
+
+/**********************************************************************/
+
+#MenuBottom div .OptionContent
+{
+    width: 295px;
+    height: 0;
+
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 108px;
+}
+#MenuBottom div:hover .OptionContent
+{
+    display: block;
+    animation-name: showMenu;
+    animation-duration: 300ms;
+}
+.ContentGap
+{
+    width: 100%;
+    height: 12px;
+}
+.Content
+{
+    height: 100%;
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* border-top-left-radius: 11px; */
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 2px;
+    /* border-top-right-radius: 2px; */
+
+    /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); */
+    /* background-color: rgba(255, 255, 255, 0.75); */
+}
+.Content a
+{
+    width: calc(100% - 24px);
+    margin: 6px 0 0;
+    padding: 3px 11px 1px;
+
+    border-top-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    
+    transition: box-shadow 300ms ease-out, background-color 300ms ease-out, color 600ms ease-out;
+
+    font-size: 21px;
+    text-decoration: none;
+
+    /* background-color: transparent;
+    color: rgb(0, 0, 0); */
+}
+.Content a:nth-of-type(1)
+{
+    margin: 0;
+}
+.Content a:hover
+{
+    /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); */
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+#BurguerContent
+{
+    /* width: 0;
+    height: 0;
+    visibility: hidden; */
+}
+
+
+
+/************************************************************************/
+/*          WEBSITE CONTENT                                             */
+/************************************************************************/
+
+
+
+#SolarSystem
+{
+    width: 100%;
+    height: 200px;
+
+    position: relative;
+    top: 120px;
+
+    background-color: rgb(98, 33, 33);
+}
+
+
+
+@keyframes Rotation
+{
+    0%{rotate: 0;}
+    100%{rotate: 360deg;}
+}
+@-webkit-keyframes webkit-Rotation
+{
+    0%{rotate: 0;}
+    100%{rotate: 360deg;}
+}
+@-moz-keyframes moz-Rotation
+{
+    0%{rotate: 0;}
+    100%{rotate: 360deg;}
+}
+@-o-keyframes o-Rotation
+{
+    0%{rotate: 0;}
+    100%{rotate: 360deg;}
+}
+
+
+
+body
+{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    background-color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+#NeptuneOrbit
+{
+    width: 96%;
+    height: 96%;
+    margin: 2%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100%;
+    
+    animation: webkit-Rotation 1800s linear infinite;
+    animation: moz-Rotation 1800s linear infinite;
+    animation: o-Rotation 1800s linear infinite;
+    animation: Rotation 1800s linear infinite;
+
+    background-color: rgba(0, 0, 255, 0.1);
+}
+/* #NeptuneOrbit:hover #NeptuneLine
+{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    border: 1px solid rgb(50, 50, 50);
+
+    transition: border 150ms linear;
+
+    border-radius: 100%;
+} */
+#Moon1Orbit
+{
+    width: 3.5%;
+    height: 3.5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: calc(96% - 1.75%);
+
+    animation: webkit-Rotation 34s linear infinite;
+    animation: moz-Rotation 34s linear infinite;
+    animation: o-Rotation 34s linear infinite;
+    animation: Rotation 34s linear infinite;
+
+    border-radius: 100%;
+    /* background-color: rgba(255, 0, 0, 0.164); */
+}
+#Moon1Itself
+{
+    width: 0.1%;
+    height: 0.1%;
+
+    position: absolute;
+    right: 3.5%;
+
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+}
+#Moon2Orbit
+{
+    width: 2.75%;
+    height: 2.75%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: webkit-Rotation 32s linear infinite;
+    animation: moz-Rotation 32s linear infinite;
+    animation: o-Rotation 32s linear infinite;
+    animation: Rotation 32s linear infinite;
+
+    border-radius: 100%;
+    /* background-color: rgba(255, 0, 0, 0.164); */
+}
+#Moon2Itself
+{
+    width: 0.1%;
+    height: 0.1%;
+
+    position: absolute;
+    right: 2.75%;
+
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+}
+#Moon3Orbit
+{
+    width: 2%;
+    height: 2%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: webkit-Rotation 30s linear infinite;
+    animation: moz-Rotation 30s linear infinite;
+    animation: o-Rotation 30s linear infinite;
+    animation: Rotation 30s linear infinite;
+
+    border-radius: 100%;
+    /* background-color: rgba(255, 0, 0, 0.164); */
+}
+#Moon3Itself
+{
+    width: 0.1%;
+    height: 0.1%;
+
+    position: absolute;
+    right: 2%;
+
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+}
+#NeptuneItself
+{
+    width: 1%;
+    height: 1%;
+
+    position: absolute;
+    right: calc(96% - 0.5%);
+
+    border-radius: 100%;
+    background-color: rgb(92, 135, 255);
+}
+#NeptuneFace
+{
+    width: 3%;
+    height: 1%;
+
+    position: absolute;
+    right: 50%;
+
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+
+
+
+
+
+#UranusOrbit
+{
+    width: 84%;
+    height: 84%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    border-radius: 100%;
+
+    rotate: -150deg;
+
+    animation: webkit-Rotation 1600s linear infinite;
+    animation: moz-Rotation 1600s linear infinite;
+    animation: o-Rotation 1600s linear infinite;
+    animation: Rotation 1600s linear infinite;
+
+    /* background-color: rgba(0, 0, 255, 0.1); */
+}
+/* #UranusOrbit:hover #UranusLine
+{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    border: 1px solid rgb(50, 50, 50);
+
+    transition: border 150ms linear;
+
+    border-radius: 100%;
+} */
+#Moon4Orbit
+{
+    width: 4.25%;
+    height: 4.25%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    right: calc(84% - 2.125%);
+
+    animation: webkit-Rotation 36s linear infinite;
+    animation: moz-Rotation 36s linear infinite;
+    animation: o-Rotation 36s linear infinite;
+    animation: Rotation 36s linear infinite;
+
+    border-radius: 100%;
+    /* background-color: rgba(255, 0, 0, 0.164); */
+}
+#Moon4Itself
+{
+    width: 0.1%;
+    height: 0.1%;
+
+    position: absolute;
+    right: 4.25%;
+
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+}
+#Moon5Orbit
+{
+    width: 3.5%;
+    height: 3.5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    right: calc(84% - 1.75%);
+
+    animation: webkit-Rotation 34s linear infinite;
+    animation: moz-Rotation 34s linear infinite;
+    animation: o-Rotation 34s linear infinite;
+    animation: Rotation 34s linear infinite;
+
+    border-radius: 100%;
+    /* background-color: rgba(255, 0, 0, 0.164); */
+}
+#Moon5Itself
+{
+    width: 0.1%;
+    height: 0.1%;
+
+    position: absolute;
+    right: 3.5%;
+
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+}
+#Moon6Orbit
+{
+    width: 2.75%;
+    height: 2.75%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: webkit-Rotation 32s linear infinite;
+    animation: moz-Rotation 32s linear infinite;
+    animation: o-Rotation 32s linear infinite;
+    animation: Rotation 32s linear infinite;
+
+    border-radius: 100%;
+    /* background-color: rgba(255, 0, 0, 0.164); */
+}
+#Moon6Itself
+{
+    width: 0.1%;
+    height: 0.1%;
+
+    position: absolute;
+    right: 2.75%;
+
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+}
+#Moon7Orbit
+{
+    width: 2%;
+    height: 2%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: webkit-Rotation 30s linear infinite;
+    animation: moz-Rotation 30s linear infinite;
+    animation: o-Rotation 30s linear infinite;
+    animation: Rotation 30s linear infinite;
+
+    border-radius: 100%;
+    /* background-color: rgba(255, 0, 0, 0.164); */
+}
+#Moon7Itself
+{
+    width: 0.1%;
+    height: 0.1%;
+
+    position: absolute;
+    right: 2%;
+
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+}
+#UranusItself
+{
+    width: 1%;
+    height: 1%;
+
+    position: absolute;
+
+    right: calc(84% - 0.5%);
+
+    border-radius: 100%;
+    background-color: rgb(130, 199, 255);
+}
+#UranusFace
+{
+    width: 3%;
+    height: 1%;
+
+    position: absolute;
+    right: 50%;
+
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+
+
+
+
+
+#SaturnOrbit
+{
+    width: 72%;
+    height: 72%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    border-radius: 100%;
+    
+    rotate: -140deg;
+
+    animation: webkit-Rotation 1400s linear infinite;
+    animation: moz-Rotation 1400s linear infinite;
+    animation: o-Rotation 1400s linear infinite;
+    animation: Rotation 1400s linear infinite;
+
+    /* background-color: rgba(0, 0, 255, 0.1); */
+}
+/* #SaturnOrbit:hover #SaturnLine
+{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    border: 1px solid rgb(50, 50, 50);
+
+    transition: border 150ms linear;
+
+    border-radius: 100%;
+} */
+#Moon8Orbit
+{
+    width: 5.6%;
+    height: 5.6%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    right: calc(72% - 2.8%);
+
+    animation: webkit-Rotation 38s linear infinite;
+    animation: moz-Rotation 38s linear infinite;
+    animation: o-Rotation 38s linear infinite;
+    animation: Rotation 38s linear infinite;
+
+    border-radius: 100%;
+    /* background-color: rgba(255, 0, 0, 0.164); */
+}
+#Moon8Itself
+{
+    width: 0.1%;
+    height: 0.1%;
+
+    position: absolute;
+    right: 5.6%;
+
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+}
+#Moon9Orbit
+{
+    width: 4.9%;
+    height: 4.9%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    right: calc(84% - 1.75%);
+
+    animation: webkit-Rotation 36s linear infinite;
+    animation: moz-Rotation 36s linear infinite;
+    animation: o-Rotation 36s linear infinite;
+    animation: Rotation 36s linear infinite;
+
+    border-radius: 100%;
+    /* background-color: rgba(255, 0, 0, 0.164); */
+}
+#Moon9Itself
+{
+    width: 0.1%;
+    height: 0.1%;
+
+    position: absolute;
+    right: 4.9%;
+
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+}
+#Moon10Orbit
+{
+    width: 4.4%;
+    height: 4.4%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: webkit-Rotation 34s linear infinite;
+    animation: moz-Rotation 34s linear infinite;
+    animation: o-Rotation 34s linear infinite;
+    animation: Rotation 34s linear infinite;
+
+    border-radius: 100%;
+    /* background-color: rgba(255, 0, 0, 0.164); */
+}
+#Moon10Itself
+{
+    width: 0.1%;
+    height: 0.1%;
+
+    position: absolute;
+    right: 4.4%;
+
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+}
+#Moon11Orbit
+{
+    width: 4%;
+    height: 4%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: webkit-Rotation 32s linear infinite;
+    animation: moz-Rotation 32s linear infinite;
+    animation: o-Rotation 32s linear infinite;
+    animation: Rotation 32s linear infinite;
+
+    border-radius: 100%;
+    /* background-color: rgba(255, 0, 0, 0.164); */
+}
+#Moon11Itself
+{
+    width: 0.1%;
+    height: 0.1%;
+
+    position: absolute;
+    right: 4%;
+
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+}
+#Moon12Orbit
+{
+    width: 3.6%;
+    height: 3.6%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: webkit-Rotation 30s linear infinite;
+    animation: moz-Rotation 30s linear infinite;
+    animation: o-Rotation 30s linear infinite;
+    animation: Rotation 30s linear infinite;
+
+    border-radius: 100%;
+    /* background-color: rgba(255, 0, 0, 0.164); */
+}
+#Moon12Itself
+{
+    width: 0.1%;
+    height: 0.1%;
+
+    position: absolute;
+    right: 3.6%;
+
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+}
+#SaturnRing1
+{
+    width: 3%;
+    height: 3%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    right: calc(72% - 1.5%);
+
+    border-radius: 100%;
+    border: 1px solid rgb(255, 223, 164);
+}
+#SaturnRing2
+{
+    width: calc(100% - 0.4%);
+    height: calc(100% - 0.4%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100%;
+    border: 1px solid rgb(255, 196, 87);
+}
+#SaturnRing3
+{
+    width: calc(100% - 0.4%);
+    height: calc(100% - 0.4%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100%;
+    border: 1px solid rgb(255, 212, 133);
+}
+#SaturnItself
+{
+    width: 1.4%;
+    height: 1.4%;
+
+    border-radius: 100%;
+    background-color: rgb(255, 224, 87);
+}
+#SaturnFace
+{
+    width: 4%;
+    height: 1.4%;
+
+    position: absolute;
+    right: 50%;
+
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+
+
+
+
+
+#JupiterOrbit
+{
+    width: 59%;
+    height: 59%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    border-radius: 100%;
+    
+    rotate: -130deg;
+
+    animation: webkit-Rotation 1200s linear infinite;
+    animation: moz-Rotation 1200s linear infinite;
+    animation: o-Rotation 1200s linear infinite;
+    animation: Rotation 1200s linear infinite;
+
+    /* background-color: rgba(0, 0, 255, 0.1); */
+}
+/* #JupiterOrbit:hover #JupiterLine
+{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    border: 1px solid rgb(50, 50, 50);
+
+    transition: border 150ms linear;
+
+    border-radius: 100%;
+} */
+/* #JupiterInfo
+{
+    width: 50vw;
+    height: 8%;
+    margin-bottom: 10px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+
+    border-radius: 10px;
+
+    font-family: Bahnschrift;
+    font-size: 15px;
+    color: white;
+
+    background-color: rgba(50, 50, 50, 0.5);
+}
+#JupiterOrbit:hover #JupiterInfo
+{
+    display: flex;
+} */
+#CalistoOrbit
+{
+    width: 6%;
+    height: 6%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    right: calc(59% - 3%);
+
+    border-radius: 100%;
+
+    animation: webkit-Rotation 36s linear infinite;
+    animation: moz-Rotation 36s linear infinite;
+    animation: o-Rotation 36s linear infinite;
+    animation: Rotation 36s linear infinite;
+
+    /* background-color: rgba(255, 0, 0, 0.164); */
+}
+#CalistoItself
+{
+    width: 0.1%;
+    height: 0.1%;
+
+    position: absolute;
+    right: 6%;
+
+    border-radius: 100%;
+    background-color: rgb(224, 195, 172);
+}
+#GanimedesOrbit
+{
+    width: 5%;
+    height: 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    animation: webkit-Rotation 34s linear infinite;
+    animation: moz-Rotation 34s linear infinite;
+    animation: o-Rotation 34s linear infinite;
+    animation: Rotation 34s linear infinite;
+
+    border-radius: 100%;
+    /* background-color: rgba(255, 0, 0, 0.164); */
+}
+#GanimedesItself
+{
+    width: 0.1%;
+    height: 0.1%;
+
+    position: absolute;
+    right: 5%;
+
+    border-radius: 100%;
+    background-color: rgb(200, 200, 200);
+}
+#EuropaOrbit
+{
+    width: 4%;
+    height: 4%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    animation: webkit-Rotation 34s linear infinite;
+    animation: moz-Rotation 32s linear infinite;
+    animation: o-Rotation 32s linear infinite;
+    animation: Rotation 32s linear infinite;
+
+    border-radius: 100%;
+    /* background-color: rgba(255, 0, 0, 0.164); */
+}
+#EuropaItself
+{
+    width: 0.1%;
+    height: 0.1%;
+
+    position: absolute;
+    right: 4%;
+
+    border-radius: 100%;
+    background-color: rgb(182, 237, 223);
+}
+#IoOrbit
+{
+    width: 3%;
+    height: 3%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    animation: webkit-Rotation 30s linear infinite;
+    animation: moz-Rotation 30s linear infinite;
+    animation: o-Rotation 30s linear infinite;
+    animation: Rotation 30s linear infinite;
+
+    border-radius: 100%;
+    /* background-color: rgba(255, 0, 0, 0.164); */
+}
+#IoItself
+{
+    width: 0.1%;
+    height: 0.1%;
+
+    position: absolute;
+    right: 3%;
+
+    border-radius: 100%;
+    background-color: rgb(246, 187, 76);
+}
+#JupiterItself
+{
+    width: 1.8%;
+    height: 1.8%;
+
+    position: absolute;
+    right: calc(59% - 0.9%);
+
+    border-radius: 100%;
+    background-color: rgb(226, 108, 61);
+}
+#JupiterFace
+{
+    width: 4%;
+    height: 1.8%;
+
+    position: absolute;
+    right: 50%;
+
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+
+
+
+
+#MarsOrbit
+{
+    width: 42%;
+    height: 42%;
+    margin: 4vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    border-radius: 100%;
+    
+    rotate: -120deg;
+
+    animation: webkit-Rotation 810s linear infinite;
+    animation: moz-Rotation 810s linear infinite;
+    animation: o-Rotation 810s linear infinite;
+    animation: Rotation 810s linear infinite;
+
+    /* background-color: rgba(0, 0, 255, 0.1); */
+}
+/* #MarsOrbit:hover #MarsLine
+{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    border: 1px solid rgb(50, 50, 50);
+
+    transition: border 150ms linear;
+    
+    border-radius: 100%;
+} */
+#DeimosOrbit
+{
+    width: 3%;
+    height: 3%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    right: calc(42% - 1.5%);
+
+    animation: webkit-Rotation 22s linear infinite;
+    animation: moz-Rotation 22s linear infinite;
+    animation: o-Rotation 22s linear infinite;
+    animation: Rotation 22s linear infinite;
+
+    border-radius: 100%;
+    /* background-color: rgba(255, 0, 0, 0.164); */
+}
+#DeimosItself
+{
+    width: 0.1%;
+    height: 0.1%;
+
+    position: absolute;
+    right: 3%;
+
+    border-radius: 100%;
+    background-color: rgb(252, 214, 183);
+}
+#PhobosOrbit
+{
+    width: 1.6%;
+    height: 1.6%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    animation: webkit-Rotation 20s linear infinite;
+    animation: moz-Rotation 20s linear infinite;
+    animation: o-Rotation 20s linear infinite;
+    animation: Rotation 20s linear infinite;
+
+    border-radius: 100%;
+    /* background-color: rgba(255, 0, 0, 0.164); */
+}
+#PhobosItself
+{
+    width: 0.1%;
+    height: 0.1%;
+
+    position: absolute;
+    right: 1.6%;
+
+    border-radius: 100%;
+    background-color: rgb(184, 174, 174);
+}
+#MarsItself
+{
+    width: 0.6%;
+    height: 0.6%;
+
+    position: absolute;
+    right: calc(42% - 0.3%);
+
+    border-radius: 100%;
+    background-color: rgb(224, 81, 24);
+}
+#MarsFace
+{
+    width: 1.8%;
+    height: 0.6%;
+
+    position: absolute;
+    right: 50%;
+
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+
+
+
+
+
+#EarthOrbit
+{
+    width: 30%;
+    height: 30%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    border-radius: 100%;
+    
+    rotate: -110deg;
+
+    animation: webkit-Rotation 750s linear infinite;
+    animation: moz-Rotation 750s linear infinite;
+    animation: o-Rotation 750s linear infinite;
+    animation: Rotation 750s linear infinite;
+
+    /* background-color: rgba(0, 0, 255, 0.1); */
+}
+/* #EarthOrbit:hover #EarthLine
+{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    border: 1px solid rgb(50, 50, 50);
+
+    transition: border 150ms linear;
+    
+    border-radius: 100%;
+} */
+#MoonOrbit
+{
+    width: 3.6%;
+    height: 3.6%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: calc(30% - 1.8%);
+
+    animation: webkit-Rotation 28s linear infinite;
+    animation: moz-Rotation 28s linear infinite;
+    animation: o-Rotation 28s linear infinite;
+    animation: Rotation 28s linear infinite;
+
+    border-radius: 100%;
+    /* background-color: rgba(255, 0, 0, 0.164); */
+}
+#MoonItself
+{
+    width: 0.2%;
+    height: 0.2%;
+
+    position: absolute;
+    right: 3.6%;
+
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+}
+#EarthItself
+{
+    width: 1.2%;
+    height: 1.2%;
+
+    position: absolute;
+    right: calc(30% - 0.6%);
+
+    border-radius: 100%;
+    background-color: rgb(0, 120, 255);
+}
+#EarthFace
+{
+    width: 2.4%;
+    height: 1.2%;
+
+    position: absolute;
+    right: 50%;
+
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+
+
+
+
+
+#VenusOrbit
+{
+    width: 20%;
+    height: 20%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    border-radius: 100%;
+    
+    rotate: -100deg;
+
+    animation: webkit-Rotation 660s linear infinite;
+    animation: moz-Rotation 660s linear infinite;
+    animation: o-Rotation 660s linear infinite;
+    animation: Rotation 660s linear infinite;
+
+    /* background-color: rgba(0, 0, 255, 0.1); */
+}
+/* #VenusOrbit:hover #VenusLine
+{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    border: 1px solid rgb(50, 50, 50);
+
+    transition: border 150ms linear;
+    
+    border-radius: 100%;
+} */
+#VenusItself
+{
+    width: 1.2%;
+    height: 1.2%;
+
+    position: absolute;
+    right: calc(20% - 0.6%);
+
+    border-radius: 100%;
+    background-color: rgb(252, 245, 183);
+}
+#VenusFace
+{
+    width: 1.2%;
+    height: 1.2%;
+
+    position: absolute;
+    right: 50%;
+
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+
+
+
+
+
+#MercuryOrbit
+{
+    width: 12%;
+    height: 12%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    border-radius: 100%;
+    
+    rotate: -90deg;
+
+    animation: webkit-Rotation 600s linear infinite;
+    animation: moz-Rotation 600s linear infinite;
+    animation: o-Rotation 600s linear infinite;
+    animation: Rotation 600s linear infinite;
+
+    /* background-color: rgba(0, 0, 255, 0.1); */
+}
+/* #MercuryOrbit:hover #MercuryLine
+{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    border: 1px solid rgb(50, 50, 50);
+
+    transition: border 150ms linear;
+    
+    border-radius: 100%;
+} */
+#MercuryIself
+{
+    width: 0.8%;
+    height: 0.8%;
+
+    position: absolute;
+    right: calc(12% - 0.4%);
+
+    border-radius: 100%;
+    background-color: rgb(121, 121, 121);
+}
+#MercuryFace
+{
+    width: 0.8%;
+    height: 0.8%;
+
+    position: absolute;
+    right: 50%;
+
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+
+
+
+
+
+#Sun
+{
+    width: 2.2%;
+    height: 2.2%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100%;
+    border: 0.1vw solid rgb(255, 189, 67);
+    background-color: rgb(255, 248, 223);
+}
+
+
+
+/************************************************************************/
+/*          END                                                         */
+/************************************************************************/
+
+
+
+#End
+{
+    width: 100%;
+    height: 120px;
+
+    /* background-color: rgb(255, 255, 255); */
+}
+
+
+
+/************************************************************************/
+/*          MEDIA QUERIES                                               */
+/************************************************************************/
+
+
+
+@media(min-width: 901px)
+{
+    #BurguerContent
+    {
+        /* width: 0;
+        height: 0;
+        visibility: hidden; */
+        display: none;
+    }
+}
+
+/************************************************************************/
+/************************************************************************/
+
+@media(max-width: 900px)
+{
+    #MenuBottom div:nth-last-of-type(1n+2)
+    {
+        display: none;
+    }
+    #MenuBottom div:nth-of-type(1n+8)
+    {
+        display: flex;
+    }
+
+    /******************************************************************/
+
+    #BurguerWindow
+    {
+        width: 100%;
+        height: calc(100% - 120px);
+
+        top: 120px;
+        /* width: calc(100% - 24px);
+        height: calc(100% - 144px);
+        margin: 12px; */
+        
+        visibility: visible;
+        display: none;
+        position: fixed;
+        justify-content: center;
+
+        animation-name: showMenuBurguer;
+        animation-duration: 300ms;
+
+        /* border-top-left-radius: 11px;
+        border-bottom-right-radius: 11px;
+        border-bottom-left-radius: 2px;
+        border-top-right-radius: 2px; */
+
+        /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); */
+        /* background-color: rgba(255, 255, 255, 0.75); */
+    }
+    #BurguerContent::-webkit-scrollbar
+    {
+        display: none;
+    }
+    #BurguerContent
+    {
+        width: calc(100% - 48px);
+        height: calc(100% - 24px);
+        margin: 24px 24px 0;
+        padding: 0;
+        
+        overflow: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        border-top-left-radius: 11px;
+        /* border-bottom-right-radius: 11px;
+        border-bottom-left-radius: 2px; */
+        border-top-right-radius: 2px;
+        
+        /* background-color: transparent; */
+    }
+    #BurguerContent div
+    {
+        width: 100%;
+        margin-bottom: 30px;
+        top: 0;
+        
+        /* background-color: transparent; */
+    }
+    #BurguerContent div p
+    {
+        margin-bottom: 6px;
+        padding: 3px 12px 1px;
+
+        border-top-left-radius: 11px;
+        border-bottom-right-radius: 11px;
+        border-bottom-left-radius: 2px;
+        border-top-right-radius: 2px;
+
+        font-size: 24px;
+
+        /* background-color: rgb(255, 255, 255); */
+        /* color: rgb(0, 0, 0); */
+    }
+    #BurguerContent a
+    {
+        margin: 6px 0 0;
+        padding: 3px 12px 1px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+
+        border-top-left-radius: 11px;
+        border-bottom-right-radius: 11px;
+        border-bottom-left-radius: 2px;
+        border-top-right-radius: 2px;
+
+        transition: box-shadow 300ms ease-out, background-color 300ms ease-out, color 600ms ease-out;
+
+        font-size: 21px;
+        text-decoration: none;
+
+        /* background-color: transparent; */
+        /* color: rgb(0, 0, 0); */
+    }
+    #BurguerContent a
+    {
+        margin: 6px 0 0;
+    }
+    #BurguerContent a:hover
+    {
+        /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); */
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+}
+
+/************************************************************************/
+/************************************************************************/
+
+@media (min-width: 601px) and (max-width: 900px) and (max-height: 600px)
+{
+    #UnderMenu
+    {
+        height: 60px;
+    }
+    #NavBar
+    {
+        top: 0;
+        width: 100%;
+        height: 60px;
+    }
+    #MenuGap
+    {
+        display: none;
+    }
+    #MenuCenter
+    {
+        width: 100%;
+        height: 60px;
+        
+        flex-direction: row;
+    }
+    #MenuTop
+    {
+        width:50%;
+        height: 60px;
+    }
+    #MenuBottom
+    {
+        width:50%;
+        height: 60px;
+        padding: 0;
+    }
+
+
+    /******************************************************************/
+
+    #BurguerWindow
+    {
+        height: calc(100% - 60px);
+
+        top: 60px;
+
+        animation-name: showMenuBurguerMini;
+        animation-duration: 300ms;
+    }
+
+    /******************************************************************/
+
+    #End
+    {
+        height: 60px;
+    }
+}
+
+/************************************************************************/
+/************************************************************************/
+
+
+@media (max-width: 600px)
+{
+
+}
+
+
+
+/************************************************************************/
+/*          EDIT MODE                                                   */
+/************************************************************************/
+
+
+
+.OPAQUE
+{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+.TRANSLUCID
+{
+    background-color: rgba(255, 255, 255, 0.75);
+    color: black;
+}
+.TRANSPARENT
+{
+    background-color: transparent;
+    color: black;
+}
+
+
+
+/*
+.MenuGap{background-color: rgba(255, 255, 0, 0.5);}
+.MenuTop{background-color: rgba(255, 0, 0, 0.5);}
+.MenuLogo{background-color: rgba(255, 255, 0, 0.5);}
+.Logo{background-color: rgba(0, 0, 255, 0.5);}
+.MenuBottom{background-color: rgba(0, 0, 255, 0.5);}
+.MenuOption{background-color: rgba(255, 255, 0, 0.5);}
+.GapAfterMenu{background-color: rgba(0, 255, 255, 0.5);}
+.MenuOption:hover .OptionContent{background-color: rgba(242, 0, 255, 0.5);}
+
+.OptionContent .ContentGap{}
+.OptionContent .Content{}
+.OptionContent .Content p{}
+.OptionContent .Content a{}
+.OptionContent .Content a:nth-of-type(1){}
+.OptionContent .Content a:hover{}
+
+
+
+/************************************************************************/
+/************************************************************************/
+/************************************************************************/
