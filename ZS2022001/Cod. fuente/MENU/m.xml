@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0">
+    <channel>
+        <title>RSSSSSSSSS</title>
+        <link></link>
+        <description></description>
+        <language>es</language>
+    
+        <item>
+            <title>Item_01</title>
+            <link></link>
+            <description></description>
+        </item>
+    
+        <item>
+            <title>Item_02</title>
+            <link></link>
+            <description></description>
+        </item>
+    </channel>
+</rss>
