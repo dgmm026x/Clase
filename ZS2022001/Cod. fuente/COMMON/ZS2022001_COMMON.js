@@ -22,11 +22,12 @@
 function BURGUERMENU()
 {
   var BURGUER = document.getElementById("BurguerWindow");
-
+  var BODY = document.getElementById("BODY");
 
   if(BURGUER.style.display === "block")
   {
     BURGUER.style.display = "none";
+    BODY.style.overflow = "visible";
     console.log("Burguer menu (0)");
   }
 
@@ -34,6 +35,7 @@ function BURGUERMENU()
   else
   {
     BURGUER.style.display = "block";
+    BODY.style.overflow = "hidden";
     console.log("Burguer menu (1)");
   }
 }
@@ -42,22 +44,18 @@ function BURGUERMENU()
 
 function THEME()
 {
-  var THEME=document.getElementById("OPAQUE");
+  const THEME=document.getElementsByClassName("OPAQUE");
 
+  console.log(THEME);
 
-  if(THEME.style.backgroundColor == "rgb(0, 0, 0)")
+  for (let i = 0; i < THEME.length; i++)
   {
-    THEME.style.backgroundColor = "rgb(255, 255, 255)";
-    THEME.style.color="rgb(0, 0, 0)";
+    if(THEME[i].style.backgroundColor == "rgb(255, 255, 255)")
+    {
+      THEME.style.backgroundColor="rgb(0, 0, 0)";
+      THEME.style.color="rgb(255, 255, 255)";
+    }
   }
-
-
-  else
-  {
-    THEME.style.backgroundColor="rgb(0, 0, 0)";
-    THEME.style.color="rgb(255, 255, 255)";
-  }
-  console.log("a");
 }
 
 
