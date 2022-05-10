@@ -1,0 +1,11 @@
+ELIMITER $$
+
+CREATE PROCEDURE buscarCantProductos(IN Producto VARCHAR())
+BEGIN
+	SELECT
+		*
+	FROM
+		
+END $$
+
+DELIMITER ;
