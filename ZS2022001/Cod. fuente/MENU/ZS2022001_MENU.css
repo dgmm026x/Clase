@@ -19,7 +19,7 @@
 
 @keyframes showMenu
 {
-    from{ height: 0;}
+    from{height: 0;}
     to{height: calc(100% - 18px);}
 }
 @keyframes showMenuBurguer
@@ -32,7 +32,6 @@
     from{height: 0;}
     to{height: calc(100% - 60px);}
 }
-
 
 
 
@@ -51,6 +50,9 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     
     background-color: transparent;
 }
@@ -60,11 +62,9 @@ body::-webkit-scrollbar
 }
 #BODY
 {   
-    overflow: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    overflow: visible;
     
-    background-color: rgb(150, 0, 0);
+    background-color: rgb(0, 0, 0);/* rgb(150, 0, 0); */
 }
 #themeSwitch
 {
@@ -83,13 +83,13 @@ body::-webkit-scrollbar
     border-bottom-left-radius: 2px;
     border-top-right-radius: 2px;
 
-    transition: box-shadow 300ms ease-out, background-color 300ms ease-out, color 600ms ease-out;
+    transition: background-color 150ms ease-out, color 450ms ease-out;
 
     font-size: 24px;
 
     /* background-color: rgb(255, 255, 255); */
 }
-#themeSwitch:hover
+#themeSwitch:active
 {
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
@@ -122,7 +122,6 @@ body::-webkit-scrollbar
     justify-content: space-between;
     position: fixed;
     
-    /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); */
     /* background-color: rgb(255, 255, 255); */
     /* color: rgb(0, 0, 0); */
 }
@@ -167,9 +166,19 @@ body::-webkit-scrollbar
     height: 50px;
     display: flex;
     justify-content: center;
-    transition: visbility 300ms ease-out;
+
+    border-top-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    transition: background-color 150ms ease-out, color 450ms ease-out;
 
     /* background-color: transparent; */
+}
+#MenuLogo:active
+{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 #Logo
 {
@@ -183,6 +192,10 @@ body::-webkit-scrollbar
     color: rgb(0, 0, 0);
 
     /* background-color: transparent; */
+}
+#Logo:active
+{
+    color: rgb(255, 255, 255);
 }
 
 /**********************************************************************/
@@ -222,7 +235,7 @@ body::-webkit-scrollbar
     border-bottom-right-radius: 11px;
     border-bottom-left-radius: 2px;
     border-top-right-radius: 2px;
-    transition: box-shadow 300ms ease-out, background-color 300ms ease-out, color 600ms ease-out;
+    transition: background-color 150ms ease-out, color 450ms ease-out;
 
     font-size: 24px;
 
@@ -230,13 +243,11 @@ body::-webkit-scrollbar
 }
 #MenuBottom div span:hover
 {
-    /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); */
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
 }
 /* #MenuBottom div span
 {
-    
     background-color: transparent;
     transition: color 600ms ease-out;
 }
@@ -255,7 +266,7 @@ body::-webkit-scrollbar
 #MenuBottom div .OptionContent
 {
     width: 295px;
-    height: 0;
+    height: calc(auto - 18px);
 
     display: none;
     flex-direction: column;
@@ -265,8 +276,7 @@ body::-webkit-scrollbar
 #MenuBottom div:hover .OptionContent
 {
     display: block;
-    animation-name: showMenu;
-    animation-duration: 300ms;
+    animation: showMenu 250ms linear;
 }
 .ContentGap
 {
@@ -291,6 +301,10 @@ body::-webkit-scrollbar
     /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); */
     /* background-color: rgba(255, 255, 255, 0.75); */
 }
+.Content:hover #BODY
+{
+    overflow: hidden;
+}
 .Content a
 {
     width: calc(100% - 24px);
@@ -302,7 +316,7 @@ body::-webkit-scrollbar
     border-bottom-left-radius: 2px;
     border-top-right-radius: 2px;
     
-    transition: box-shadow 300ms ease-out, background-color 300ms ease-out, color 600ms ease-out;
+    transition: background-color 150ms ease-out, color 450ms ease-out;
 
     font-size: 21px;
     text-decoration: none;
@@ -314,9 +328,8 @@ body::-webkit-scrollbar
 {
     margin: 0;
 }
-.Content a:hover
+.Content a:active
 {
-    /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); */
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
 }
@@ -369,7 +382,7 @@ body::-webkit-scrollbar
     border-bottom-left-radius: 2px;
     border-top-right-radius: 2px;
 
-    transition: box-shadow 300ms ease-out, background-color 300ms ease-out, color 600ms ease-out;
+    transition: background-color 150ms ease-out, color 450ms ease-out;
 
     font-size: 24px;
     text-decoration: none;
@@ -378,9 +391,8 @@ body::-webkit-scrollbar
     /* background-color: rgba(255, 255, 255, 0.75); */
     /* color: rgb(0, 0, 0); */
 }
-.PageContent a:hover
+.PageContent a:active
 {
-    /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); */
     background-color:rgba(0, 0, 0, 0.75);
     color: rgb(255, 255, 255);
 }
@@ -411,11 +423,15 @@ body::-webkit-scrollbar
 
 @media(min-width: 901px)
 {
+    body
+    {   
+        overflow: visible;
+        
+        background-color: rgb(0, 0, 0);/* rgb(150, 0, 0); */
+    }
+
     #BurguerContent
     {
-        /* width: 0;
-        height: 0;
-        visibility: hidden; */
         display: none;
     }
 }
@@ -460,7 +476,6 @@ body::-webkit-scrollbar
         border-top-right-radius: 2px; */
 
         /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); */
-        background-color: rgba(255, 255, 255);
     }
     #BurguerContent::-webkit-scrollbar
     {
@@ -469,7 +484,7 @@ body::-webkit-scrollbar
     #BurguerContent
     {
         width: calc(100% - 48px);
-        height: calc(100% - 48px);
+        height: calc(100% - 24px);
         margin: 24px 24px 0;
         padding: 0;
         
@@ -478,11 +493,9 @@ body::-webkit-scrollbar
         scrollbar-width: none;
 
         border-top-left-radius: 11px;
-        border-bottom-right-radius: 11px;
-        border-bottom-left-radius: 2px;
+        /* border-bottom-right-radius: 11px;
+        border-bottom-left-radius: 2px; */
         border-top-right-radius: 2px;
-        
-        /* background-color: transparent; */
     }
     #BurguerContent div
     {
@@ -504,7 +517,6 @@ body::-webkit-scrollbar
 
         font-size: 24px;
 
-        background-color: rgb(220, 220, 220);
         /* color: rgb(0, 0, 0); */
     }
     #BurguerContent a
@@ -533,9 +545,8 @@ body::-webkit-scrollbar
     {
         margin: 6px 0 0;
     }
-    #BurguerContent a:hover
+    #BurguerContent a:active
     {
-        /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); */
         background-color: rgb(0, 0, 0);
         color: rgb(255, 255, 255);
     }
@@ -645,6 +656,11 @@ body::-webkit-scrollbar
 .OPAQUE
 {
     background-color: rgb(255, 255, 255);
+    color: black;
+}
+.SUBOPAQUE
+{
+    background-color: rgb(230, 230, 230);
     color: black;
 }
 .TRANSLUCID
