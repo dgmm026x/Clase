@@ -1,0 +1,58 @@
+/**********************************************************************/
+/*  Actividad 4  */
+
+
+
+@keyframes transition {
+    
+    0% {
+
+        rotate: 0;
+    }
+
+    100% {
+
+        rotate: 360deg;
+    }
+}
+
+body {
+    
+    margin: 0;
+
+    background-color: rgb(80, 80, 80);
+}
+
+#core {
+
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+
+    display: flex;
+    justify-content: center;
+
+    border-radius: 50px;
+
+    background-color: wheat;
+}
+
+#core:hover {
+
+    animation: transition 8000ms linear infinite;
+}
+
+div div {
+
+    width: 5px;
+    height: 30px;
+    margin-top: 3px;
+
+    border-radius: 2.5px;
+
+    background-color: black;
+}
+
+
+
+/**********************************************************************/

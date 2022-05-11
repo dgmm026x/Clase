@@ -1,0 +1,47 @@
+/**********************************************************************/
+/*  Actividad 1  */
+
+
+
+@keyframes transition {
+    
+    0% {
+
+        background-color: green;
+    }
+    
+    33.333333333% {
+
+        background-color: blue;
+    }
+
+    66.666666666% {
+
+        background-color: red;
+    }
+
+    100% {
+
+        background-color: yellow;
+    }
+}
+
+body {
+    
+    margin: 0;
+
+    background-color: rgb(80, 80, 80);
+}
+
+div {
+
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+
+    animation: transition 3000ms linear forwards;
+}
+
+
+
+/**********************************************************************/

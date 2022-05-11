@@ -1,0 +1,65 @@
+/**********************************************************************/
+/*  Actividad 3  */
+
+
+
+@keyframes transition {
+    
+    0% {
+
+        left: 0;
+        bottom: 400px;
+    }
+    
+    25% {
+
+        background-color: green;
+        left: 400px;
+        bottom: 400px;
+    }
+
+    50% {
+
+        background-color: blue;
+        left: 400px;
+        bottom: 0;
+    }
+
+    75% {
+
+        background-color: red;
+        left: 0;
+        bottom: 0;
+    }
+
+    100% {
+
+        background-color: yellow;
+        left: 0;
+        bottom: 400px;
+    }
+}
+
+body {
+    
+    margin: 0;
+
+    background-color: rgb(80, 80, 80);
+}
+
+div{
+
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+
+    position: absolute;
+
+    animation: transition 8000ms linear infinite;
+
+    background-color: transparent;
+}
+
+
+
+/**********************************************************************/
