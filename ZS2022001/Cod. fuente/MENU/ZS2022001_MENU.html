@@ -4,6 +4,7 @@
 <!--                                                                --->
 <!--        ZS202201 MENU (HTML5 FILE)                              --->
 <!--        (DESIGN BEGAN IN: 2022-03-27)                           --->
+<!--        (MAJOR UPGRADE (JS, DARK THEME): 2022-05-11)            --->
 <!--                                                                --->
 <!--------------------------------------------------------------------->
 <!--------------------------------------------------------------------->
@@ -30,15 +31,207 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!------------------------------------------------------------->
+
 
         <title>✧</title><!--AFA卐DAM-->
 
-        <!------------------------------------------------------------->
+
 
         <link rel="stylesheet" href="ZS2022001_MENU.css">
 
-        <script src="../COMMON/ZS2022001_COMMON.js"></script>
+
+
+        <!------------------------------------------------------------->
+        <!--        SCRIPT                                           -->
+        <!------------------------------------------------------------->
+
+
+
+        <!-- <script src="../COMMON/ZS2022001_COMMON.js"></script> -->
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        
+        <script>
+
+            var PURE_WHITE = "rgb(255, 255, 255)";
+            var PURE_BLACK = "rgb(0, 0, 0)";
+
+            var TRANSL_WHITE = "rgba(225, 225, 225, 0.9)";
+            var TRANSL_BLACK = "rgba(30, 30, 30, 0.9)";
+
+            var TRANSL_WHITE2 = "rgba(235, 235, 235, 0.9)";
+            var TRANSL_BLACK2 = "rgba(20, 20, 20, 0.9)";
+
+            var BUTTON_WHITE = "rgb(255, 255, 255)";
+            var BUTTON_BLACK = "rgb(0, 0, 0)";
+
+            $(window).resize (
+                
+                function () {
+
+                    if(window.outerWidth > 900) {
+
+                        if(document.getElementById("BurguerWindow").style.display = "block") {
+                            document.getElementById("BurguerWindow").style.display = "none";
+                            document.getElementById("BODY").style.overflow = "visible";
+                            document.getElementById("BurguerButton").style.backgroundColor = BUTTON_WHITE;
+                            document.getElementById("BurguerButton").style.color = BUTTON_BLACK;
+
+                            // console.log("VIEW = DESKTOP");
+                            // console.log("BURGUERMENU = CLOSED BY DESKTOP VIEW");
+                        }
+                    }
+
+                    else {
+
+                        // console.log("VIEW = MOBILE");
+                    }
+                }
+            );
+
+        </script>
+        <script>
+
+            function BURGUERMENU() {
+            
+                var BURGUER = document.getElementById("BurguerWindow");
+                var BODY = document.getElementById("BODY");
+                var BUTTONY = document.getElementById("BurguerButton");
+
+                if(BURGUER.style.display === "block") {
+
+                    BURGUER.style.display = "none";
+                    BODY.style.overflow = "visible";
+
+                    BurguerButton.style.backgroundColor = BUTTON_WHITE;
+                    BurguerButton.style.color = BUTTON_BLACK;
+
+                    console.log();
+                    console.log("Burguer NOW --> HIDDEN");
+                }
+
+
+                else {
+
+                    BURGUER.style.display = "block";
+                    BODY.style.overflow = "hidden";
+
+                    BurguerButton.style.backgroundColor = BUTTON_BLACK;
+                    BurguerButton.style.color = BUTTON_WHITE;
+
+                    console.log();
+                    console.log("Burguer NOW --> SHOWING");
+                }
+            }
+
+
+
+            function THEME() {
+
+                var STATUS = 1;
+
+                var ALTER = BUTTON_WHITE;
+                BUTTON_WHITE = BUTTON_BLACK;
+                BUTTON_BLACK = ALTER;
+                
+                //OPAQUE OBJECTS////////////////////////////////////////////////////////
+
+                var OPAQUE=document.getElementsByClassName("OPAQUE");
+
+                for (let i = 0; i < OPAQUE.length; i++) {
+
+                    if(OPAQUE[i].style.backgroundColor == PURE_BLACK) {
+
+                        OPAQUE[i].style.backgroundColor = PURE_WHITE;
+                        OPAQUE[i].style.color = PURE_BLACK;
+                        STATUS = 1;
+                    }
+
+                    else {
+
+                        OPAQUE[i].style.backgroundColor = PURE_BLACK;
+                        OPAQUE[i].style.color = PURE_WHITE;
+                        STATUS = 0;
+                    }
+                }
+                
+                //TRANSLUCID OBJECTS////////////////////////////////////////////////////
+
+                var TRANSLUCID=document.getElementsByClassName("TRANSLUCID");
+
+                for (let i = 0; i < TRANSLUCID.length; i++) {
+
+                    if(TRANSLUCID[i].style.backgroundColor == TRANSL_BLACK) {
+
+                        TRANSLUCID[i].style.backgroundColor = TRANSL_WHITE;
+                        TRANSLUCID[i].style.color = PURE_BLACK;
+                        STATUS = 1;
+                    }
+
+                    else {
+
+                        TRANSLUCID[i].style.backgroundColor = TRANSL_BLACK;
+                        TRANSLUCID[i].style.color = PURE_WHITE;
+                        STATUS = 0;
+                    }
+                }
+                
+                //TRANSLUCID2 OBJECTS////////////////////////////////////////////////////
+
+                var TRANSLUCID2=document.getElementsByClassName("TRANSLUCID2");
+
+                for (let i = 0; i < TRANSLUCID2.length; i++) {
+
+                    if(TRANSLUCID2[i].style.backgroundColor == TRANSL_BLACK2) {
+
+                        TRANSLUCID2[i].style.backgroundColor = TRANSL_WHITE2;
+                        TRANSLUCID2[i].style.color = PURE_BLACK;
+                        STATUS = 1;
+                    }
+
+                    else {
+
+                        TRANSLUCID2[i].style.backgroundColor = TRANSL_BLACK2;
+                        TRANSLUCID2[i].style.color = PURE_WHITE;
+                        STATUS = 0;
+                    }
+                }
+                
+                //TRANSPARENT OBJECTS///////////////////////////////////////////////////
+
+                var TRANSPARENT=document.getElementsByClassName("TRANSPARENT");
+
+                for (let i = 0; i < TRANSPARENT.length; i++) {
+
+                    if(TRANSPARENT[i].style.color == PURE_WHITE) {
+
+                        TRANSPARENT[i].style.color = PURE_BLACK;
+                        STATUS = 1;
+                    }
+
+                    else {
+
+                        TRANSPARENT[i].style.color = PURE_WHITE;
+                        STATUS = 0;
+                    }
+                }
+
+                ////////////////////////////////////////////////////////////////////////
+
+                if(STATUS == 1) {
+
+                    console.log();
+                    console.log("Theme NOW --> LIGHT");
+                }
+                
+                else {
+
+                    console.log();
+                    console.log("Theme NOW --> DARK");
+                }
+            }
+
+        </script>
 
     </head>
 
@@ -64,7 +257,7 @@
 
         <div id="NavBar" class="OPAQUE">
 
-            <div id="themeSwitch" onclick="THEME()">☾</div>
+            <div id="themeSwitch" class="OPAQUE" onclick="THEME()">☾</div>
 
             <div class="MenuGap"></div>
 
@@ -73,7 +266,7 @@
                 <div id="MenuTop">
 
                     <div id="MenuLogo">
-                        <a id="Logo" href="ZS2022001_MENU.html">✧</a>
+                        <a id="Logo" class="TRANSPARENT" href="ZS2022001_MENU.html">✧</a>
                     </div>
 
                 </div><!--MenuTop-->
@@ -90,7 +283,7 @@
 
                     <div>
 
-                        <span>SP</span>
+                        <span>ZP</span>
                         
                         <div class="OptionContent">
 
@@ -110,14 +303,14 @@
 
                     <div>
 
-                        <span>SS</span>
+                        <span>ZS</span>
 
                         <div class="OptionContent">
 
                             <div class="ContentGap"></div>
 
                             <div class="Content TRANSLUCID">
-                                <a class="TRANSPARENT" href="../ZS/SOLARSYSTEM/ZS2022001_SOLARSYSTEM.html">Solar system</a>
+                                <a class="TRANSPARENT" href="">Solar system</a>
                             </div>
 
                         </div>
@@ -128,7 +321,7 @@
 
                     <div>
 
-                        <span>SE</span>
+                        <span>ZE</span>
 
                         <div class="OptionContent">
 
@@ -148,7 +341,7 @@
 
                     <div>
 
-                        <span>SA</span>
+                        <span>ZA</span>
 
                         <div class="OptionContent">
 
@@ -168,7 +361,7 @@
 
                     <div>
 
-                        <span>SR</span>
+                        <span>ZR</span>
 
                         <div class="OptionContent">
 
@@ -186,7 +379,7 @@
 
                     <div>
 
-                        <span>SC</span>
+                        <span>ZC</span>
 
                         <div class="OptionContent">
 
@@ -224,9 +417,9 @@
 
 
 
-                    <div id="BurguerMenu" onclick="BURGUERMENU()">
+                    <div class="OptionContent" onclick="BURGUERMENU()">
 
-                        <span>||||</span>
+                        <span id="BurguerButton" class="OPAQUE">||||</span>
 
                     </div><!--|||| (Burguer)-->
 
@@ -273,7 +466,7 @@
                 <div>
                     <p class="OPAQUE">SS</p>
                     
-                    <a class="TRANSPARENT" href="../ZS/SOLARSYSTEM/ZS2022001_SOLARSYSTEM.html">Solar system</a>
+                    <a class="TRANSPARENT" href="">Solar system</a>
                 </div>
 
 
@@ -345,19 +538,19 @@
         </div> -->
 
         <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/spacex_bfr_mars_mission_4k-3840x2160.jpg);">
-            <a class="TRANSLUCID" href="">STARSHIP GEN. 2: MARS LANDING</a>
+            <a class="TRANSLUCID2" href="">STARSHIP GEN. 2: MARS LANDING</a>
         </div>
 
         <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/STR_10.png);">
-            <a class="TRANSLUCID" href="">STARSHIP-SUPERHEAVY GEN. 4: FLIGHT AT MAX. Q</a>
+            <a class="TRANSLUCID2" href="">STARSHIP-SUPERHEAVY GEN. 4: FLIGHT AT MAX. Q</a>
         </div>
 
         <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/mars_landing.png);">
-            <a class="TRANSLUCID" href="">STARSHIP GEN. 4: MARS ENTRY</a>
+            <a class="TRANSLUCID2" href="">STARSHIP GEN. 4: MARS ENTRY</a>
         </div>
 
         <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/STR_7.jpg);">
-            <a class="TRANSLUCID" href="">STARSHIP GEN. 4: CLOSING ORBIT TRAJECTORY WITHIN SATURN'S SPHERE OF INFLUENCE</a>
+            <a class="TRANSLUCID2" href="">STARSHIP GEN. 4: CLOSING ORBIT TRAJECTORY WITHIN SATURN'S SPHERE OF INFLUENCE</a>
         </div>
 
 

@@ -12,49 +12,121 @@
 
 
 ////////////////////////////////////////////////////////////////////////
-//                                                                    //
 //          BURGUER MENU                                              //
-//                                                                    //
 ////////////////////////////////////////////////////////////////////////
 
 
 
-function BURGUERMENU()
-{
+function BURGUERMENU() {
+  
   var BURGUER = document.getElementById("BurguerWindow");
   var BODY = document.getElementById("BODY");
 
-  if(BURGUER.style.display === "block")
-  {
+  if(BURGUER.style.display === "block") {
+
     BURGUER.style.display = "none";
     BODY.style.overflow = "visible";
-    console.log("Burguer menu (0)");
+    console.log();
+    console.log("Burguer NOW --> HIDDEN");
   }
 
 
-  else
-  {
+  else {
+
     BURGUER.style.display = "block";
     BODY.style.overflow = "hidden";
-    console.log("Burguer menu (1)");
+    console.log();
+    console.log("Burguer NOW --> SHOWING");
   }
 }
 
 
 
-function THEME()
-{
-  const THEME=document.getElementsByClassName("OPAQUE");
+////////////////////////////////////////////////////////////////////////
+//          COLOR THEME                                               //
+////////////////////////////////////////////////////////////////////////
 
-  console.log(THEME);
 
-  for (let i = 0; i < THEME.length; i++)
-  {
-    if(THEME[i].style.backgroundColor == "rgb(255, 255, 255)")
-    {
-      THEME.style.backgroundColor="rgb(0, 0, 0)";
-      THEME.style.color="rgb(255, 255, 255)";
+
+function THEME() {
+
+  var STATUS = 1;
+
+  //OPAQUE OBJECTS////////////////////////////////////////////////////////
+
+  var OPAQUE=document.getElementsByClassName("OPAQUE");
+
+  for (let i = 0; i < OPAQUE.length; i++) {
+
+    if(OPAQUE[i].style.backgroundColor == "rgb(0, 0, 0)") {
+
+      OPAQUE[i].style.backgroundColor="rgb(255, 255, 255)";
+      OPAQUE[i].style.color="rgb(0, 0, 0)";
+      STATUS = 1;
     }
+
+    else {
+
+      OPAQUE[i].style.backgroundColor="rgb(0, 0, 0)";
+      OPAQUE[i].style.color="rgb(255, 255, 255)";
+      STATUS = 0;
+    }
+  }
+  
+  //TRANSLUCID OBJECTS////////////////////////////////////////////////////
+
+  var TRANSLUCID=document.getElementsByClassName("TRANSLUCID");
+
+  for (let i = 0; i < TRANSLUCID.length; i++) {
+
+    if(TRANSLUCID[i].style.backgroundColor == "rgba(0, 0, 0, 0.86)") {
+
+      TRANSLUCID[i].style.backgroundColor="rgba(255, 255, 255, 0.75)";
+      TRANSLUCID[i].style.color="rgb(0, 0, 0)";
+      STATUS = 1;
+    }
+
+    else {
+
+      TRANSLUCID[i].style.backgroundColor="rgba(0, 0, 0, 0.86)";
+      TRANSLUCID[i].style.color="rgb(255, 255, 255)";
+      STATUS = 0;
+    }
+  }
+  
+  //TRANSPARENT OBJECTS///////////////////////////////////////////////////
+
+  var TRANSPARENT=document.getElementsByClassName("TRANSPARENT");
+
+  for (let i = 0; i < TRANSPARENT.length; i++) {
+
+    if(TRANSPARENT[i].style.color == "rgb(255, 255, 255)") {
+
+      TRANSPARENT[i].style.backgroundColor="transparent";
+      TRANSPARENT[i].style.color="rgb(0, 0, 0)";
+      STATUS = 1;
+    }
+
+    else {
+
+      TRANSPARENT[i].style.backgroundColor="transparent";
+      TRANSPARENT[i].style.color="rgb(255, 255, 255)";
+      STATUS = 0;
+    }
+  }
+
+  ////////////////////////////////////////////////////////////////////////
+
+  if(STATUS == 1) {
+
+    console.log();
+    console.log("Theme NOW --> LIGHT");
+  }
+  
+  else {
+
+    console.log();
+    console.log("Theme NOW --> DARK");
   }
 }
 

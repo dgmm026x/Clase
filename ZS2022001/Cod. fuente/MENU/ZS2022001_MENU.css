@@ -19,18 +19,18 @@
 
 @keyframes showMenu
 {
-    from{height: 0;}
-    to{height: calc(100% - 18px);}
+    from {height: 0;}
+    to {height: calc(100% - 18px);}
 }
 @keyframes showMenuBurguer
 {
-    from{height: 0;}
-    to{height: calc(100% - 120px);}
+    from {height: 0;}
+    to {height: calc(100% - 120px);}
 }
 @keyframes showMenuBurguerMini
 {
-    from{height: 0;}
-    to{height: calc(100% - 60px);}
+    from {height: 0;}
+    to {height: calc(100% - 60px);}
 }
 
 
@@ -70,30 +70,30 @@ body::-webkit-scrollbar
 {
     width: 40px;
     height: 40px;
-    padding-right: 2px;
 
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
+    position: absolute;
     left: 12px;
+    /* right: 0;
+    top: calc(100vh - 40px); */
 
     border-top-left-radius: 11px;
     border-bottom-right-radius: 11px;
     border-bottom-left-radius: 2px;
     border-top-right-radius: 2px;
 
-    transition: background-color 150ms ease-out, color 450ms ease-out;
 
     font-size: 24px;
-
-    /* background-color: rgb(255, 255, 255); */
 }
-#themeSwitch:active
+/* #themeSwitch:active
 {
+    transition: background-color 150ms ease-out, color 450ms ease-out;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-}
+} */
 
 
 
@@ -171,15 +171,15 @@ body::-webkit-scrollbar
     border-bottom-right-radius: 11px;
     border-bottom-left-radius: 2px;
     border-top-right-radius: 2px;
-    transition: background-color 150ms ease-out, color 450ms ease-out;
 
     /* background-color: transparent; */
 }
-#MenuLogo:active
+/* #MenuLogo:active
 {
+    transition: background-color 150ms ease-out, color 450ms ease-out;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-}
+} */
 #Logo
 {
     padding-bottom: 5px;
@@ -193,10 +193,10 @@ body::-webkit-scrollbar
 
     /* background-color: transparent; */
 }
-#Logo:active
+/* #Logo:active
 {
     color: rgb(255, 255, 255);
-}
+} */
 
 /**********************************************************************/
 
@@ -229,34 +229,20 @@ body::-webkit-scrollbar
     align-items: center;
     justify-content: center;
 
-    touch-action: auto;
-
     border-top-left-radius: 11px;
     border-bottom-right-radius: 11px;
     border-bottom-left-radius: 2px;
     border-top-right-radius: 2px;
-    transition: background-color 150ms ease-out, color 450ms ease-out;
 
     font-size: 24px;
-
-    /* background-color: transparent; */
 }
-#MenuBottom div span:hover
+/* #MenuBottom div:nth-last-of-type(1n+2):hover span
 {
+    transition: background-color 150ms ease-out, color 450ms ease-out;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-}
-/* #MenuBottom div span
-{
-    background-color: transparent;
-    transition: color 600ms ease-out;
-}
-#MenuBottom div:hover span
-{
-    background-color: transparent;
-    color: black;
 } */
-#MenuBottom div:nth-of-type(1n+8)
+#MenuBottom div:nth-of-type(1n+8) span
 {
     display: none;
 }
@@ -265,7 +251,7 @@ body::-webkit-scrollbar
 
 #MenuBottom div .OptionContent
 {
-    width: 295px;
+    width: 25vw;/* 295px; */
     height: calc(auto - 18px);
 
     display: none;
@@ -276,7 +262,7 @@ body::-webkit-scrollbar
 #MenuBottom div:hover .OptionContent
 {
     display: block;
-    animation: showMenu 250ms linear;
+    /* animation: showMenu 250ms linear; */
 }
 .ContentGap
 {
@@ -315,8 +301,6 @@ body::-webkit-scrollbar
     border-bottom-right-radius: 11px;
     border-bottom-left-radius: 2px;
     border-top-right-radius: 2px;
-    
-    transition: background-color 150ms ease-out, color 450ms ease-out;
 
     font-size: 21px;
     text-decoration: none;
@@ -328,16 +312,15 @@ body::-webkit-scrollbar
 {
     margin: 0;
 }
-.Content a:active
+/* .Content a:hover
 {
+    transition: background-color 150ms ease-out, color 450ms ease-out;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-}
-#BurguerContent
+} */
+#BurguerWindow
 {
-    /* width: 0;
-    height: 0;
-    visibility: hidden; */
+    display: none;
 }
 
 
@@ -391,11 +374,11 @@ body::-webkit-scrollbar
     /* background-color: rgba(255, 255, 255, 0.75); */
     /* color: rgb(0, 0, 0); */
 }
-.PageContent a:active
+/* .PageContent a:hover
 {
-    background-color:rgba(0, 0, 0, 0.75);
+    background-color:rgba(20, 20, 20, 0.9);
     color: rgb(255, 255, 255);
-}
+} */
 
 
 
@@ -421,31 +404,13 @@ body::-webkit-scrollbar
 
 
 
-@media(min-width: 901px)
-{
-    body
-    {   
-        overflow: visible;
-        
-        background-color: rgb(0, 0, 0);/* rgb(150, 0, 0); */
-    }
-
-    #BurguerContent
-    {
-        display: none;
-    }
-}
-
-/************************************************************************/
-/************************************************************************/
-
-@media(max-width: 900px)
+@media (max-width: 900px) or (max-height: 600px) 
 {
     #MenuBottom div:nth-last-of-type(1n+2)
     {
         display: none;
     }
-    #MenuBottom div:nth-of-type(1n+8)
+    #MenuBottom div:nth-of-type(1n+8) span
     {
         display: flex;
     }
@@ -458,24 +423,18 @@ body::-webkit-scrollbar
         height: calc(100% - 120px);
 
         top: 120px;
-        /* width: calc(100% - 24px);
-        height: calc(100% - 144px);
-        margin: 12px; */
         
         visibility: visible;
         display: none;
         position: fixed;
         justify-content: center;
 
-        animation-name: showMenuBurguer;
-        animation-duration: 300ms;
+        /* animation: showMenuBurguer 250ms ease-out; */
 
         /* border-top-left-radius: 11px;
         border-bottom-right-radius: 11px;
         border-bottom-left-radius: 2px;
         border-top-right-radius: 2px; */
-
-        /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); */
     }
     #BurguerContent::-webkit-scrollbar
     {
@@ -502,8 +461,6 @@ body::-webkit-scrollbar
         width: 100%;
         margin-bottom: 30px;
         top: 0;
-        
-        /* background-color: transparent; */
     }
     #BurguerContent div p
     {
@@ -516,8 +473,6 @@ body::-webkit-scrollbar
         border-top-right-radius: 2px;
 
         font-size: 24px;
-
-        /* color: rgb(0, 0, 0); */
     }
     #BurguerContent a
     {
@@ -533,30 +488,37 @@ body::-webkit-scrollbar
         border-bottom-left-radius: 2px;
         border-top-right-radius: 2px;
 
-        transition: box-shadow 300ms ease-out, background-color 300ms ease-out, color 600ms ease-out;
-
         font-size: 21px;
         text-decoration: none;
-
-        /* background-color: transparent; */
-        /* color: rgb(0, 0, 0); */
     }
     #BurguerContent a
     {
         margin: 6px 0 0;
     }
-    #BurguerContent a:active
+    /* #BurguerContent a:hover
     {
+        transition: box-shadow 300ms ease-out, background-color 300ms ease-out, color 600ms ease-out;
         background-color: rgb(0, 0, 0);
         color: rgb(255, 255, 255);
-    }
+    } */
 }
 
 /************************************************************************/
 /************************************************************************/
 
-@media (min-width: 601px) and (max-width: 900px) and (max-height: 600px)
+@media (max-height: 600px)
 {
+    #MenuBottom div:nth-last-of-type(1n+2)
+    {
+        display: none;
+    }
+    #MenuBottom div:nth-of-type(1n+8) span
+    {
+        display: flex;
+    }
+
+    /******************************************************************/
+
     #UnderMenu
     {
         height: 60px;
@@ -599,8 +561,7 @@ body::-webkit-scrollbar
 
         top: 60px;
 
-        animation-name: showMenuBurguerMini;
-        animation-duration: 300ms;
+        /* animation: showMenuBurguerMini 250ms ease-out; */
     }
 
     /******************************************************************/
@@ -612,10 +573,10 @@ body::-webkit-scrollbar
 
     /******************************************************************/
 
-    #End
+    /* #End
     {
         height: 60px;
-    }
+    } */
 }
 
 /************************************************************************/
@@ -658,14 +619,19 @@ body::-webkit-scrollbar
     background-color: rgb(255, 255, 255);
     color: black;
 }
-.SUBOPAQUE
+/* .OPAQUEINVERSE
 {
-    background-color: rgb(230, 230, 230);
-    color: black;
-}
+    background-color: rgb(0, 0, 0);
+    color: white;
+} */
 .TRANSLUCID
 {
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(225, 225, 225, 0.9);
+    color: black;
+}
+.TRANSLUCID2
+{
+    background-color: rgba(235, 235, 235, 0.9);
     color: black;
 }
 .TRANSPARENT
