@@ -89,8 +89,7 @@
                 }
             );
 
-        </script>
-        <script>
+            
 
             function BURGUERMENU() {
             
@@ -126,9 +125,55 @@
 
 
 
-            function THEME() {
+            var STATUS = 1;
 
-                var STATUS = 1;
+            function HOVER() {
+
+                var TRANSPARENT=document.getElementsByClassName("TRANSPARENT");
+                var BUTTON=document.getElementsByClassName("BUTTON");
+
+                for (let i = 0; i < TRANSPARENT.length; i++) {
+
+                    if(STATUS == 0) {
+
+                        BUTTON[i].style.backgroundColor = PURE_WHITE;
+                        BUTTON[i].style.color = PURE_BLACK;
+                    }
+
+                    else {
+
+                        BUTTON[i].style.backgroundColor = PURE_BLACK;
+                        BUTTON[i].style.color = PURE_WHITE;
+                    }
+                }
+            }
+
+
+
+            function NOHOVER() {
+
+                var TRANSPARENT=document.getElementsByClassName("TRANSPARENT");
+                var BUTTON=document.getElementsByClassName("BUTTON");
+
+                for (let i = 0; i < TRANSPARENT.length; i++) {
+
+                    if(STATUS == 1) {
+
+                        BUTTON[i].style.backgroundColor = PURE_WHITE;
+                        BUTTON[i].style.color = PURE_BLACK;
+                    }
+
+                    else {
+
+                        BUTTON[i].style.backgroundColor = PURE_BLACK;
+                        BUTTON[i].style.color = PURE_WHITE;
+                    }
+                }
+            }
+
+
+
+            function THEME() {
 
                 var ALTER = BUTTON_WHITE;
                 BUTTON_WHITE = BUTTON_BLACK;
@@ -283,14 +328,14 @@
 
                     <div>
 
-                        <span>ZP</span>
+                        <span class="BUTTON" onmouseover="HOVER()" onmouseout="NOHOVER()">ZP</span>
                         
                         <div class="OptionContent">
 
                             <div class="ContentGap"></div>
 
                             <div class="Content TRANSLUCID">
-                                <a class="TRANSPARENT" href="">PAaaaaaa</a>
+                                <a class="TRANSPARENT " href="">PAaaaaaa</a>
                                 <a class="TRANSPARENT" href="">PBbbb</a>
                                 <a class="TRANSPARENT" href="">PCccccccccc</a>
                             </div>

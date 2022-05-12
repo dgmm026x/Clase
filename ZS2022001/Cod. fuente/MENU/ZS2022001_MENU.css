@@ -122,6 +122,8 @@ body::-webkit-scrollbar
     justify-content: space-between;
     position: fixed;
     
+    transition: background-color 150ms ease-out, color 450ms ease-out;
+    
     /* background-color: rgb(255, 255, 255); */
     /* color: rgb(0, 0, 0); */
 }
@@ -171,12 +173,13 @@ body::-webkit-scrollbar
     border-bottom-right-radius: 11px;
     border-bottom-left-radius: 2px;
     border-top-right-radius: 2px;
+    
+    transition: background-color 150ms ease-out, color 450ms ease-out;
 
     /* background-color: transparent; */
 }
 /* #MenuLogo:active
 {
-    transition: background-color 150ms ease-out, color 450ms ease-out;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
 } */
@@ -190,6 +193,8 @@ body::-webkit-scrollbar
     font-size: 60px;
     text-decoration: none;
     color: rgb(0, 0, 0);
+    
+    transition: background-color 150ms ease-out, color 450ms ease-out;
 
     /* background-color: transparent; */
 }
@@ -233,12 +238,13 @@ body::-webkit-scrollbar
     border-bottom-right-radius: 11px;
     border-bottom-left-radius: 2px;
     border-top-right-radius: 2px;
+    
+    transition: background-color 150ms ease-out, color 450ms ease-out;
 
     font-size: 24px;
 }
 /* #MenuBottom div:nth-last-of-type(1n+2):hover span
 {
-    transition: background-color 150ms ease-out, color 450ms ease-out;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
 } */
@@ -305,6 +311,8 @@ body::-webkit-scrollbar
     font-size: 21px;
     text-decoration: none;
 
+    transition: background-color 150ms ease-out, color 450ms ease-out;
+
     /* background-color: transparent;
     color: rgb(0, 0, 0); */
 }
@@ -314,7 +322,7 @@ body::-webkit-scrollbar
 }
 /* .Content a:hover
 {
-    transition: background-color 150ms ease-out, color 450ms ease-out;
+
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
 } */
@@ -435,6 +443,8 @@ body::-webkit-scrollbar
         border-bottom-right-radius: 11px;
         border-bottom-left-radius: 2px;
         border-top-right-radius: 2px; */
+        
+        transition: background-color 150ms ease-out, color 450ms ease-out;
     }
     #BurguerContent::-webkit-scrollbar
     {
@@ -471,6 +481,8 @@ body::-webkit-scrollbar
         border-bottom-right-radius: 11px;
         border-bottom-left-radius: 2px;
         border-top-right-radius: 2px;
+        
+        transition: background-color 150ms ease-out, color 450ms ease-out;
 
         font-size: 24px;
     }
@@ -487,6 +499,8 @@ body::-webkit-scrollbar
         border-bottom-right-radius: 11px;
         border-bottom-left-radius: 2px;
         border-top-right-radius: 2px;
+        
+        transition: background-color 150ms ease-out, color 450ms ease-out;
 
         font-size: 21px;
         text-decoration: none;

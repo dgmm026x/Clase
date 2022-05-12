@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<web>
+
+    <header>
+
+        <titulo></titulo>
+    
+        <descripcion></descripcion>
+    
+        <subtitulo></subtitulo>
+    
+        <conjunto>
+
+            <pelicula>
+
+                <titulo>titulo</titulo>
+
+                <director>director</director>
+
+                <imagen>imagen</imagen>
+
+                <salida>salida</salida>
+
+                <sinopsis>sinopsis</sinopsis>
+
+                <generos>generos</generos>
+
+                <resparto>
+
+                    <principales>
+
+                        <actor>actor</actor>
+
+                        <actor>actor</actor>
+
+                        <actor>actor</actor>
+
+                    </principales>
+
+                    <secundario>
+                        
+                        <actor>actor2</actor>
+
+                        <actor>actor2</actor>
+
+                        <actor>actor2</actor>
+
+                    </secundario>
+
+                </resparto>
+
+            </pelicula>
+
+
+
+            <pelicula>
+
+                <titulo></titulo>
+
+                <director></director>
+
+                <imagen></imagen>
+
+                <salida></salida>
+
+                <sinopsis></sinopsis>
+
+                <generos></generos>
+
+                <resparto>
+
+                    <principales>
+
+                        <actor></actor>
+
+                        <actor></actor>
+
+                        <actor></actor>
+
+                    </principales>
+
+                    <secundario>
+                        
+                        <actor></actor>
+
+                        <actor></actor>
+
+                        <actor></actor>
+
+                    </secundario>
+
+                </resparto>
+
+            </pelicula>
+
+
+
+            <pelicula>
+
+                <titulo></titulo>
+
+                <director></director>
+
+                <imagen></imagen>
+
+                <salida></salida>
+
+                <sinopsis></sinopsis>
+
+                <generos></generos>
+
+                <resparto>
+
+                    <principales>
+
+                        <actor></actor>
+
+                        <actor></actor>
+
+                        <actor></actor>
+
+                    </principales>
+
+                    <secundario>
+                        
+                        <actor></actor>
+
+                        <actor></actor>
+
+                        <actor></actor>
+
+                    </secundario>
+
+                </resparto>
+
+            </pelicula>
+
+
+
+            <pelicula>
+
+                <titulo></titulo>
+
+                <director></director>
+
+                <imagen></imagen>
+
+                <salida></salida>
+
+                <sinopsis></sinopsis>
+
+                <generos></generos>
+
+                <resparto>
+
+                    <principales>
+
+                        <actor></actor>
+
+                        <actor></actor>
+
+                        <actor></actor>
+
+                    </principales>
+
+                    <secundario>
+                        
+                        <actor></actor>
+
+                        <actor></actor>
+
+                        <actor></actor>
+
+                    </secundario>
+
+                </resparto>
+
+            </pelicula>
+
+
+
+            <pelicula>
+
+                <titulo></titulo>
+
+                <director></director>
+
+                <imagen></imagen>
+
+                <salida></salida>
+
+                <sinopsis></sinopsis>
+
+                <generos></generos>
+
+                <resparto>
+
+                    <principales>
+
+                        <actor></actor>
+
+                        <actor></actor>
+
+                        <actor></actor>
+
+                    </principales>
+
+                    <secundario>
+                        
+                        <actor></actor>
+
+                        <actor></actor>
+
+                        <actor></actor>
+
+                    </secundario>
+
+                </resparto>
+
+            </pelicula>
+
+
+            
+            <pelicula>
+
+                <titulo></titulo>
+
+                <director></director>
+
+                <imagen></imagen>
+
+                <salida></salida>
+
+                <sinopsis></sinopsis>
+
+                <generos></generos>
+
+                <resparto>
+
+                    <principales>
+
+                        <actor></actor>
+
+                        <actor></actor>
+
+                        <actor></actor>
+
+                    </principales>
+
+                    <secundario>
+                        
+                        <actor></actor>
+
+                        <actor></actor>
+
+                        <actor></actor>
+
+                    </secundario>
+
+                </resparto>
+
+            </pelicula>
+
+        </conjunto>
+    
+    </header>
+    
+    
+    
+    <footer>
+    
+        <final></final>
+    
+    </footer>
+
+</web>

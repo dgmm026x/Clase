@@ -1,3 +1,8 @@
+/**********************************************************************/
+/*  Actividad 8  */
+
+
+
 @keyframes Rotation
 {
     0%{rotate: 0;}
@@ -195,7 +200,7 @@ body
 
     border-radius: 100%;
 
-    rotate: -150deg;
+    /* rotate: -150deg; */
 
     animation: webkit-Rotation 1600s linear infinite;
     animation: moz-Rotation 1600s linear infinite;
@@ -374,7 +379,7 @@ body
 
     border-radius: 100%;
     
-    rotate: -140deg;
+    /* rotate: -140deg; */
 
     animation: webkit-Rotation 1400s linear infinite;
     animation: moz-Rotation 1400s linear infinite;
@@ -616,7 +621,7 @@ body
 
     border-radius: 100%;
     
-    rotate: -130deg;
+    /* rotate: -130deg; */
 
     animation: webkit-Rotation 1200s linear infinite;
     animation: moz-Rotation 1200s linear infinite;
@@ -821,7 +826,7 @@ body
 
     border-radius: 100%;
     
-    rotate: -120deg;
+    /* rotate: -120deg; */
 
     animation: webkit-Rotation 810s linear infinite;
     animation: moz-Rotation 810s linear infinite;
@@ -942,7 +947,7 @@ body
 
     border-radius: 100%;
     
-    rotate: -110deg;
+    /* rotate: -110deg; */
 
     animation: webkit-Rotation 750s linear infinite;
     animation: moz-Rotation 750s linear infinite;
@@ -1033,7 +1038,7 @@ body
 
     border-radius: 100%;
     
-    rotate: -100deg;
+    /* rotate: -100deg; */
 
     animation: webkit-Rotation 660s linear infinite;
     animation: moz-Rotation 660s linear infinite;
@@ -1094,7 +1099,7 @@ body
 
     border-radius: 100%;
     
-    rotate: -90deg;
+    /* rotate: -90deg; */
 
     animation: webkit-Rotation 600s linear infinite;
     animation: moz-Rotation 600s linear infinite;
@@ -1156,3 +1161,7 @@ body
     border: 0.1vw solid rgb(255, 189, 67);
     background-color: rgb(255, 248, 223);
 }
+
+
+
+/**********************************************************************/
