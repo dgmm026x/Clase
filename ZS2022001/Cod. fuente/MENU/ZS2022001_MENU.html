@@ -127,52 +127,6 @@
 
             var STATUS = 1;
 
-            function HOVER() {
-
-                var TRANSPARENT=document.getElementsByClassName("TRANSPARENT");
-                var BUTTON=document.getElementsByClassName("BUTTON");
-
-                for (let i = 0; i < TRANSPARENT.length; i++) {
-
-                    if(STATUS == 0) {
-
-                        BUTTON[i].style.backgroundColor = PURE_WHITE;
-                        BUTTON[i].style.color = PURE_BLACK;
-                    }
-
-                    else {
-
-                        BUTTON[i].style.backgroundColor = PURE_BLACK;
-                        BUTTON[i].style.color = PURE_WHITE;
-                    }
-                }
-            }
-
-
-
-            function NOHOVER() {
-
-                var TRANSPARENT=document.getElementsByClassName("TRANSPARENT");
-                var BUTTON=document.getElementsByClassName("BUTTON");
-
-                for (let i = 0; i < TRANSPARENT.length; i++) {
-
-                    if(STATUS == 1) {
-
-                        BUTTON[i].style.backgroundColor = PURE_WHITE;
-                        BUTTON[i].style.color = PURE_BLACK;
-                    }
-
-                    else {
-
-                        BUTTON[i].style.backgroundColor = PURE_BLACK;
-                        BUTTON[i].style.color = PURE_WHITE;
-                    }
-                }
-            }
-
-
-
             function THEME() {
 
                 var ALTER = BUTTON_WHITE;
@@ -261,6 +215,25 @@
                     }
                 }
 
+                //RESET BUTTON OBJECTS BACKGROUND COLOR/////////////////////////////////
+
+                var BUTTON=document.getElementsByClassName("BUTTON");
+
+                for (let i = 0; i < BUTTON.length; i++) {
+
+                    if(BUTTON[i].style.backgroundColor == PURE_WHITE) {
+
+                        BUTTON[i].style.backgroundColor = PURE_BLACK;
+                        BUTTON[i].style.color = PURE_WHITE;
+                    }
+
+                    else {
+
+                        BUTTON[i].style.backgroundColor = PURE_WHITE;
+                        BUTTON[i].style.color = PURE_BLACK;
+                    }
+                }
+
                 ////////////////////////////////////////////////////////////////////////
 
                 if(STATUS == 1) {
@@ -273,6 +246,50 @@
 
                     console.log();
                     console.log("Theme NOW --> DARK");
+                }
+            }
+
+
+
+            function HOVER() {
+
+                var BUTTON=document.getElementsByClassName("BUTTON");
+
+                for (let i = 0; i < BUTTON.length; i++) {
+
+                    if(STATUS == 0) {
+
+                        BUTTON[i].style.backgroundColor = PURE_WHITE;
+                        BUTTON[i].style.color = PURE_BLACK;
+                    }
+
+                    else {
+
+                        BUTTON[i].style.backgroundColor = PURE_BLACK;
+                        BUTTON[i].style.color = PURE_WHITE;
+                    }
+                }
+            }
+
+
+
+            function NOHOVER() {
+
+                var BUTTON=document.getElementsByClassName("BUTTON");
+
+                for (let i = 0; i < BUTTON.length; i++) {
+
+                    if(STATUS == 1) {
+
+                        BUTTON[i].style.backgroundColor = PURE_WHITE;
+                        BUTTON[i].style.color = PURE_BLACK;
+                    }
+
+                    else {
+
+                        BUTTON[i].style.backgroundColor = PURE_BLACK;
+                        BUTTON[i].style.color = PURE_WHITE;
+                    }
                 }
             }
 
@@ -326,9 +343,9 @@
 
                 <div id="MenuBottom">
 
-                    <div>
+                    <div class="BUTTON" onmouseover="HOVER()" onmouseout="NOHOVER()">
 
-                        <span class="BUTTON" onmouseover="HOVER()" onmouseout="NOHOVER()">ZP</span>
+                        <span>ZP</span>
                         
                         <div class="OptionContent">
 
@@ -348,7 +365,7 @@
 
                     <div>
 
-                        <span>ZS</span>
+                        <span class="BUTTON" onmouseover="HOVER()" onmouseout="NOHOVER()">ZS</span>
 
                         <div class="OptionContent">
 
@@ -366,7 +383,7 @@
 
                     <div>
 
-                        <span>ZE</span>
+                        <span class="BUTTON" onmouseover="HOVER()" onmouseout="NOHOVER()">ZE</span>
 
                         <div class="OptionContent">
 
@@ -386,7 +403,7 @@
 
                     <div>
 
-                        <span>ZA</span>
+                        <span class="BUTTON" onmouseover="HOVER()" onmouseout="NOHOVER()">ZA</span>
 
                         <div class="OptionContent">
 
@@ -406,7 +423,7 @@
 
                     <div>
 
-                        <span>ZR</span>
+                        <span class="BUTTON" onmouseover="HOVER()" onmouseout="NOHOVER()">ZR</span>
 
                         <div class="OptionContent">
 
@@ -424,7 +441,7 @@
 
                     <div>
 
-                        <span>ZC</span>
+                        <span class="BUTTON" onmouseover="HOVER()" onmouseout="NOHOVER()">ZC</span>
 
                         <div class="OptionContent">
 
@@ -444,7 +461,7 @@
 
                     <div>
 
-                        <span>||||</span>
+                        <span class="BUTTON" onmouseover="HOVER()" onmouseout="NOHOVER()">||||</span>
 
                         <div class="OptionContent">
 

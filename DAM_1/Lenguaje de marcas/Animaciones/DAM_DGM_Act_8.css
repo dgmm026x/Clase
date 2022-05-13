@@ -26,6 +26,10 @@
 
 
 
+/* Empiezan alineados por preferencia peronal... */
+
+
+
 body
 {
     margin: 0;
@@ -54,6 +58,8 @@ body
     align-items: center;
 
     border-radius: 100%;
+
+    rotate: -160deg;
     
     animation: webkit-Rotation 1800s linear infinite;
     animation: moz-Rotation 1800s linear infinite;

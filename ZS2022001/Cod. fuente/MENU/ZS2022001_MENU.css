@@ -212,8 +212,9 @@ body::-webkit-scrollbar
     
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+
+    background-color: red;
 }
 #MenuBottom div
 {
@@ -225,8 +226,8 @@ body::-webkit-scrollbar
 #MenuBottom div span
 {
     height: 36px;
-    width: 85px;
-    margin: 0 6px;
+    width: 90px;
+    margin: 0 12px 0;
     padding-top: 2px;
 
     display: flex;
@@ -257,7 +258,8 @@ body::-webkit-scrollbar
 
 #MenuBottom div .OptionContent
 {
-    width: 25vw;/* 295px; */
+    width: 21vw;/* 295px; */
+    max-width: 300px;
     height: calc(auto - 18px);
 
     display: none;
@@ -274,6 +276,8 @@ body::-webkit-scrollbar
 {
     width: 100%;
     height: 12px;
+
+    background-color: blue;
 }
 .Content
 {
@@ -292,10 +296,6 @@ body::-webkit-scrollbar
 
     /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); */
     /* background-color: rgba(255, 255, 255, 0.75); */
-}
-.Content:hover #BODY
-{
-    overflow: hidden;
 }
 .Content a
 {

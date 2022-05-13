@@ -61,7 +61,7 @@ body {
 
     border-radius: 50px;
 
-    animation: transition 8000ms linear infinite;
+    animation: transition 1500ms linear infinite; /*En 8000ms parece un gusano en movimiento*/
 
     background-color: rgba(183, 154, 100, 0.598);
 }
