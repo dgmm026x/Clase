@@ -1,0 +1,88 @@
+* {
+
+    margin: 0;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+body {
+
+    background-color: grey;
+}
+
+header {
+
+    padding: 15px;
+
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 36px;
+    background-color: dimgray;
+}
+
+section {
+
+    padding: 15px 0;
+    background-color: grey;
+}
+
+section p {
+    
+    padding: 15px 0;
+}
+
+section:nth-of-type(1) {
+    
+    padding: 15px 15px 0px;
+}
+
+section div {
+
+    padding: 15px;
+    border-radius: 20px;
+}
+
+section div div {
+    
+    background-color: dimgray;
+}
+
+section div:nth-of-type(2n+1) {
+
+    background-color: dimgray;
+}
+
+section div:nth-of-type(2n+1) div {
+    
+    background-color: grey;
+}
+
+section div h2 {
+
+    color: rgb(179, 228, 255);
+    padding-top: 35px;
+    padding-bottom: 10px;
+}
+
+section div:nth-of-type(2n+1) h2 {
+    
+    color: rgb(255, 122, 89);
+}
+
+section div p {
+
+    padding: 5px 0;
+}
+
+section div {
+
+    margin: 10px 0;
+}
+
+footer {
+
+    text-align: center;
+    padding: 20px 15px;
+    background-color: rgb(116, 92, 51);
+}

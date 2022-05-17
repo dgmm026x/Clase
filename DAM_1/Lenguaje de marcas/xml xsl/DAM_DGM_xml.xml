@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="DAM_DGM_xsl.xsl" type="text/xsl"?>
+
+<web>
+
+    <title>Actividad xml/xsl</title>
+
+    <titulo>Compilación de películas</titulo>
+
+    <descripcion>Esto es una compilación de peliculas y talll...</descripcion>
+
+    <subtitulo>PELÍCULAS:</subtitulo>
+
+    <conjunto>
+        
+        <subtitulo2>Peliculas</subtitulo2>
+
+        <pelicula>
+
+            <titulo>PULP FICTION</titulo>
+
+            <director>DIRECTOR: Quentin Tarantino</director>
+
+            <salida>AÑO DE SALIDA: 1994</salida>
+
+            <sinopsis>SINOPSIS: Jules y Vincent, dos asesinos a sueldo con no demasiadas luces, trabajan para el gángster Marsellus Wallace. Vincent le confiesa a Jules que Marsellus le ha pedido que cuide de Mia, su atractiva mujer. Jules le recomienda prudencia porque es muy peligroso sobrepasarse con la novia del jefe. Cuando llega la hora de trabajar, ambos deben ponerse "manos a la obra". Su misión: recuperar un misterioso maletín. (FILMAFFINITY)</sinopsis>
+
+            <generos>GÉNEROS: Humor negro, comedia</generos>
+
+            <tituloprincipales>REPARTO PRINCIPALES:</tituloprincipales>
+
+            <actor1>John Travolta</actor1>
+
+            <actor2>Samuel L. Jackson</actor2>
+
+            <actor3>Uma Thurman</actor3>
+
+            <titulosecundarios>REPARTO SECUNDARIOS:</titulosecundarios>
+                
+            <actor4>Eric Stoltz</actor4>
+
+            <actor5>Rosanna Arquette</actor5>
+
+            <actor6>Christopher Walken</actor6>
+
+        </pelicula>
+
+        <pelicula>
+
+            <titulo>SNATCH</titulo>
+
+            <director>DIRECTOR: Guy Ritchie</director>
+
+            <salida>AÑO DE SALIDA: 2000</salida>
+
+            <sinopsis>SINOPSIS: 
+                Franky es un ladrón de diamantes que tiene que entregar un valioso ejemplar a su jefe Avi, pero, antes de hacerlo, se deja convencer por un tal Boris para apostar en un combate ilegal de boxeo. En realidad, se trata de una trampa para arrebatarle el diamante. Cuando Avi se entera, contrata a Tony para encontrar a Franky y al diamante. Descubierto el triste destino de Franky, la recuperación de la gema desaparecida provoca una situación caótica, donde el engaño, el chantaje y el fraude se mezclan de forma sangrienta con perros, diamantes, boxeadores y gran variedad de armas. (FILMAFFINITY)</sinopsis>
+
+            <generos>GÉNEROS: Suspense, Comedia</generos>
+
+            <tituloprincipales>REPARTO PRINCIPALES:</tituloprincipales>
+
+            <actor1>Jason Statham</actor1>
+
+            <actor2>Brad Pitt</actor2>
+
+            <actor3>Alan Ford</actor3>
+
+            <titulosecundarios>REPARTO SECUNDARIOS:</titulosecundarios>
+                
+            <actor4>Dennis Farina</actor4>
+
+            <actor5>Benicio Del Toro</actor5>
+
+            <actor6>Vinnie Jones</actor6>
+
+        </pelicula>
+
+        <pelicula>
+
+            <titulo>BLADE RUNNER</titulo>
+
+            <director>DIRECTOR: Ridley Scott</director>
+
+            <salida>AÑO DE SALIDA: 1982</salida>
+
+            <sinopsis>SINOPSIS: Noviembre de 2019. A principios del siglo XXI, la poderosa Tyrell Corporation creó, gracias a los avances de la ingeniería genética, un robot llamado Nexus 6, un ser virtualmente idéntico al hombre pero superior a él en fuerza y agilidad, al que se dio el nombre de Replicante. Estos robots trabajaban como esclavos en las colonias exteriores de la Tierra. Después de la sangrienta rebelión de un equipo de Nexus-6, los Replicantes fueron desterrados de la Tierra. Brigadas especiales de policía, los Blade Runners, tenían órdenes de matar a todos los que no hubieran acatado la condena. Pero a esto no se le llamaba ejecución, se le llamaba "retiro". Tras un grave incidente, el ex Blade Runner Rick Deckard es llamado de nuevo al servicio para encontrar y "retirar" a unos replicantes rebeldes. (FILMAFFINITY)</sinopsis>
+
+            <generos>GÉNEROS: Suspense, Ciencia ficción</generos>
+
+            <tituloprincipales>REPARTO PRINCIPALES:</tituloprincipales>
+
+            <actor1>Harrison Ford</actor1>
+
+            <actor2>Rutger Hauer</actor2>
+
+            <actor3>Sean Young</actor3>
+
+            <titulosecundarios>REPARTO SECUNDARIOS:</titulosecundarios>
+                
+            <actor4>Edward James Olmos</actor4>
+
+            <actor5>William Sanderson</actor5>
+
+            <actor6>Joanna Cassidy</actor6>
+
+        </pelicula>
+
+        <pelicula>
+
+            <titulo>BLADE RUNNER 2049</titulo>
+
+            <director>DIRECTOR: Denis Villeneuve</director>
+
+            <salida>AÑO DE SALIDA: 	2017</salida>
+
+            <sinopsis>SINOPSIS: Treinta años después de los eventos del primer film, un nuevo blade runner, K (Ryan Gosling) descubre un secreto profundamente oculto que podría acabar con el caos que impera en la sociedad. El descubrimiento de K le lleva a iniciar la búsqueda de Rick Deckard (Harrison Ford), un blade runner al que se le perdió la pista hace 30 años. (FILMAFFINITY)</sinopsis>
+
+            <generos>GÉNEROS: Acción, Ciencia ficción</generos>
+
+            <tituloprincipales>REPARTO PRINCIPALES:</tituloprincipales>
+
+            <actor1>Ryan Gosling</actor1>
+
+            <actor2>Harrison Ford</actor2>
+
+            <actor3>Ana de Armas</actor3>
+
+            <titulosecundarios>REPARTO SECUNDARIOS:</titulosecundarios>
+                
+            <actor4>Jared Leto</actor4>
+
+            <actor5>Dave Bautista</actor5>
+
+            <actor6>Barkhad Abdi</actor6>
+
+        </pelicula>
+
+        <pelicula>
+
+            <titulo>MALDITOS BASTARDOS</titulo>
+
+            <director>DIRECTOR: Quentin Tarantino</director>
+
+            <salida>AÑO DE SALIDA: 2009</salida>
+
+            <sinopsis>SINOPSIS: Segunda Guerra Mundial (1939-1945). En la Francia ocupada por los alemanes, Shosanna Dreyfus (Mélanie Laurent) presencia la ejecución de su familia por orden del coronel Hans Landa (Christoph Waltz). Después de huir a París, adopta una nueva identidad como propietaria de un cine. En otro lugar de Europa, el teniente Aldo Raine (Brad Pitt) adiestra a un grupo de soldados judíos ("The Basterds") para atacar objetivos concretos. Los hombres de Raine y una actriz alemana (Diane Kruger), que trabaja para los aliados, deben llevar a cabo una misión para hacer caer a los jefes del Tercer Reich. El destino quiere que todos se encuentren bajo la marquesina de un cine donde Shosanna espera para vengarse. (FILMAFFINITY)</sinopsis>
+
+            <generos>GÉNEROS: Bélico, Acción, Humor negro</generos>
+
+            <tituloprincipales>REPARTO PRINCIPALES:</tituloprincipales>
+
+            <actor1>Brad Pitt</actor1>
+
+            <actor2>Christoph Waltz</actor2>
+
+            <actor3>Mélanie Laurent</actor3>
+
+            <titulosecundarios>REPARTO SECUNDARIOS:</titulosecundarios>
+                
+            <actor4>Diane Kruger</actor4>
+
+            <actor5>Daniel Brühl</actor5>
+
+            <actor6>Michael Fassbender</actor6>
+
+        </pelicula>
+
+        <pelicula>
+
+            <titulo>DJANGO DESENCADENADO</titulo>
+
+            <director>DIRECTOR: Quentin Tarantino</director>
+
+            <salida>AÑO DE SALIDA: 2012</salida>
+
+            <sinopsis>SINOPSIS: En Texas, dos años antes de estallar la Guerra Civil Americana, King Schultz (Christoph Waltz), un cazarrecompensas alemán que sigue la pista a unos asesinos para cobrar por sus cabezas, le promete al esclavo negro Django (Jamie Foxx) dejarlo en libertad si le ayuda a atraparlos. Él acepta, pues luego quiere ir a buscar a su esposa Broomhilda (Kerry Washington), esclava en una plantación del terrateniente Calvin Candie (Leonardo DiCaprio). (FILMAFFINITY)</sinopsis>
+
+            <generos>GÉNEROS: </generos>
+
+            <tituloprincipales>REPARTO PRINCIPALES:</tituloprincipales>
+
+            <actor1>Jamie Foxx</actor1>
+
+            <actor2>Christoph Waltz</actor2>
+
+            <actor3>Leonardo DiCaprio</actor3>
+
+            <titulosecundarios>REPARTO SECUNDARIOS:</titulosecundarios>
+                
+            <actor4>Kerry Washington</actor4>
+
+            <actor5>Samuel L. Jackson</actor5>
+
+            <actor6>Don Johnson</actor6>
+
+        </pelicula>
+
+    </conjunto>
+    
+    <final>El pie de página y talll</final>
+
+</web>
