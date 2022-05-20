@@ -1,0 +1,17 @@
+USE neptuno;
+
+DELIMITER $$
+DROP FUNCTION if EXISTS Act2a $$
+CREATE FUNCTION Act2a(IN id VARCHAR(5))
+
+BEGIN
+	SELECT
+		IdCliente
+	FROM clientes
+	WHERE IdCliente = id
+	;
+END$$
+
+DELIMITER ;
+
+SELECT Act2a('ALFKI');
