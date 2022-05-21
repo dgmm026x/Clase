@@ -33,7 +33,7 @@
 
 
 
-        <title>✧</title><!--AFA卐DAM-->
+        <title>✦</title><!--AFA卐DAM-->
 
 
 
@@ -56,14 +56,31 @@
             var PURE_WHITE = "rgb(255, 255, 255)";
             var PURE_BLACK = "rgb(0, 0, 0)";
 
-            var TRANSL_WHITE = "rgba(225, 225, 225, 0.9)";
-            var TRANSL_BLACK = "rgba(30, 30, 30, 0.9)";
+            var TRANSL_WHITE = "rgba(200, 200, 200, 0.95)";
+            var TRANSL_BLACK = "rgba(35, 35, 35, 0.98)";
 
-            var TRANSL_WHITE2 = "rgba(235, 235, 235, 0.9)";
+            var TRANSL_WHITE2 = "rgba(255, 255, 255, 0.9)";
             var TRANSL_BLACK2 = "rgba(20, 20, 20, 0.9)";
 
             var BUTTON_WHITE = "rgb(255, 255, 255)";
             var BUTTON_BLACK = "rgb(0, 0, 0)";
+
+
+
+            if(window.innerHeight <= 600) {
+
+
+                var ANIMATIONOPEN = "showMenuBurguerMini";
+                var ANIMATIONCLOSE = "hideMenuBurguerMini";
+            }
+
+            else {
+
+                var ANIMATIONOPEN = "showMenuBurguer";
+                var ANIMATIONCLOSE = "hideMenuBurguer";
+            }
+
+
 
             $(window).resize (
                 
@@ -76,15 +93,19 @@
                             document.getElementById("BODY").style.overflow = "visible";
                             document.getElementById("BurguerButton").style.backgroundColor = BUTTON_WHITE;
                             document.getElementById("BurguerButton").style.color = BUTTON_BLACK;
-
-                            // console.log("VIEW = DESKTOP");
-                            // console.log("BURGUERMENU = CLOSED BY DESKTOP VIEW");
                         }
                     }
 
-                    else {
+                    if(window.outerWidth <= 900 && window.outerHeight <= 600) {
 
-                        // console.log("VIEW = MOBILE");
+                        var ANIMATIONOPEN = "showMenuBurguer";
+                        var ANIMATIONCLOSE = "hideMenuBurguer";
+                    }
+
+                    if(window.outerWidth <= 600) {
+
+                        var ANIMATIONOPEN = "showMenuBurguerMini";
+                        var ANIMATIONCLOSE = "hideMenuBurguerMini";
                     }
                 }
             );
@@ -94,13 +115,24 @@
             function BURGUERMENU() {
             
                 var BURGUER = document.getElementById("BurguerWindow");
+                var BURGUERCONTENT = document.getElementById("BurguerContent");
                 var BODY = document.getElementById("BODY");
                 var BUTTONY = document.getElementById("BurguerButton");
 
                 if(BURGUER.style.display === "block") {
 
-                    BURGUER.style.display = "none";
+
+                    BURGUER.style.animationName = ANIMATIONCLOSE;
+                    BURGUERCONTENT.style.overflow = "hidden";
+                    
+                    setTimeout(()=> {
+
+                        BURGUER.style.display = "none";
+                    }, 290);
+
                     BODY.style.overflow = "visible";
+
+
 
                     BurguerButton.style.backgroundColor = BUTTON_WHITE;
                     BurguerButton.style.color = BUTTON_BLACK;
@@ -113,7 +145,15 @@
                 else {
 
                     BURGUER.style.display = "block";
+                    BURGUER.style.animationName = ANIMATIONOPEN;
                     BODY.style.overflow = "hidden";
+
+                    setTimeout(()=> {
+
+                        BURGUERCONTENT.style.overflow = "scroll";
+                    }, 290);
+
+
 
                     BurguerButton.style.backgroundColor = BUTTON_BLACK;
                     BurguerButton.style.color = BUTTON_WHITE;
@@ -132,10 +172,14 @@
                 var ALTER = BUTTON_WHITE;
                 BUTTON_WHITE = BUTTON_BLACK;
                 BUTTON_BLACK = ALTER;
-                
+
                 //OPAQUE OBJECTS////////////////////////////////////////////////////////
 
                 var OPAQUE=document.getElementsByClassName("OPAQUE");
+
+                var LINENAV = document.getElementById("NavBar");
+                var LINEEND = document.getElementById("End");
+                var LINEBUR = document.getElementById("BurguerWindow");
 
                 for (let i = 0; i < OPAQUE.length; i++) {
 
@@ -144,6 +188,10 @@
                         OPAQUE[i].style.backgroundColor = PURE_WHITE;
                         OPAQUE[i].style.color = PURE_BLACK;
                         STATUS = 1;
+
+                        LINEBUR.style.borderBottom = "2px solid black";
+                        LINENAV.style.borderBottom = "2px solid black";
+                        LINEEND.style.borderTop = "2px solid black";
                     }
 
                     else {
@@ -151,6 +199,10 @@
                         OPAQUE[i].style.backgroundColor = PURE_BLACK;
                         OPAQUE[i].style.color = PURE_WHITE;
                         STATUS = 0;
+
+                        LINEBUR.style.borderBottom = "2px solid white";
+                        LINENAV.style.borderBottom = "2px solid white";
+                        LINEEND.style.borderTop = "2px solid white";
                     }
                 }
                 
@@ -251,47 +303,47 @@
 
 
 
-            function HOVER() {
+            // function HOVER() {
 
-                var BUTTON=document.getElementsByClassName("BUTTON");
+            //     var BUTTON=document.getElementsByClassName("BUTTON");
 
-                for (let i = 0; i < BUTTON.length; i++) {
+            //     for (let i = 0; i < BUTTON.length; i++) {
 
-                    if(STATUS == 0) {
+            //         if(STATUS == 0) {
 
-                        BUTTON[i].style.backgroundColor = PURE_WHITE;
-                        BUTTON[i].style.color = PURE_BLACK;
-                    }
+            //             BUTTON[i].style.backgroundColor = PURE_WHITE;
+            //             BUTTON[i].style.color = PURE_BLACK;
+            //         }
 
-                    else {
+            //         else {
 
-                        BUTTON[i].style.backgroundColor = PURE_BLACK;
-                        BUTTON[i].style.color = PURE_WHITE;
-                    }
-                }
-            }
+            //             BUTTON[i].style.backgroundColor = PURE_BLACK;
+            //             BUTTON[i].style.color = PURE_WHITE;
+            //         }
+            //     }
+            // }
 
 
 
-            function NOHOVER() {
+            // function NOHOVER() {
 
-                var BUTTON=document.getElementsByClassName("BUTTON");
+            //     var BUTTON=document.getElementsByClassName("BUTTON");
 
-                for (let i = 0; i < BUTTON.length; i++) {
+            //     for (let i = 0; i < BUTTON.length; i++) {
 
-                    if(STATUS == 1) {
+            //         if(STATUS == 1) {
 
-                        BUTTON[i].style.backgroundColor = PURE_WHITE;
-                        BUTTON[i].style.color = PURE_BLACK;
-                    }
+            //             BUTTON[i].style.backgroundColor = PURE_WHITE;
+            //             BUTTON[i].style.color = PURE_BLACK;
+            //         }
 
-                    else {
+            //         else {
 
-                        BUTTON[i].style.backgroundColor = PURE_BLACK;
-                        BUTTON[i].style.color = PURE_WHITE;
-                    }
-                }
-            }
+            //             BUTTON[i].style.backgroundColor = PURE_BLACK;
+            //             BUTTON[i].style.color = PURE_WHITE;
+            //         }
+            //     }
+            // }
 
         </script>
 
@@ -328,7 +380,7 @@
                 <div id="MenuTop">
 
                     <div id="MenuLogo">
-                        <a id="Logo" class="TRANSPARENT" href="ZS2022001_MENU.html">✧</a>
+                        <a id="Logo" class="TRANSPARENT" href="ZS2022001_MENU.html">✦</a>
                     </div>
 
                 </div><!--MenuTop-->
@@ -343,7 +395,7 @@
 
                 <div id="MenuBottom">
 
-                    <div class="BUTTON" onmouseover="HOVER()" onmouseout="NOHOVER()">
+                    <div>
 
                         <span>ZP</span>
                         
@@ -365,7 +417,7 @@
 
                     <div>
 
-                        <span class="BUTTON" onmouseover="HOVER()" onmouseout="NOHOVER()">ZS</span>
+                        <span>ZS</span>
 
                         <div class="OptionContent">
 
@@ -383,7 +435,7 @@
 
                     <div>
 
-                        <span class="BUTTON" onmouseover="HOVER()" onmouseout="NOHOVER()">ZE</span>
+                        <span>ZE</span>
 
                         <div class="OptionContent">
 
@@ -403,7 +455,7 @@
 
                     <div>
 
-                        <span class="BUTTON" onmouseover="HOVER()" onmouseout="NOHOVER()">ZA</span>
+                        <span>ZA</span>
 
                         <div class="OptionContent">
 
@@ -423,7 +475,7 @@
 
                     <div>
 
-                        <span class="BUTTON" onmouseover="HOVER()" onmouseout="NOHOVER()">ZR</span>
+                        <span>ZR</span>
 
                         <div class="OptionContent">
 
@@ -441,7 +493,7 @@
 
                     <div>
 
-                        <span class="BUTTON" onmouseover="HOVER()" onmouseout="NOHOVER()">ZC</span>
+                        <span>ZC</span>
 
                         <div class="OptionContent">
 
@@ -461,7 +513,7 @@
 
                     <div>
 
-                        <span class="BUTTON" onmouseover="HOVER()" onmouseout="NOHOVER()">||||</span>
+                        <span>||||</span>
 
                         <div class="OptionContent">
 
@@ -583,9 +635,9 @@
 
 
 
-        <!-- <div class="PageContent" style="background-image: url(../Multimedia/Sky-Children-of-the-Light-Switch.jpg);">
-            <a href="">SKY BETA: LIGHT OF THE CHILDREN</a>
-        </div> -->
+        <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/Switch-SkyChildrenoftheLight-hero.jpg);">
+            <a class="TRANSLUCID2" href="">SKY BETA: LIGHT OF THE CHILDREN</a>
+        </div>
 
         <!-- <div class="PageContent" style="background-image: url(../Multimedia/Switch-SkyChildrenoftheLight-hero.jpg);">
             <a href="">SKY: LIGHT OF THE CHILDREN</a>
@@ -599,9 +651,9 @@
             <a href="">STARSHIP 20: FULL STACK WITH BOOSTER 4</a>
         </div> -->
 
-        <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/spacex_bfr_mars_mission_4k-3840x2160.jpg);">
+        <!-- <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/spacex_bfr_mars_mission_4k-3840x2160.jpg);">
             <a class="TRANSLUCID2" href="">STARSHIP GEN. 2: MARS LANDING</a>
-        </div>
+        </div> -->
 
         <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/STR_10.png);">
             <a class="TRANSLUCID2" href="">STARSHIP-SUPERHEAVY GEN. 4: FLIGHT AT MAX. Q</a>
@@ -611,9 +663,9 @@
             <a class="TRANSLUCID2" href="">STARSHIP GEN. 4: MARS ENTRY</a>
         </div>
 
-        <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/STR_7.jpg);">
+        <!-- <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/STR_7.jpg);">
             <a class="TRANSLUCID2" href="">STARSHIP GEN. 4: CLOSING ORBIT TRAJECTORY WITHIN SATURN'S SPHERE OF INFLUENCE</a>
-        </div>
+        </div> -->
 
 
 
@@ -623,7 +675,17 @@
 
 
 
-        <div id="End" class="OPAQUE"></div>
+        <div id="End" class="OPAQUE">
+            <div>
+                <p>Contacto</p>
+                <p>dgm0026x@gmail.com</p>
+                <p>@dgm0026z (Instagram)</p>
+            </div>
+            <div>
+                <p></p>
+                <p>v 2022.05.21</p>
+            </div>
+        </div>
 
 
 
