@@ -173,10 +173,14 @@
                 BUTTON_WHITE = BUTTON_BLACK;
                 BUTTON_BLACK = ALTER;
 
+                
+
+
                 //OPAQUE OBJECTS////////////////////////////////////////////////////////
 
                 var OPAQUE=document.getElementsByClassName("OPAQUE");
 
+                var TEXTICON = document.getElementById("themeSwitch");
                 var LINENAV = document.getElementById("NavBar");
                 var LINEEND = document.getElementById("End");
                 var LINEBUR = document.getElementById("BurguerWindow");
@@ -189,6 +193,7 @@
                         OPAQUE[i].style.color = PURE_BLACK;
                         STATUS = 1;
 
+                        // TEXTICON.innerHTML= "☾";
                         LINEBUR.style.borderBottom = "2px solid black";
                         LINENAV.style.borderBottom = "2px solid black";
                         LINEEND.style.borderTop = "2px solid black";
@@ -200,6 +205,7 @@
                         OPAQUE[i].style.color = PURE_WHITE;
                         STATUS = 0;
 
+                        // TEXTICON.innerHTML= "☀";
                         LINEBUR.style.borderBottom = "2px solid white";
                         LINENAV.style.borderBottom = "2px solid white";
                         LINEEND.style.borderTop = "2px solid white";
@@ -303,47 +309,27 @@
 
 
 
-            // function HOVER() {
+            function HOVER() {
 
-            //     var BUTTON=document.getElementsByClassName("BUTTON");
+                var BUTTON=document.getElementsByClassName("BUTTON");
 
-            //     for (let i = 0; i < BUTTON.length; i++) {
+                for (let i = 0; i < BUTTON.length; i++) {
 
-            //         if(STATUS == 0) {
-
-            //             BUTTON[i].style.backgroundColor = PURE_WHITE;
-            //             BUTTON[i].style.color = PURE_BLACK;
-            //         }
-
-            //         else {
-
-            //             BUTTON[i].style.backgroundColor = PURE_BLACK;
-            //             BUTTON[i].style.color = PURE_WHITE;
-            //         }
-            //     }
-            // }
+                    BUTTON[i].style.animationName = "showMenu";
+                }
+            }
 
 
 
-            // function NOHOVER() {
+            function NOHOVER() {
 
-            //     var BUTTON=document.getElementsByClassName("BUTTON");
+                var BUTTON=document.getElementsByClassName("BUTTON");
 
-            //     for (let i = 0; i < BUTTON.length; i++) {
+                for (let i = 0; i < BUTTON.length; i++) {
 
-            //         if(STATUS == 1) {
-
-            //             BUTTON[i].style.backgroundColor = PURE_WHITE;
-            //             BUTTON[i].style.color = PURE_BLACK;
-            //         }
-
-            //         else {
-
-            //             BUTTON[i].style.backgroundColor = PURE_BLACK;
-            //             BUTTON[i].style.color = PURE_WHITE;
-            //         }
-            //     }
-            // }
+                    BUTTON[i].style.animationName = "hideMenu";
+                }
+            }
 
         </script>
 
@@ -371,7 +357,7 @@
 
         <div id="NavBar" class="OPAQUE">
 
-            <div id="themeSwitch" class="OPAQUE" onclick="THEME()">☾</div>
+            <div id="themeSwitch" class="OPAQUE" onclick="THEME()">☀</div>
 
             <div class="MenuGap"></div>
 
@@ -397,17 +383,15 @@
 
                     <div>
 
-                        <span>ZP</span>
+                        <span class="HoverMenu">ZP</span><!--onmouseover="HOVER()" onmouseout="NOHOVER()"-->
                         
-                        <div class="OptionContent">
+                        <div class="Content">
 
                             <div class="ContentGap"></div>
-
-                            <div class="Content TRANSLUCID">
-                                <a class="TRANSPARENT " href="">PAaaaaaa</a>
-                                <a class="TRANSPARENT" href="">PBbbb</a>
-                                <a class="TRANSPARENT" href="">PCccccccccc</a>
-                            </div>
+                            
+                            <a class="TRANSPARENT " href="">PAaaaaaa</a>
+                            <a class="TRANSPARENT" href="">PBbbb</a>
+                            <a class="TRANSPARENT" href="">PCccccccccc</a>
 
                         </div>
 
@@ -415,9 +399,9 @@
 
 
 
-                    <div>
+                    <!-- <div>
 
-                        <span>ZS</span>
+                        <span class="HoverMenu">ZS</span>
 
                         <div class="OptionContent">
 
@@ -435,7 +419,7 @@
 
                     <div>
 
-                        <span>ZE</span>
+                        <span class="HoverMenu">ZE</span>
 
                         <div class="OptionContent">
 
@@ -455,7 +439,7 @@
 
                     <div>
 
-                        <span>ZA</span>
+                        <span class="HoverMenu">ZA</span>
 
                         <div class="OptionContent">
 
@@ -475,7 +459,7 @@
 
                     <div>
 
-                        <span>ZR</span>
+                        <span class="HoverMenu">ZR</span>
 
                         <div class="OptionContent">
 
@@ -493,7 +477,7 @@
 
                     <div>
 
-                        <span>ZC</span>
+                        <span class="HoverMenu">ZC</span>
 
                         <div class="OptionContent">
 
@@ -513,7 +497,7 @@
 
                     <div>
 
-                        <span>||||</span>
+                        <span class="HoverMenu">||||</span>
 
                         <div class="OptionContent">
 
@@ -527,11 +511,11 @@
 
                         </div>
 
-                    </div>
+                    </div> -->
 
 
 
-                    <div class="OptionContent" onclick="BURGUERMENU()">
+                    <div id="BurguerBox" class="OptionContent" onclick="BURGUERMENU()">
 
                         <span id="BurguerButton" class="OPAQUE">||||</span>
 
@@ -634,26 +618,11 @@
         <!------------------------------------------------------------->
 
 
-
-        <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/Switch-SkyChildrenoftheLight-hero.jpg);">
-            <a class="TRANSLUCID2" href="">SKY BETA: LIGHT OF THE CHILDREN</a>
-        </div>
-
-        <!-- <div class="PageContent" style="background-image: url(../Multimedia/Switch-SkyChildrenoftheLight-hero.jpg);">
-            <a href="">SKY: LIGHT OF THE CHILDREN</a>
+        <!-- <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/Switch-SkyChildrenoftheLight-hero.jpg);">
+            <p>STARSHIP GEN. 4: CLOSING ORBIT TRAJECTORY WITHIN SATURN'S SPHERE OF INFLUENCE</p>
         </div> -->
 
-        <!-- <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/STARSHIP_SN15_Desktop.png);">
-            <a href="">STARSHIP SN15: 10KM FLIGHT TEST</a>
-        </div> -->
 
-        <!-- <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/S20_Chopstick_Stack_Desktop.png);">
-            <a href="">STARSHIP 20: FULL STACK WITH BOOSTER 4</a>
-        </div> -->
-
-        <!-- <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/spacex_bfr_mars_mission_4k-3840x2160.jpg);">
-            <a class="TRANSLUCID2" href="">STARSHIP GEN. 2: MARS LANDING</a>
-        </div> -->
 
         <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/STR_10.png);">
             <a class="TRANSLUCID2" href="">STARSHIP-SUPERHEAVY GEN. 4: FLIGHT AT MAX. Q</a>
@@ -663,9 +632,9 @@
             <a class="TRANSLUCID2" href="">STARSHIP GEN. 4: MARS ENTRY</a>
         </div>
 
-        <!-- <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/STR_7.jpg);">
+        <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/STR_7.jpg);">
             <a class="TRANSLUCID2" href="">STARSHIP GEN. 4: CLOSING ORBIT TRAJECTORY WITHIN SATURN'S SPHERE OF INFLUENCE</a>
-        </div> -->
+        </div>
 
 
 
@@ -682,7 +651,7 @@
                 <p>@dgm0026z (Instagram)</p>
             </div>
             <div>
-                <p></p>
+                <p>Versión del diseño web</p>
                 <p>v 2022.05.21</p>
             </div>
         </div>
