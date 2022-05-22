@@ -5,6 +5,7 @@
 <!--        ZS202201 MENU (HTML5 FILE)                              --->
 <!--        (DESIGN BEGAN IN: 2022-03-27)                           --->
 <!--        (MAJOR UPGRADE (JS, DARK THEME): 2022-05-11)            --->
+<!--        (MAJOR REDESIGN: 2022-05-21)                            --->
 <!--                                                                --->
 <!--------------------------------------------------------------------->
 <!--------------------------------------------------------------------->
@@ -47,10 +48,10 @@
 
 
 
-        <!-- <script src="../COMMON/ZS2022001_COMMON.js"></script> -->
+        <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> -->
+        <!-- <script>$(window).resize (function () {});</script> -->
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-        
+
         <script>
 
             var PURE_WHITE = "rgb(255, 255, 255)";
@@ -67,68 +68,39 @@
 
 
 
-            if(window.innerHeight <= 600) {
-
-
-                var ANIMATIONOPEN = "showMenuBurguerMini";
-                var ANIMATIONCLOSE = "hideMenuBurguerMini";
-            }
-
-            else {
-
-                var ANIMATIONOPEN = "showMenuBurguer";
-                var ANIMATIONCLOSE = "hideMenuBurguer";
-            }
-
-
-
-            $(window).resize (
-                
-                function () {
-
-                    if(window.outerWidth > 900) {
-
-                        if(document.getElementById("BurguerWindow").style.display = "block") {
-                            document.getElementById("BurguerWindow").style.display = "none";
-                            document.getElementById("BODY").style.overflow = "visible";
-                            document.getElementById("BurguerButton").style.backgroundColor = BUTTON_WHITE;
-                            document.getElementById("BurguerButton").style.color = BUTTON_BLACK;
-                        }
-                    }
-
-                    if(window.outerWidth <= 900 && window.outerHeight <= 600) {
-
-                        var ANIMATIONOPEN = "showMenuBurguer";
-                        var ANIMATIONCLOSE = "hideMenuBurguer";
-                    }
-
-                    if(window.outerWidth <= 600) {
-
-                        var ANIMATIONOPEN = "showMenuBurguerMini";
-                        var ANIMATIONCLOSE = "hideMenuBurguerMini";
-                    }
-                }
-            );
-
-            
-
             function BURGUERMENU() {
-            
+
                 var BURGUER = document.getElementById("BurguerWindow");
                 var BURGUERCONTENT = document.getElementById("BurguerContent");
                 var BODY = document.getElementById("BODY");
-                var BUTTONY = document.getElementById("BurguerButton");
+                var BUTTON = document.getElementById("BurguerButton");
+
+
+                if(window.innerHeight <= 600) {
+
+
+                    var ANIMATIONOPEN = "showMenuBurguerMini";
+                    var ANIMATIONCLOSE = "hideMenuBurguerMini";
+                }
+
+                else {
+
+                    var ANIMATIONOPEN = "showMenuBurguer";
+                    var ANIMATIONCLOSE = "hideMenuBurguer";
+                }
+
 
                 if(BURGUER.style.display === "block") {
 
 
+                    BUTTON.innerHTML= "﹀";
                     BURGUER.style.animationName = ANIMATIONCLOSE;
                     BURGUERCONTENT.style.overflow = "hidden";
                     
                     setTimeout(()=> {
 
                         BURGUER.style.display = "none";
-                    }, 290);
+                    }, 441);
 
                     BODY.style.overflow = "visible";
 
@@ -144,6 +116,7 @@
 
                 else {
 
+                    BUTTON.innerHTML= "︿";
                     BURGUER.style.display = "block";
                     BURGUER.style.animationName = ANIMATIONOPEN;
                     BODY.style.overflow = "hidden";
@@ -151,7 +124,7 @@
                     setTimeout(()=> {
 
                         BURGUERCONTENT.style.overflow = "scroll";
-                    }, 290);
+                    }, 441);
 
 
 
@@ -172,9 +145,6 @@
                 var ALTER = BUTTON_WHITE;
                 BUTTON_WHITE = BUTTON_BLACK;
                 BUTTON_BLACK = ALTER;
-
-                
-
 
                 //OPAQUE OBJECTS////////////////////////////////////////////////////////
 
@@ -308,28 +278,34 @@
             }
 
 
+            function OPTIONHOVER1() {var OPTION = document.getElementById("Option1");if(STATUS == 1) {OPTION.style.backgroundColor = PURE_BLACK;OPTION.style.color = PURE_WHITE;}else {OPTION.style.backgroundColor = PURE_WHITE;OPTION.style.color = PURE_BLACK;}}
+            function OPTIONNOHOVER1() {var OPTION = document.getElementById("Option1");OPTION.style.backgroundColor = "transparent";if(STATUS == 0) {OPTION.style.color = PURE_WHITE;}else {OPTION.style.color = PURE_BLACK;}}
 
-            function HOVER() {
+            function OPTIONHOVER2() {var OPTION = document.getElementById("Option2");if(STATUS == 1) {OPTION.style.backgroundColor = PURE_BLACK;OPTION.style.color = PURE_WHITE;}else {OPTION.style.backgroundColor = PURE_WHITE;OPTION.style.color = PURE_BLACK;}}
+            function OPTIONNOHOVER2() {var OPTION = document.getElementById("Option2");OPTION.style.backgroundColor = "transparent";if(STATUS == 0) {OPTION.style.color = PURE_WHITE;}else {OPTION.style.color = PURE_BLACK;}}
 
-                var BUTTON=document.getElementsByClassName("BUTTON");
+            function OPTIONHOVER3() {var OPTION = document.getElementById("Option3");if(STATUS == 1) {OPTION.style.backgroundColor = PURE_BLACK;OPTION.style.color = PURE_WHITE;}else {OPTION.style.backgroundColor = PURE_WHITE;OPTION.style.color = PURE_BLACK;}}
+            function OPTIONNOHOVER3() {var OPTION = document.getElementById("Option3");OPTION.style.backgroundColor = "transparent";if(STATUS == 0) {OPTION.style.color = PURE_WHITE;}else {OPTION.style.color = PURE_BLACK;}}
 
-                for (let i = 0; i < BUTTON.length; i++) {
+            function OPTIONHOVER4() {var OPTION = document.getElementById("Option4");if(STATUS == 1) {OPTION.style.backgroundColor = PURE_BLACK;OPTION.style.color = PURE_WHITE;}else {OPTION.style.backgroundColor = PURE_WHITE;OPTION.style.color = PURE_BLACK;}}
+            function OPTIONNOHOVER4() {var OPTION = document.getElementById("Option4");OPTION.style.backgroundColor = "transparent";if(STATUS == 0) {OPTION.style.color = PURE_WHITE;}else {OPTION.style.color = PURE_BLACK;}}
 
-                    BUTTON[i].style.animationName = "showMenu";
-                }
-            }
+            function OPTIONHOVER5() {var OPTION = document.getElementById("Option5");if(STATUS == 1) {OPTION.style.backgroundColor = PURE_BLACK;OPTION.style.color = PURE_WHITE;}else {OPTION.style.backgroundColor = PURE_WHITE;OPTION.style.color = PURE_BLACK;}}
+            function OPTIONNOHOVER5() {var OPTION = document.getElementById("Option5");OPTION.style.backgroundColor = "transparent";if(STATUS == 0) {OPTION.style.color = PURE_WHITE;}else {OPTION.style.color = PURE_BLACK;}}
+
+            function OPTIONHOVER6() {var OPTION = document.getElementById("Option6");if(STATUS == 1) {OPTION.style.backgroundColor = PURE_BLACK;OPTION.style.color = PURE_WHITE;}else {OPTION.style.backgroundColor = PURE_WHITE;OPTION.style.color = PURE_BLACK;}}
+            function OPTIONNOHOVER6() {var OPTION = document.getElementById("Option6");OPTION.style.backgroundColor = "transparent";if(STATUS == 0) {OPTION.style.color = PURE_WHITE;}else {OPTION.style.color = PURE_BLACK;}}
 
 
 
-            function NOHOVER() {
+            function BUTTONHOVER1() {var BUTTON = document.getElementById("Button1");if(STATUS == 0) {BUTTON.style.backgroundColor = TRANSL_WHITE2;BUTTON.style.color = PURE_BLACK;}else {BUTTON.style.backgroundColor = TRANSL_BLACK2;BUTTON.style.color = PURE_WHITE;}}
+            function BUTTONNOHOVER1() {var BUTTON = document.getElementById("Button1");if(STATUS == 1) {BUTTON.style.backgroundColor = TRANSL_WHITE2;BUTTON.style.color = PURE_BLACK;}else {BUTTON.style.backgroundColor = TRANSL_BLACK2;BUTTON.style.color = PURE_WHITE;}}
 
-                var BUTTON=document.getElementsByClassName("BUTTON");
-
-                for (let i = 0; i < BUTTON.length; i++) {
-
-                    BUTTON[i].style.animationName = "hideMenu";
-                }
-            }
+            function BUTTONHOVER2() {var BUTTON = document.getElementById("Button2");if(STATUS == 0) {BUTTON.style.backgroundColor = TRANSL_WHITE2;BUTTON.style.color = PURE_BLACK;}else {BUTTON.style.backgroundColor = TRANSL_BLACK2;BUTTON.style.color = PURE_WHITE;}}
+            function BUTTONNOHOVER2() {var BUTTON = document.getElementById("Button2");if(STATUS == 1) {BUTTON.style.backgroundColor = TRANSL_WHITE2;BUTTON.style.color = PURE_BLACK;}else {BUTTON.style.backgroundColor = TRANSL_BLACK2;BUTTON.style.color = PURE_WHITE;}}
+            
+            function BUTTONHOVER3() {var BUTTON = document.getElementById("Button3");if(STATUS == 0) {BUTTON.style.backgroundColor = TRANSL_WHITE2;BUTTON.style.color = PURE_BLACK;}else {BUTTON.style.backgroundColor = TRANSL_BLACK2;BUTTON.style.color = PURE_WHITE;}}
+            function BUTTONNOHOVER3() {var BUTTON = document.getElementById("Button3");if(STATUS == 1) {BUTTON.style.backgroundColor = TRANSL_WHITE2;BUTTON.style.color = PURE_BLACK;}else {BUTTON.style.backgroundColor = TRANSL_BLACK2;BUTTON.style.color = PURE_WHITE;}}
 
         </script>
 
@@ -381,145 +357,12 @@
 
                 <div id="MenuBottom">
 
-                    <div>
-
-                        <span class="HoverMenu">ZP</span><!--onmouseover="HOVER()" onmouseout="NOHOVER()"-->
-                        
-                        <div class="Content">
-
-                            <div class="ContentGap"></div>
-                            
-                            <a class="TRANSPARENT " href="">PAaaaaaa</a>
-                            <a class="TRANSPARENT" href="">PBbbb</a>
-                            <a class="TRANSPARENT" href="">PCccccccccc</a>
-
-                        </div>
-
-                    </div>
+                    <!-- <span id="HotButton1" class="HotAccess" onmouseover="HOVER()" onmouseout="NOHOVER()">||||</span> -->
 
 
-
-                    <!-- <div>
-
-                        <span class="HoverMenu">ZS</span>
-
-                        <div class="OptionContent">
-
-                            <div class="ContentGap"></div>
-
-                            <div class="Content TRANSLUCID">
-                                <a class="TRANSPARENT" href="">Solar system</a>
-                            </div>
-
-                        </div>
-
-                    </div>
+                    <span id="BurguerButton" class="HotAccess OPAQUE" onclick="BURGUERMENU()">﹀</span>
 
 
-
-                    <div>
-
-                        <span class="HoverMenu">ZE</span>
-
-                        <div class="OptionContent">
-
-                            <div class="ContentGap"></div>
-
-                            <div class="Content TRANSLUCID">
-                                <a class="TRANSPARENT" href="">EAaaaaaa</a>
-                                <a class="TRANSPARENT" href="">EBbbb</a>
-                                <a class="TRANSPARENT" href="">ECccccccccc</a>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div>
-
-                        <span class="HoverMenu">ZA</span>
-
-                        <div class="OptionContent">
-
-                            <div class="ContentGap"></div>
-
-                            <div class="Content TRANSLUCID">
-                                <a class="TRANSPARENT" href="">AAaaaaaa</a>
-                                <a class="TRANSPARENT" href="">ABbbb</a>
-                                <a class="TRANSPARENT" href="">ACccccccccc</a>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div>
-
-                        <span class="HoverMenu">ZR</span>
-
-                        <div class="OptionContent">
-
-                            <div class="ContentGap"></div>
-
-                            <div class="Content TRANSLUCID">
-                                <a class="TRANSPARENT" href="">RAaaaaaa</a>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    
-
-
-                    <div>
-
-                        <span class="HoverMenu">ZC</span>
-
-                        <div class="OptionContent">
-
-                            <div class="ContentGap"></div>
-
-                            <div class="Content TRANSLUCID">
-                                <a class="TRANSPARENT" href="">CAaaaaaa</a>
-                                <a class="TRANSPARENT" href="">CBbbb</a>
-                                <a class="TRANSPARENT" href="">CCccccccccc</a>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div>
-
-                        <span class="HoverMenu">||||</span>
-
-                        <div class="OptionContent">
-
-                            <div class="ContentGap"></div>
-
-                            <div class="Content TRANSLUCID">
-                                <a class="TRANSPARENT" href="">Account</a>
-                                <a class="TRANSPARENT" href="">Contact</a>
-                                <a class="TRANSPARENT" href="">History</a>
-                            </div>
-
-                        </div>
-
-                    </div> -->
-
-
-
-                    <div id="BurguerBox" class="OptionContent" onclick="BURGUERMENU()">
-
-                        <span id="BurguerButton" class="OPAQUE">||||</span>
-
-                    </div><!--|||| (Burguer)-->
 
                 </div><!--MenuBottom-->
             
@@ -544,9 +387,8 @@
                 <div>
                     <p class="OPAQUE">S</p>
 
-                    <a class="TRANSPARENT" href="">Account</a>
-                    <a class="TRANSPARENT" href="">Contact</a>
-                    <a class="TRANSPARENT" href="">History</a>
+                    <a id="Option1" class="TRANSPARENT" href="" onmouseover="OPTIONHOVER1()" onmouseout="OPTIONNOHOVER1()">Account</a>
+                    <a id="Option2" class="TRANSPARENT" href="" onmouseover="OPTIONHOVER2()" onmouseout="OPTIONNOHOVER2()">Contact</a>
                 </div>
 
 
@@ -554,9 +396,8 @@
                 <div>
                     <p class="OPAQUE">SP</p>
 
-                    <a class="TRANSPARENT" href="">PAaaaaaa</a>
-                    <a class="TRANSPARENT" href="">PBbbb</a>
-                    <a class="TRANSPARENT" href="">PCccccccccc</a>
+                    <a id="Option3" class="TRANSPARENT" href="" onmouseover="OPTIONHOVER3()" onmouseout="OPTIONNOHOVER3()">History</a>
+                    <a id="Option4" class="TRANSPARENT" href="" onmouseover="OPTIONHOVER4()" onmouseout="OPTIONNOHOVER4()">PAaaaaaa</a>
                 </div>
 
 
@@ -564,7 +405,7 @@
                 <div>
                     <p class="OPAQUE">SS</p>
                     
-                    <a class="TRANSPARENT" href="">Solar system</a>
+                    <a id="Option5" class="TRANSPARENT" href="" onmouseover="OPTIONHOVER5()" onmouseout="OPTIONNOHOVER5()">PBbbb</a>
                 </div>
 
 
@@ -572,44 +413,22 @@
                 <div>
                     <p class="OPAQUE">SE</p>
 
-                    <a class="TRANSPARENT" href="">EAaaaaaa</a>
-                    <a class="TRANSPARENT" href="">EBbbb</a>
-                    <a class="TRANSPARENT" href="">ECccccccccc</a>
-                </div>
-                
-
-
-                 <div>
-                    <p class="OPAQUE">SA</p>
-
-                    <a class="TRANSPARENT" href="">AAaaaaaa</a>
-                    <a class="TRANSPARENT" href="">ABbbb</a>
-                    <a class="TRANSPARENT" href="">ACccccccccc</a>
-                </div>
-                
-
-
-                <div>
-                    <p class="OPAQUE">SR</p>
-                    
-                    <a class="TRANSPARENT" href="">RAaaaaaa</a>
-                    <a class="TRANSPARENT" href="">RBbbb</a>
-                    <a class="TRANSPARENT" href="">RCccccccccc</a>
-                </div>
-                
-
-
-                <div>
-                    <p class="OPAQUE">SC</p>
-
-                    <a class="TRANSPARENT" href="">CAaaaaaa</a>
-                    <a class="TRANSPARENT" href="">CBbbb</a>
-                    <a class="TRANSPARENT" href="">CCccccccccc</a>
+                    <a id="Option6" class="TRANSPARENT" href="" onmouseover="OPTIONHOVER6()" onmouseout="OPTIONNOHOVER6()">PCccccccccc</a>
                 </div>
 
             </div>
 
         </div><!--WindowOptionContent (Burguer)-->
+
+        <!------------------------------------------------------------->
+        <!--        WEBSITE CONTENT                                  -->
+        <!------------------------------------------------------------->
+
+
+
+        <div id="Title">
+            <p>INTRODUCCIÓN</p>
+        </div>
 
 
 
@@ -622,18 +441,16 @@
             <p>STARSHIP GEN. 4: CLOSING ORBIT TRAJECTORY WITHIN SATURN'S SPHERE OF INFLUENCE</p>
         </div> -->
 
-
-
         <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/STR_10.png);">
-            <a class="TRANSLUCID2" href="">STARSHIP-SUPERHEAVY GEN. 4: FLIGHT AT MAX. Q</a>
+            <a id="Button1" class="TRANSLUCID2" href="" onmouseover="BUTTONHOVER1()" onmouseout="BUTTONNOHOVER1()">STARSHIP-SUPERHEAVY GEN. 4: FLIGHT AT MAX. Q</a>
         </div>
 
         <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/mars_landing.png);">
-            <a class="TRANSLUCID2" href="">STARSHIP GEN. 4: MARS ENTRY</a>
+            <a id="Button2" class="TRANSLUCID2" href="" onmouseover="BUTTONHOVER2()" onmouseout="BUTTONNOHOVER2()">STARSHIP GEN. 4: MARS ENTRY</a>
         </div>
 
         <div class="PageContent" style="background-image: url(MENU_MULTIMEDIA/STR_7.jpg);">
-            <a class="TRANSLUCID2" href="">STARSHIP GEN. 4: CLOSING ORBIT TRAJECTORY WITHIN SATURN'S SPHERE OF INFLUENCE</a>
+            <a id="Button3" class="TRANSLUCID2" href="" onmouseover="BUTTONHOVER3()" onmouseout="BUTTONNOHOVER3()">STARSHIP GEN. 4: CLOSING ORBIT TRAJECTORY WITHIN SATURN'S SPHERE OF INFLUENCE</a>
         </div>
 
 
@@ -651,7 +468,7 @@
                 <p>@dgm0026z (Instagram)</p>
             </div>
             <div>
-                <p>Versión del diseño web</p>
+                <p>「ZS2022001」</p>
                 <p>v 2022.05.21</p>
             </div>
         </div>

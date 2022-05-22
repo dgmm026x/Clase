@@ -118,7 +118,7 @@ body::-webkit-scrollbar
 #BODY
 {   
     overflow: visible;
-    
+
     background-color: rgb(0, 0, 0);/* rgb(150, 0, 0); */
 }
 #themeSwitch
@@ -143,12 +143,6 @@ body::-webkit-scrollbar
 
     font-size: 24px;
 }
-/* #themeSwitch:active
-{
-    transition: background-color 150ms ease-out, color 450ms ease-out;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-} */
 
 
 
@@ -161,11 +155,7 @@ body::-webkit-scrollbar
 #UnderMenu
 {
     width: 100%;
-    height: 120px;
-
-    /* display: none; */
-
-    /* background-color: rgb(255, 255, 255); */
+    height: 122px;
 }
 #NavBar
 {
@@ -188,8 +178,6 @@ body::-webkit-scrollbar
 {
     width: 25%;
     height: 120px;
-
-    /* background-color: transparent; */
 }
 #MenuCenter
 {
@@ -199,8 +187,6 @@ body::-webkit-scrollbar
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    /* background-color: transparent; */
 }
 
 /**********************************************************************/
@@ -229,14 +215,7 @@ body::-webkit-scrollbar
     border-top-right-radius: 2px;
     
     transition: background-color 150ms ease-out, color 450ms ease-out;
-
-    /* background-color: transparent; */
 }
-/* #MenuLogo:active
-{
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-} */
 #Logo
 {
     padding-bottom: 5px;
@@ -249,15 +228,15 @@ body::-webkit-scrollbar
     color: rgb(0, 0, 0);
     
     transition: background-color 150ms ease-out, color 450ms ease-out;
-
-    /* background-color: transparent; */
 }
-/* #Logo:active
-{
-    color: rgb(255, 255, 255);
-} */
 
-/**********************************************************************/
+
+
+/************************************************************************/
+/*          BURGUER MENU                                                */
+/************************************************************************/
+
+
 
 #MenuBottom
 {
@@ -267,24 +246,12 @@ body::-webkit-scrollbar
     display: flex;
     flex-direction: row;
     justify-content: center;
-
-    /* background-color: red; */
 }
-#MenuBottom div
-{
-    height: 36px;
-    margin: 12px 12px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-#MenuBottom div span
+.HotAccess
 {
     height: 36px;
     width: 90px;
-    /* margin: 0 12px 0; */
-    /* padding-top: 2px; */
+    margin: 12px;
 
     display: flex;
     flex-direction: column;
@@ -301,102 +268,129 @@ body::-webkit-scrollbar
     font-size: 24px;
     background-color: rebeccapurple;
 }
-/* #MenuBottom div:nth-last-of-type(1n+2):hover span
+#BurguerWindow
 {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-} */
-#MenuBottom div:nth-last-of-type(1)
+    width: 100%;
+    height: calc(100vh - 122px);
+
+    top: 120px;
+    
+    visibility: visible;
+    display: none;
+    position: fixed;
+    justify-content: center;
+    
+    transition: background-color 150ms ease-out, color 450ms ease-out, border 150ms ease-out;
+
+    animation: showMenuBurguer 450ms ease-in-out;
+
+    border-bottom: 2px solid black;
+}
+#BurguerContent::-webkit-scrollbar
 {
     display: none;
 }
-
-/**********************************************************************/
-
-.OptionContent
+#BurguerContent
 {
-    width: 21vw;/* 295px; */
-    height: calc(auto - 18px);
-    max-width: 300px;
-    margin: 0;
+    width: 652px;
+    height: calc(100% - 48px);
+    margin: 48px calc((100% - 652px) / 2) 0;
+    padding: 0;
+    
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 108px;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 2px;
+
+    transition: width 450ms ease-out, margin 450ms ease-out;
 }
-.ContentGap
+#BurguerContent div
 {
     width: 100%;
-    height: 14px;
-    margin: 0;
-
-    background-color: blue;
+    margin-bottom: 30px;
+    top: 0;
 }
-.Content
+#BurguerContent div:nth-last-of-type(1)
 {
-    height: 100%;
-    margin: 0;
-    padding: 24px;
-
-    display: block;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-
-    transition: background-color 150ms ease-out, color 450ms ease-out, border 150ms ease-out;
-
-    border-bottom: 2px solid black;
-    
-    background-color: green;
-
-    /* border-top-left-radius: 11px; */
-    /* border-bottom-right-radius: 11px;
-    border-bottom-left-radius: 2px; */
-    /* border-top-right-radius: 2px; */
-
-    /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); */
-    /* background-color: rgba(255, 255, 255, 0.75); */
+    margin-bottom: 48px;
 }
-/* #MenuBottom div:hover .OptionContent
+#BurguerContent div p
 {
-    display: block;
-    overflow: scroll;
-    animation: showMenu 1000ms ease-in-out;
-} */
-.Content a
-{
-    width: calc(100% - 24px);
-    margin: 6px 0 0;
-    padding: 3px 11px 1px;
+    margin-bottom: 6px;
+    padding: 3px 12px 1px;
 
     border-top-left-radius: 11px;
     border-bottom-right-radius: 11px;
     border-bottom-left-radius: 2px;
     border-top-right-radius: 2px;
+    
+    transition: background-color 150ms ease-out, color 450ms ease-out;
+
+    font-size: 24px;
+}
+#BurguerContent a
+{
+    margin: 6px 0 0;
+    padding: 3px 12px 1px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    border-top-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    
+    transition: background-color 150ms ease-out, color 450ms ease-out;
 
     font-size: 21px;
     text-decoration: none;
-
-    transition: background-color 150ms ease-out, color 450ms ease-out;
-
-    /* background-color: transparent;
-    color: rgb(0, 0, 0); */
 }
-.Content a:nth-of-type(1)
+#BurguerContent a
 {
-    margin: 0;
+    margin: 6px 0 0;
 }
-/* .Content a:hover
-{
-
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-} */
 #BurguerWindow
 {
     display: none;
+}
+
+
+
+/************************************************************************/
+/*          WEBSITE TITLE                                               */
+/************************************************************************/
+
+
+
+#Title
+{
+    height: calc(100vh - 122px);
+    /* height: 100vh; */
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    background-image:url(MENU_MULTIMEDIA/S20_Chopstick_Stack_Desktop.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+
+#Title p {
+
+    margin-bottom: 122px;
+
+    font-size: 36px;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 5px rgb(0, 0, 0, 1);
 }
 
 
@@ -409,13 +403,12 @@ body::-webkit-scrollbar
 
 .PageContent
 {
-    height: calc(100vh - 120px - 84px);
+    height: calc(100vh - 122px - 84px);
     padding: 48px;
     /* height: 100vh; */
 
     display: flex;
     align-items: flex-end;
-    justify-content: left;
 
     background-position: center;
     background-repeat: no-repeat;
@@ -437,6 +430,8 @@ body::-webkit-scrollbar
     border-bottom-left-radius: 2px;
     border-top-right-radius: 2px;
 
+    flex-wrap: wrap;
+
     transition: background-color 150ms ease-out, color 450ms ease-out;
 
     font-size: 24px;
@@ -444,12 +439,6 @@ body::-webkit-scrollbar
     
     box-shadow: 0px 0px 1px rgb(0, 0, 0, 0.4);
 }
-
-/* .PageContent a:hover
-{
-    background-color:rgba(20, 20, 20, 0.9);
-    color: rgb(255, 255, 255);
-} */
 
 
 
@@ -542,113 +531,15 @@ body::-webkit-scrollbar
 
 
 
-@media (max-width: 900px) or (max-height: 600px) 
-{
-    #MenuBottom div:nth-last-of-type(1n+2)
+@media (max-width: 700px) or (max-height: 600px) 
     {
-        display: none;
-    }
-    #MenuBottom div:nth-of-type(1n+8) span
-    {
-        display: flex;
-    }
 
-    /******************************************************************/
-
-    #BurguerWindow
-    {
-        width: 100%;
-        height: calc(100vh - 122px);
-
-        top: 120px;
-        
-        visibility: visible;
-        display: none;
-        position: fixed;
-        justify-content: center;
-
-        /* animation: showMenuBurguer 250ms ease-out; */
-
-        /* border-top-left-radius: 11px;
-        border-bottom-right-radius: 11px;
-        border-bottom-left-radius: 2px;
-        border-top-right-radius: 2px; */
-        
-        transition: background-color 150ms ease-out, color 450ms ease-out, border 150ms ease-out;
-
-        animation: showMenuBurguer 300ms ease-in-out;
-
-        border-bottom: 2px solid black;
-    }
-    #BurguerContent::-webkit-scrollbar
-    {
-        display: none;
-    }
     #BurguerContent
     {
         width: calc(100% - 48px);
-        height: calc(100% - 24px);
-        margin: 24px 24px 0;
-        padding: 0;
-        
-        overflow: scroll;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-
-        border-top-left-radius: 11px;
-        /* border-bottom-right-radius: 11px;
-        border-bottom-left-radius: 2px; */
-        border-top-right-radius: 2px;
+        height: calc(100% - 50px);
+        margin: 48px 24px 0;
     }
-    #BurguerContent div
-    {
-        width: 100%;
-        margin-bottom: 30px;
-        top: 0;
-    }
-    #BurguerContent div p
-    {
-        margin-bottom: 6px;
-        padding: 3px 12px 1px;
-
-        border-top-left-radius: 11px;
-        border-bottom-right-radius: 11px;
-        border-bottom-left-radius: 2px;
-        border-top-right-radius: 2px;
-        
-        transition: background-color 150ms ease-out, color 450ms ease-out;
-
-        font-size: 24px;
-    }
-    #BurguerContent a
-    {
-        margin: 6px 0 0;
-        padding: 3px 12px 1px;
-
-        display: flex;
-        flex-direction: row;
-        align-items: baseline;
-
-        border-top-left-radius: 11px;
-        border-bottom-right-radius: 11px;
-        border-bottom-left-radius: 2px;
-        border-top-right-radius: 2px;
-        
-        transition: background-color 150ms ease-out, color 450ms ease-out;
-
-        font-size: 21px;
-        text-decoration: none;
-    }
-    #BurguerContent a
-    {
-        margin: 6px 0 0;
-    }
-    /* #BurguerContent a:hover
-    {
-        transition: box-shadow 300ms ease-out, background-color 300ms ease-out, color 600ms ease-out;
-        background-color: rgb(0, 0, 0);
-        color: rgb(255, 255, 255);
-    } */
 }
 
 /************************************************************************/
@@ -656,20 +547,24 @@ body::-webkit-scrollbar
 
 @media (max-height: 600px)
 {
-    #MenuBottom div:nth-last-of-type(1n+2)
+    #BurguerContent
     {
-        display: none;
+        /* max-width: 652px; */
+        width: calc(100% - 48px);
+        height: calc(100% - 24px);
+        margin: 24px 24px 0;
+        padding: 0;
     }
-    #MenuBottom div:nth-last-of-type(1)
+    #BurguerContent div:nth-last-of-type(1)
     {
-        display: flex;
+        margin-bottom: 24px;
     }
 
     /******************************************************************/
 
     #UnderMenu
     {
-        height: 60px;
+        height: 62px;
     }
     #NavBar
     {
@@ -712,16 +607,54 @@ body::-webkit-scrollbar
     }
     
     /******************************************************************/
-    
+
+    #Title
+    {
+    height: calc(100vh - 62px);
+    }
+
     .PageContent
     {
-        height: calc(100vh - 60px);
+        height: calc(100vh - 62px - 84px);
     }
 }
 
 /************************************************************************/
 /************************************************************************/
 
+@media (min-width: 701px)
+{
+    #BurguerContent
+    {
+        /* width: calc(100% - 40%); */
+        width: 652px;
+        height: calc(100% - 48px);
+        margin: 48px calc((100% - 652px) / 2) 0;
+        padding: 0;
+        
+        overflow: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        border-top-left-radius: 11px;
+        border-top-right-radius: 2px;
+
+        transition: width 450ms ease-out, margin 450ms ease-out;
+    }
+    #BurguerContent div
+    {
+        width: 100%;
+        margin-bottom: 30px;
+        top: 0;
+    }
+    #BurguerContent div:nth-last-of-type(1)
+    {
+        margin-bottom: 48px;
+    }
+}
+
+/************************************************************************/
+/************************************************************************/
 
 @media (max-width: 600px)
 {
@@ -737,6 +670,7 @@ body::-webkit-scrollbar
     .PageContent
     {
         justify-content: center;
+        transition: justify-content 450ms ease-out;
     }
     .PageContent a
     {
@@ -786,31 +720,6 @@ body::-webkit-scrollbar
     background-color: transparent;
     color: black;
 }
-
-
-
-/************************************************************************/
-/*          EDIT MODE                                                   */
-/************************************************************************/
-
-
-
-/* 
-.MenuGap{background-color: rgba(255, 255, 0, 0.5);}
-.MenuTop{background-color: rgba(255, 0, 0, 0.5);}
-.MenuLogo{background-color: rgba(255, 255, 0, 0.5);}
-.Logo{background-color: rgba(0, 0, 255, 0.5);}
-.MenuBottom{background-color: rgba(0, 0, 255, 0.5);}
-.MenuOption{background-color: rgba(255, 255, 0, 0.5);}
-.GapAfterMenu{background-color: rgba(0, 255, 255, 0.5);}
-.MenuOption:hover .OptionContent{background-color: rgba(242, 0, 255, 0.5);}
-
-.OptionContent .ContentGap{}
-.OptionContent .Content{}
-.OptionContent .Content p{}
-.OptionContent .Content a{}
-.OptionContent .Content a:nth-of-type(1){}
-.OptionContent .Content a:hover{}
 
 
 
