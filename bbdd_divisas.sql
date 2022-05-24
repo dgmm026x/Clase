@@ -1,0 +1,11 @@
+CREATE DATABASE bbdd_divisas;
+
+USE bbdd_divisas;
+
+DROP TABLE if EXISTS divisas;
+CREATE TABLE if NOT EXISTS divisas (
+	
+	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	nombre VARCHAR(12) NOT NULL,
+	valor FLOAT NOT NULL
+);
