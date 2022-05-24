@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="3_tienda.xsl" type="text/xsl"?>
+
+
+<tienda>
+             
+    <title>Tienda Online</title>
+    <encabezado>Bienvenid@s a mi tienda</encabezado>
+    <descripcion>Esto es una tienda online que vende productos a través de internet</descripcion>
+    
+    <productos>
+
+        <producto>
+
+            <titulo>producto 1</titulo>
+            <descripcion> esto y talll</descripcion>
+            <precio>100 uds de dinerosh</precio>
+
+        </producto>
+
+        <producto>
+
+            <titulo>producto 2</titulo>
+            <descripcion> esto y esto y talll</descripcion>
+            <precio>100 uds de dinerosh</precio>
+
+        </producto>
+
+        <producto>
+
+            <titulo>producto 3</titulo>
+            <descripcion> esto y esto y esto y talll</descripcion>
+            <precio>300 uds de dinerosh</precio>
+
+        </producto>
+
+        <producto>
+
+            <titulo>producto 4</titulo>
+            <descripcion> mucho esto y talll</descripcion>
+            <precio>420 uds de dinerosh</precio>
+
+        </producto>
+
+    </productos>
+
+</tienda>
