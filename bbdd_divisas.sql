@@ -1,3 +1,4 @@
+DROP DATABASE if EXISTS bbdd_divisas;
 CREATE DATABASE bbdd_divisas;
 
 USE bbdd_divisas;
@@ -9,3 +10,7 @@ CREATE TABLE if NOT EXISTS divisas (
 	nombre VARCHAR(12) NOT NULL,
 	valor FLOAT NOT NULL
 );
+
+INSERT INTO divisas (nombre, valor) VALUES ('EUR', 1);
+INSERT INTO divisas (nombre, valor) VALUES ('YEN', 0.0074);
+INSERT INTO divisas (nombre, valor) VALUES ('USD', 0.94);
