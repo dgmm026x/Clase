@@ -5,6 +5,7 @@
 package mainPackage;
 
 import java.sql.*;
+import java.util.*;
 
 
 
@@ -15,6 +16,7 @@ import java.sql.*;
 class DivisaDAO {
 	
 	private Connection conexion;
+	protected TreeMap<String, List<String>> historial = new TreeMap<>();
 	
 	
 	
@@ -231,6 +233,92 @@ class DivisaDAO {
 	
 	
 	protected void deleteDivisa() {
+	}
+	
+	
+	
+	
+	
+	
+	protected void guardarEnHistorial(double valor, Divisa divisa) {
+		
+		try {
+			
+			String sentencia = "SELECT * FROM divisas WHERE nombre = ?";
+			
+			PreparedStatement datosSentencia = conexion.prepareStatement(sentencia);
+			
+			datosSentencia.setString(1, divisa.getNombre());
+
+			Statement declaracion = conexion.createStatement();
+			
+			ResultSet resultadoQuery = declaracion.executeQuery(sentencia);
+			
+			int id = 0;
+			
+			while(resultadoQuery.next()) {
+				
+				id = resultadoQuery.getInt(1);
+			}
+			
+			String sentencia2 = "INSERT INTO historial (idDivisa, conversion) VALUES (?,?)";
+			
+			PreparedStatement datosSentencia2 = conexion.prepareStatement(sentencia2);
+
+			datosSentencia2.setInt(1, id);
+			datosSentencia2.setString(2, ("Conversion de " + valor + " EUR a ---> " + (valor * divisa.getValor()) + " " + divisa.getNombre()));
+			
+			datosSentencia2.executeUpdate();
+			System.out.println();
+			System.out.println(" · Conversion REGISTRADA en el HISTORIAL");
+		}
+		
+		catch (SQLException e) {
+
+			System.out.println();
+			System.err.println(" · ERROR REGISTRANDO conversion en el HISTORIAL");
+		}
+	}
+	
+	
+	
+	
+	
+	
+	protected TreeMap<String, List<String>> verTodoHistorial() {
+		
+		TreeMap<String, List<String>> historial = null;
+		
+		try {
+			
+			String sentencia = "SELECT * FROM divisas";
+			
+			Statement declaracion = conexion.createStatement();
+			
+			ResultSet resultadoQuery = declaracion.executeQuery(sentencia);
+			
+			while(resultadoQuery.next()) {
+				
+				historial.put(resultadoQuery.getString(2), null);
+				
+				String sentencia2 = "SELECT * FROM divisas";
+				
+				Statement declaracion2 = conexion.createStatement();
+				
+				ResultSet resultadoQuery2 = declaracion2.executeQuery(sentencia2);
+				
+				while(resultadoQuery2.next()) {
+					
+					historial.get(resultadoQuery.getString(2)).add(resultadoQuery2.getString(2));
+				}
+			}
+		}
+		catch (Exception e) {
+			
+			System.err.println(" · ERROR buscando divisa");
+		}
+		
+		return historial;
 	}
 }
 

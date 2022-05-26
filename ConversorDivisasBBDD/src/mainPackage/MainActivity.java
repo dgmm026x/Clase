@@ -5,7 +5,9 @@
 package mainPackage;
 
 import java.util.Scanner;
+import java.util.TreeMap;
 import java.util.InputMismatchException;
+import java.util.List;
 
 
 
@@ -18,6 +20,7 @@ public class MainActivity {
 	public static void main(String[] args) {
 		
 		Scanner teclado = new Scanner(System.in);
+		
 		
 		menu(teclado);
 	}
@@ -40,6 +43,7 @@ public class MainActivity {
 				System.out.println("   [2] CONVERSION de EUR a cualquier divisa");
 				System.out.println("   [3] ACTUALIZAR divisa");
 				System.out.println("   [4] LISTA de divisas");
+				System.out.println("   [5] HISTORIAL de CONVERSIONES");
 				System.out.println();
 				System.out.println("   [0] SALIR");
 				System.out.println();
@@ -47,7 +51,7 @@ public class MainActivity {
 				System.out.print(  "   [x] -> "); int opcion = teclado.nextInt(); teclado.nextLine();
 				System.out.println();
 				
-				if(opcion < 0 || opcion > 4) {
+				if(opcion < 0 || opcion > 5) {
 					
 					throw new InputMismatchException();
 				}
@@ -74,6 +78,11 @@ public class MainActivity {
 						case 4:
 							
 							listaDivisas();
+							break;
+
+						case 5:
+							
+							verHistorialConversiones(teclado);
 							break;
 							
 						case 0:
@@ -198,12 +207,13 @@ public class MainActivity {
 			switch (letra) {
 			
 				case "D":
-				
+					
 					Divisa divisa = divisaDAO.readValorDivisa(nombre);
 					System.out.println();
 					System.out.println(" · Divisa indicada valida");
 					System.out.println();
 					System.out.println("   CONVERSION: " + valor + " EUR ---> " + (valor * divisa.getValor()) + " " + divisa.getNombre());
+					divisaDAO.guardarEnHistorial(valor, divisa);
 					break;
 					
 				case "N":
@@ -316,6 +326,68 @@ public class MainActivity {
 		
 		System.out.println();
 		System.out.println();
+	}
+	
+	
+	
+	
+	
+	
+	protected static void verHistorialConversiones(Scanner teclado) {
+		
+		try {
+			
+			System.out.println("·································································");
+			System.out.println("HISTORIAL DE CONVERSIONES");
+			System.out.println("·································································");
+			System.out.println();
+//			System.out.println("   [1] Por TIPO");
+			System.out.println("   [2] TODAS");
+			System.out.println();
+			System.out.println("   [0] SALIR");
+			System.out.println();
+			System.out.println();
+			System.out.print(  "   [x] -> "); int opcion = teclado.nextInt(); teclado.nextLine();
+			System.out.println();
+			
+			if(opcion < 1 || opcion > 2) {
+				
+				throw new InputMismatchException();
+			}
+			
+			else {
+				
+				DivisaDAO divisaDAO = new DivisaDAO();
+				
+				switch(opcion) {
+				
+//					case 1:
+//						
+//						System.out.println();
+//						System.out.print(  "   Introducir nombre de la divisa: "); String nombre = teclado.nextLine();
+//						System.out.println();
+//						System.out.println();
+//						break;
+						
+					case 2:
+						
+						System.out.println(divisaDAO.verTodoHistorial());
+						break;
+						
+					case 0:
+						
+						System.out.println("·································································");
+						System.out.println("PROCESO CANCELADO");
+						System.out.println("·································································");
+						break;
+				}
+			}
+		}
+		
+		catch (InputMismatchException e) {
+			
+			System.err.println(" · Caracter introducido invalido");
+		}
 	}
 }
 

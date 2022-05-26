@@ -5,23 +5,23 @@
 
 @keyframes Rotation
 {
-    0%{rotate: 0;}
-    100%{rotate: 360deg;}
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
 }
 @-webkit-keyframes webkit-Rotation
 {
-    0%{rotate: 0;}
-    100%{rotate: 360deg;}
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
 }
 @-moz-keyframes moz-Rotation
 {
-    0%{rotate: 0;}
-    100%{rotate: 360deg;}
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
 }
 @-o-keyframes o-Rotation
 {
-    0%{rotate: 0;}
-    100%{rotate: 360deg;}
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
 }
 
 
@@ -59,7 +59,7 @@ body
 
     border-radius: 100%;
 
-    rotate: -160deg;
+    /* rotate: -160deg; */
     
     animation: webkit-Rotation 1800s linear infinite;
     animation: moz-Rotation 1800s linear infinite;
